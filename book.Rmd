@@ -12,10 +12,125 @@ output:
     theme: cerulean
 ---
 
+These notes are from [A Book of Abstract Algebra by Charles C. Pinter](http://www2.math.umd.edu/~jcohen/402/Pinter%20Algebra.pdf). 
+
 ```{r,echo=F, message=F}
 
 ```
 
-# Chapter 1 
+# Intro. (1/3) 
 
-# Chapter 2
+## Origins
+
+- "algebra" - _al jebr_ in Arabic was first used by Mohammed of Kharizm and roughly translated as "reunion". 
+
+- Omar Khayyam defined algebra as the _science of solving equations_. 
+
+- Algebra's high leve of perfection is a product of the Italian Renaissanee. 
+
+- 1501 Girolamo Cardan, physician, astrologer, and mathematician was born. Wrote _Book on Games of Chance_ and _Ars Magna (The Great Art)_. 
+
+- 1500 Tartaglia (Niccolo Fontana) was born. He translated Euclid and Archimedes, and in 1535 found a way of solving any cubic equation of the form $x^3+ax^2=b$.
+
+- Ludovico Ferrari discovered the general method for solving quadratic equations of the form $x^4+ax^3+bx^2+cx=d$ around 1548. 
+
+- 1824 Niels Abel showed _there does not exist any formula for the roots of an equation whose degree is 5 or greater_. 
+
+## Modern Age
+
+## The Algebra of Matrices
+
+- A _matrix_ is a rectangular array of numbers
+
+- $(\begin{smallmatrix} 2 & 11 & -3\\ 9 & 0.5 & 4\end{smallmatrix})$ Is a 2 X 3 matrix with two rows and three columns. 
+
+- $(\begin{smallmatrix} a & b \\ c & d\end{smallmatrix})+(\begin{smallmatrix} a' & b' \\ c' & d'\end{smallmatrix})=(\begin{smallmatrix}a + a' & b + b'\\ c + c' & d + d'\end{smallmatrix})$
+
+- $0 = (\begin{smallmatrix} 0 & 0 \\ 0 & 0\end{smallmatrix})$ is called the zero matrix
+
+- $(\begin{smallmatrix} 1 & 2 \\ 3 & 0\end{smallmatrix})(\begin{smallmatrix} 1 & 1 \\ 2 & 0\end{smallmatrix})=(\begin{smallmatrix}5 & 1\\ 3 & 3\end{smallmatrix})$
+
+  - $(1\times1)+(1\times2)=5$
+  
+  - $(1\times1)+(1\times0)=1$
+  
+  - $(3\times0)+(1\times2)=3$
+  
+  - $(3\times0)+(1\times0)=3$
+
+- For matrices the commutative law of multiplication $AB=BA$ is not true. 
+
+- $I = (\begin{smallmatrix} 1 & 0 \\ 0 & 1\end{smallmatrix})$ is called the _identity_ matrix. 
+
+## Boolean Algebra
+
+- $A\cup B=A+B$
+
+- $A\cap B=A\cdot B$
+
+- axioms are followed
+
+## Algebraic Structures
+
+- an algebraic structure is one with an arbitrary set, with one ore more defined operations. 
+
+- algebra is the study of algebraic structures 
+
+## Axioms
+
+- first appears in Euclid's _Elements_
+
+- Premises : 
+
+  - things that are equal to the same thing are equal to each other
+  
+  - The whole is greater than the part
+  
+  - A straight line can be drawn through any two points. 
+  
+  - All right angles are equal 
+  
+- what was important about Euclid was the way he organized geometric facts into a logical sequence where each theorem builds on preceding theorems and then forms the logical basis for other theorems. 
+
+- Axiomatic method is not a way of discoving facts but organizing them 
+
+- lucid perfection and flawless simplicity 
+
+- note that mathematics is essentially abstract, so we acquire knowledge about them by logic and not observation 
+
+## The Axiomatics of Algebra
+
+We assume that _A_ is any set and there is anoperation on _A_ which we designater with the symbol *. 
+
+(1) $a*b=b*a$ : communtative 
+
+(2) $a*(b*c)=(a*b)*c$ : associative
+
+(3) $e*a=a$ and $a*e=a$ $\forall a\in A$ : identity element
+
+(4) $a*a^{-1}=e$ and $a^{-1}*a=e$ : every element has an inverse 
+
+(5) $a*(b\perp c)=(a*b)\perp(a*c)$ : * is distributive over $\perp$
+
+Note : a ring is a set _A_ with two operations, usually symbolized by + and $\cdot$; having the following axioms: _Addition is commutative and associative, it has a neutral element commonly symbolized by 0, and every element a has an inverse –a with respect to addition. Multiplication is associative, has a neutral element 1, and is distributive over addition._
+
+- matrix algebra is an example of a ring
+
+## Abstraction Revisted
+
+- The process of selecting what is relevant and disregarding everything elese is the very essence of abstraction. 
+
+- Abstraction in modern algebra began about 1830's and was completed about 100 years later. 
+
+- Evariste Galoris (born ~ 1812) tied problems of finding the roots of equations with new discovereies on permutations, but was overlooked (and forgotten) by Cauchy, Fourier, and Poisson. His papers weren't published until 10 years after he died. 
+
+# Ch. 2 : Operations (1/5)
+
+
+
+# Ch. 3 (1/7)
+
+# Ch. 4 (1/12)
+
+# Ch. 5 (1/14)
+
