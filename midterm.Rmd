@@ -16,8 +16,73 @@ output:
 
 ```
 
-
 # W1: Jan. 3rd, 2022
+
+Discussed Chapter 1 (literally). 
+
+- 16th - 18th century math competitions 
+
+- looking to solve polynomials 
+
+- cant solve polynomial greater than 5
+
+- we will see groups of permutations in chapter 7
+
+- don't do Galois thoery in this course (is in 345 and at the end of the book)
+
+  - fun but hard
+
+We are going to prove things with only three rules (in the beginning). 
+
+## Appendix A - Set Theory 
+
+A set is an un-ordered collection of objects. The objects are called elements. 
+
+- set of students , set of real numbers 
+
+We use capital letters (A,B, ...,G, H, K,...) for sets. 
+
+- call group G, and more than one group G, H, K
+
+We use lover case for elements. 
+
+If $x$ is an elements of A, we write $x\in A$. 
+
+- this is read "x is an element of A" or "x is in A"
+
+- $x\notin A$, x is not an element of A
+
+**Ex** : Let $A = \{1,4,3,5\}$. Then $3\in A$, but $b\notin A$.
+
+- culry brackets indicate that order doesn't matter. 
+
+**Ex** : Let B be the set of letters of the alphabet. Then the elements $B=\{a,b,c,...,x,y,z\}$. 
+
+## Common examples of sets
+
+1. The empty set $\emptyset=\{\}$. 
+
+2. The natural numebrs $\mathbb{N}=\{1,2,3,...\}$
+
+3. The integers $\mathbb{Z}=\{...-3,-2,-1,0,1,2,3,...\}$
+
+- Number Theory deal a lot with integers
+
+4. The rational numbers $\mathbb{Q}=\{\frac{m}{n}|m,n\in\mathbb{Z}\text{ and }n\ne0\}$.
+
+- set builder notation, tell the elements and what restrictions on those elements
+
+- could ";" instead of "|"
+
+- bar read "such that"
+
+5. The set of real numbers $\mathbb{R}$
+
+6. The complex numbers $\mathbb{C}=\{a+bi|a,b\in\mathbb{R}\text{ and }i^2=-1\}$
+
+- wont be on test, but are good for showing examples in class
+
+Placing an asterisk in the superscript means delete zero : $\mathbb{R}^*=\{x\in\mathbb{R}|x\ne 0\}$.
 
 # W1: Jan. 5th, 2022
 
