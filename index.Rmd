@@ -1,0 +1,18 @@
+---
+title: "About"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+output:
+  html_document:
+    theme: cerulean
+---
+
+```{r,echo=F, message=F}
+library(dplyr)
+library(kableExtra)
+```
+
+These are class notes and R code for Julie Bracken's MTH-344 : Introduction to Group Theory Application Winter term 2022 at Portland State University.
