@@ -142,9 +142,30 @@ There are three aspects of this definition which need to be stressed:
 
 An operations is a way of combining two elements, so associiative law is important when considering 3 or more elements
 
-# Ch. 3 (1/7)
+# Ch. 3 : The Definition of Groups (1/7)
 
-# Ch. 4 (1/12)
+# Ch. 4 : Elementary Properties of Groups (1/12)
 
-# Ch. 5 (1/14)
+# Ch. 5 : Subgroups (1/14)
 
+# Ch. 6 : Functions (1/21)
+
+# Ch. 7 : Groups of Permutations (1/24)
+
+# Ch. 8 : Permutations of a Finite Set (1/26)
+
+# Ch. 9 : Isomorphism (1/31)
+
+# Ch. 10 : Order of Group Elements (2/4)
+
+# Ch. 11 : Cyclic Groups (2/7)
+
+# Ch. 12 : Paritions and Equivalence Relations (2/16)
+
+# Ch. 13 : Counting Cosets (2/18)
+
+# Ch. 14 : Homomorphisms (2/23)
+
+# Ch. 15 : Quotitent Groups (2/28)
+
+# Ch. 16 : The Fundamental Homomorphism Theorem (3/4)
