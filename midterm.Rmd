@@ -84,6 +84,7 @@ If $x$ is an elements of A, we write $x\in A$.
 
 Placing an asterisk in the superscript means delete zero : $\mathbb{R}^*=\{x\in\mathbb{R}|x\ne 0\}$.
 
+
 # W1: Jan. 5th, 2022
 
 # W1: Jan. 7th, 2022

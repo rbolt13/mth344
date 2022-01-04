@@ -124,6 +124,7 @@ Note : a ring is a set _A_ with two operations, usually symbolized by + and $\cd
 
 - Evariste Galoris (born ~ 1812) tied problems of finding the roots of equations with new discovereies on permutations, but was overlooked (and forgotten) by Cauchy, Fourier, and Poisson. His papers weren't published until 10 years after he died. 
 
+
 # Ch. 2 : Operations (1/5)
 
 _An operation * on A is a rule which assigns to each ordered pair (a,b) of elements of A exactly one element of a*b in A._
@@ -143,6 +144,34 @@ There are three aspects of this definition which need to be stressed:
 An operations is a way of combining two elements, so associiative law is important when considering 3 or more elements
 
 # Ch. 3 : The Definition of Groups (1/7)
+
+A group is a set with a defined operation that is associative, has a neutral element, and for which each element has an inverse. This group can be represented $<G,*>$.
+
+$<\mathbb{Z},+>$ : additive group of integers. 
+
+$<\mathbb{Q},+>$ : additive group of rational numbers.
+
+$<\mathbb{R},+>$ : additive group of the reals.
+
+$<\mathbb{Q^*},\cdot>$ : multiplicative group of non zero rational numbers.
+
+$<\mathbb{R^*},\cdot>$ : multiplicative group of non zero real numbers.
+
+$\mathbb{Q}^{\text{pos}}$ denoters the group of all positive rational numbers. 
+
+$\mathbb{R}^{\text{pos}}$ denoters the group of all positive real numbers. 
+
+Finite groups have a limited number of elements. 
+
+_A groups of integers modulo n_ (where n is any positive integer greate than 1) is the easiest finite group to study. 
+
+- modulo n consists of {0,1,2,...,n-1}. 
+
+- Ex : modulo 6 is {0,1,2,3,4,5}.
+
+- it may be useful to use operation tables 
+
+- Commutative is not true in every group 
 
 # Ch. 4 : Elementary Properties of Groups (1/12)
 
