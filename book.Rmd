@@ -175,6 +175,68 @@ _A groups of integers modulo n_ (where n is any positive integer greate than 1) 
 
 # Ch. 4 : Elementary Properties of Groups (1/12)
 
+Every group has exactly one idently element. 
+
+Each element in every group has exactly one inverse. 
+
+"plus" : additive notation. 
+
+"multiply" : multiplicative notation. 
+
+Groups with be "G" or "H".
+
+e is the identity element. 
+
+"a inverse" : $a^{-1}$.
+
+> **Theorem 1** : If G is a group and a, b, c are elements of G then 
+>
+> (i) $ab=ac\quad\Rightarrow b=c$ and 
+>
+> (ii) $ba=ca\quad \Rightarrow b=c$
+
+Proof : Suppose   
+\begin{equation}\label{proof T.1}
+\begin{split}
+ab & = ac\quad\text{ Then, } \\
+a^{-1}(ab) & = a^{-1}(ac)\quad\text{ By the associative law,} \\
+(a^{-1}a)b & = (a^{-1}a)c \\
+eb & = ec \\
+b & = c
+\end{split}
+\end{equation}
+
+> **Theorem 2** : If G is a group and a, b are elements of G, then
+> $$ab=e\quad\Rightarrow\quad a=b^{-1}\quad\text{ and }\quad b=a^{-1}$$
+
+Proof : If $ab=e$, then $ab=aa^{-1}$ so by the cancellation law, $b=a^{-1}$. Analogously, $a=b^{-1}$. 
+
+Meaning that if the product of two elements is e, then those elements are inverses of each other. (If a is inverse of b, then b is inverse of a.)
+
+> **Theorem 3** : If G is a group and a, b are elements of G, then 
+>
+> (i) $a^{-1}b^{-1}=b^{-1}a^{-1}$
+>
+> (ii) $(a^{-1})^{-1}=a$
+
+Meaning (i) the inverse of a product is the product of the inverse, and (ii) that a is the inverse of the inverse of a.  
+
+Proof (i) : 
+\begin{equation}\label{proof T.3(i)}
+\begin{split}
+(ab)(b^{-1}a^{-1}) & = a[(bb^{-1})a^{-1}] \\
+& = a[ea^{-1}] \\
+& = aa^{-1} \\
+& = e
+\end{split}
+\end{equation}
+
+Since the product ab and $b^{-1}a^{-1}$ is equal to e, it follows by T.2 that they are each others inverses. Thus, $(ab)^{-1}=b^{-1}a^{-1}$. 
+
+Proof (ii) : $aa^{-1}=e$ , so by T.2 a is the inverse of $a^{-1}$, that is $a=(a^{-1})^{-1}$. 
+
+If G is a finite group, the number of elements in G is called the _order_ of G. It is customary to denote the order of G by the symbol |G|. 
+
 # Ch. 5 : Subgroups (1/14)
 
 # Ch. 6 : Functions (1/21)

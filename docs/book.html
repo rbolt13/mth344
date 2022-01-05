@@ -481,6 +481,54 @@ div.tocify {
 </div>
 <div id="ch.-4-elementary-properties-of-groups-112" class="section level1">
 <h1>Ch. 4 : Elementary Properties of Groups (1/12)</h1>
+<p>Every group has exactly one idently element.</p>
+<p>Each element in every group has exactly one inverse.</p>
+<p>“plus” : additive notation.</p>
+<p>“multiply” : multiplicative notation.</p>
+<p>Groups with be “G” or “H”.</p>
+<p>e is the identity element.</p>
+<p>“a inverse” : <span class="math inline">\(a^{-1}\)</span>.</p>
+<blockquote>
+<p><strong>Theorem 1</strong> : If G is a group and a, b, c are elements of G then</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(ab=ac\quad\Rightarrow b=c\)</span> and</p></li>
+<li><p><span class="math inline">\(ba=ca\quad \Rightarrow b=c\)</span></p></li>
+</ol>
+</blockquote>
+<p>Proof : Suppose<br />
+<span class="math display">\[\begin{equation}\label{proof T.1}
+\begin{split}
+ab &amp; = ac\quad\text{ Then, } \\
+a^{-1}(ab) &amp; = a^{-1}(ac)\quad\text{ By the associative law,} \\
+(a^{-1}a)b &amp; = (a^{-1}a)c \\
+eb &amp; = ec \\
+b &amp; = c
+\end{split}
+\end{equation}\]</span></p>
+<blockquote>
+<p><strong>Theorem 2</strong> : If G is a group and a, b are elements of G, then <span class="math display">\[ab=e\quad\Rightarrow\quad a=b^{-1}\quad\text{ and }\quad b=a^{-1}\]</span></p>
+</blockquote>
+<p>Proof : If <span class="math inline">\(ab=e\)</span>, then <span class="math inline">\(ab=aa^{-1}\)</span> so by the cancellation law, <span class="math inline">\(b=a^{-1}\)</span>. Analogously, <span class="math inline">\(a=b^{-1}\)</span>.</p>
+<p>Meaning that if the product of two elements is e, then those elements are inverses of each other. (If a is inverse of b, then b is inverse of a.)</p>
+<blockquote>
+<p><strong>Theorem 3</strong> : If G is a group and a, b are elements of G, then</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(a^{-1}b^{-1}=b^{-1}a^{-1}\)</span></p></li>
+<li><p><span class="math inline">\((a^{-1})^{-1}=a\)</span></p></li>
+</ol>
+</blockquote>
+<p>Meaning (i) the inverse of a product is the product of the inverse, and (ii) that a is the inverse of the inverse of a.</p>
+<p>Proof (i) : <span class="math display">\[\begin{equation}\label{proof T.3(i)}
+\begin{split}
+(ab)(b^{-1}a^{-1}) &amp; = a[(bb^{-1})a^{-1}] \\
+&amp; = a[ea^{-1}] \\
+&amp; = aa^{-1} \\
+&amp; = e
+\end{split}
+\end{equation}\]</span></p>
+<p>Since the product ab and <span class="math inline">\(b^{-1}a^{-1}\)</span> is equal to e, it follows by T.2 that they are each others inverses. Thus, <span class="math inline">\((ab)^{-1}=b^{-1}a^{-1}\)</span>.</p>
+<p>Proof (ii) : <span class="math inline">\(aa^{-1}=e\)</span> , so by T.2 a is the inverse of <span class="math inline">\(a^{-1}\)</span>, that is <span class="math inline">\(a=(a^{-1})^{-1}\)</span>.</p>
+<p>If G is a finite group, the number of elements in G is called the <em>order</em> of G. It is customary to denote the order of G by the symbol |G|.</p>
 </div>
 <div id="ch.-5-subgroups-114" class="section level1">
 <h1>Ch. 5 : Subgroups (1/14)</h1>
