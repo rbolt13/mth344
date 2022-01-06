@@ -16,7 +16,7 @@ output:
 
 ```
 
-# W1: Jan. 3rd, 2022
+# W1 D1: Jan. 3rd, 2022
 
 Discussed Chapter 1 (literally). 
 
@@ -84,7 +84,132 @@ If $x$ is an elements of A, we write $x\in A$.
 
 Placing an asterisk in the superscript means delete zero : $\mathbb{R}^*=\{x\in\mathbb{R}|x\ne 0\}$.
 
+Placing a + in the superscript means the set only contains $\mathbb{R}^+=\{x\in\mathbb{R}|x>0\}$. 
 
-# W1: Jan. 5th, 2022
+# W1 D2: Jan. 5th, 2022
 
-# W1: Jan. 7th, 2022
+## Definitions
+
+1. A set B is a **subset** of A, denoted $B\subseteq A$, if every element of B is an element of B is an element of A. 
+
+![](img/img4.png)
+
+- Ex: $\mathbb{Z\subseteq Q}$ and $\mathbb{Q\subseteq R}$
+
+2. The **union** of two sets A and B, denoted $A\cup B$, is the $$A\cup B=\{x|x\in A\text{ or } x\in B\text{ or both}\}$$
+
+![](img/img5.png)
+
+3. The **intersection** of A and B, denoted $A\cap B$, is the set $$A\cap B=\{x|x\in A \text{ and } x\in B\}$$
+
+![](img/img6.png)
+
+4. The **Cartesian product** of A and B, denoted $A\times B$, is the set $$A\times B=\{(a,b)|a\in A \text{ and } b\in B\}$$ 
+
+- Ex : Let $A=\{1,2\}$ and $B=\{2,3,4\}$, then $$A\times B=\{(1,2),(1,3),(1,4),(2,2),(2,3),(2,4)\}$$
+
+## Other notations
+
+1. $\Rightarrow$ means "implies"
+
+- Ex : $x=2\Rightarrow x^2=4$
+
+2. $\Leftrightarrow$ means "if and only if"
+
+- Ex : $x=\pm 2\Leftrightarrow x^2=4$
+
+- The statements on either side of $\Leftrightarrow$ are equivalents. 
+
+$\square$ : means end of proof (so does Q.E.D.)
+
+$\forall$ : means for all
+
+$\exists$ : means there exists 
+
+s.t. : such that
+
+w.r.t. : with respect to 
+
+WLOG : without loss of generality 
+
+TFAE : the following are equivalent 
+
+![](img/img7.png)
+
+## Operations 
+
+An **operation** * on a set A is a rule which assigns to each ordered pair (a,b) of elements of A exactly one element $a*b$ of A.
+
+- needs to work for each ordered pair. 
+
+- output comes from the same set we started with, A. 
+
+Common Examples (and nonexamples) : 
+
+1. + is an operation on $\mathbb{Z,Q,R,C}$
+
+2. + isn't an operation on $\mathbb{R}*$, because 1, $-1\in \mathbb{R}*$ but $1+(-1)=0\notin\mathbb{R}^*$
+
+3. $\cdot$ is an operation on $\mathbb{Z, Q, R, R^*}$, ect. 
+
+4. - is not an operation on $\mathbb{N}=\{1,2,3,4,...\}$ since $2,5\in\mathbb{N}$ but $2-5=-3\notin\mathbb{N}$
+
+5. $\div$ is not an operation on $\mathbb{Z}$, since $0\in\mathbb{Z}$ and we can't divide by sero. 
+
+6. Matrix addition and multiplication are operations on the set of $2\times 2$ matrices with real entries.
+
+7. Compositions is an operation on sets of functions. 
+
+## Operation Tables 
+
+Suppose * is an operation on $A=\{a,b,c\}$. 
+
+![](img/img8.png)
+
+- Ex : Let $A=\{0,1,2\}$. Define an operation + on A, called addition mod 3, as follows : 
+
+![](img/img9.png)
+
+To compute $1+2$, start at 1 on the circle and move 2 spaces clockwise. 
+
+So, $1+2=0$ in A. Similarly $2+2=1$ in A. Another way to think about this " 
+
+In the integers $2+2=4$, and 4 is 1 more than 3. 
+
+Here's the operation table: 
+
+![](img/img10.png)
+
+Notice the table has the property that every element of A appears exactly once in each row and column. 
+
+- Sudoku property 
+
+## Properties of Opertations 
+
+Let * be an operation on a set A. 
+
+1. * is **commutative** if $a\ne b=b\ne a\forall a,b\in A$. 
+
+Ex : 
+
+(i) + and $\cdot$ of numbers are commutative operations. 
+
+(ii) matrix multiplication is $\underline{\text{not}}$ commutative : 
+
+$$(\begin{smallmatrix} 1 & 1 \\ 1 & 0\end{smallmatrix})(\begin{smallmatrix} 1 & 1 \\ 0 & 1\end{smallmatrix})\ne(\begin{smallmatrix} 1 & 1 \\ 0 & 1\end{smallmatrix})(\begin{smallmatrix} 1 & 1 \\ 1 & 0\end{smallmatrix})$$
+
+(iii) - and $\div$ are $\underline{\text{not}}$ commutative : 
+
+$$1-2\ne 2-1\quad\text{and}\quad\frac{1}{2}\ne\frac{2}{1}$$
+
+(iv) function composition $\underline{\text{isn't}}$ commutative : 
+
+Let $f(x)=x^2$ and $g(x)=x+1$. 
+
+Then $(f\circ g)(x)=f(g(x))=(x+1)^2$, but $(g\circ f)(x)=g(f(x))=x^2+1$. 
+
+# W1 D3: Jan. 7th, 2022
+
+
+
+

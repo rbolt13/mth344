@@ -127,17 +127,17 @@ Note : a ring is a set _A_ with two operations, usually symbolized by + and $\cd
 
 # Ch. 2 : Operations (1/5)
 
-_An operation * on A is a rule which assigns to each ordered pair (a,b) of elements of A exactly one element of a*b in A._
+An operation * on A is a rule which assigns to each ordered pair (a,b) of elements of A exactly one element of a*b in A.
 
 There are three aspects of this definition which need to be stressed: 
 
-(1) _a*b is defined $\forall$ oredered pair (a,b) of elements of A_
+(1) a*b is defined $\forall$ oredered pair (a,b) of elements of A
 
 - For example, division does not qualify as an operation on the set of $\mathbb{R}$ the real numbers, for there are ordered pairs such as (3,0) whose quotient 3/0 is undefined. In order to be an operation on $\mathbb{R}$, division would have to associate a real number alb with every ordered pair (a, b) of elements of $\mathbb{R}$.
 
-(2) _a*b must be uniquely defined._
+(2) a*b must be uniquely defined.
 
-(3) _If a and b are in A, a*b must be in A_
+(3) If a and b are in A, a*b must be in A
 
 - "A is closed under the operation *"
 
@@ -306,6 +306,8 @@ A group determined by a set of generators and defining equations, can be represe
 ![](img/img3.png)
 
 # Ch. 6 : Functions (1/21)
+
+Pages 60 - 65
 
 # Ch. 7 : Groups of Permutations (1/24)
 
