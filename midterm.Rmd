@@ -186,19 +186,19 @@ Notice the table has the property that every element of A appears exactly once i
 
 ## Properties of Opertations 
 
-Let * be an operation on a set A. 
+Let $*$ be an operation on a set A. 
 
-1. * is **commutative** if $a\ne b=b\ne a\forall a,b\in A$. 
+1. $*$ is **commutative** if $a\ne b=b\ne a\forall a,b\in A$. 
 
 Ex : 
 
-(i) + and $\cdot$ of numbers are commutative operations. 
+(i) $+$ and $\cdot$ of numbers are commutative operations. 
 
 (ii) matrix multiplication is $\underline{\text{not}}$ commutative : 
 
 $$(\begin{smallmatrix} 1 & 1 \\ 1 & 0\end{smallmatrix})(\begin{smallmatrix} 1 & 1 \\ 0 & 1\end{smallmatrix})\ne(\begin{smallmatrix} 1 & 1 \\ 0 & 1\end{smallmatrix})(\begin{smallmatrix} 1 & 1 \\ 1 & 0\end{smallmatrix})$$
 
-(iii) - and $\div$ are $\underline{\text{not}}$ commutative : 
+(iii) $-$ and $\div$ are $\underline{\text{not}}$ commutative : 
 
 $$1-2\ne 2-1\quad\text{and}\quad\frac{1}{2}\ne\frac{2}{1}$$
 
@@ -210,6 +210,7 @@ Then $(f\circ g)(x)=f(g(x))=(x+1)^2$, but $(g\circ f)(x)=g(f(x))=x^2+1$.
 
 # W1 D3: Jan. 7th, 2022
 
+# Properties of Operations Cont. 
 
 
 
