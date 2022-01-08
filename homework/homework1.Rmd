@@ -41,11 +41,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## 4. Define an operation * on the set $G=\{(x,y)\in\mathbb{R}\times\mathbb{R}|x\ne 0\}$ by $$(a,b)*(c,d)=(ac,ad+bc).$$ Prove that $\langle G,*\rangle$ is an abelian group. (You do not need to check associativity. We will show this in class.)
 
-## 5. 
+## 5. Let a,b,c,x be elements of a group G. Solve the following system of equations for x : 
 
-### (a)
+### (a) $bx^2=ax^{-1}\quad$ and $x^4=c$
 
-### (b)
+### (b) $x^2c=bxa^{-1}\quad$ and $xca=cax$
 
 ## 6. This problem asks you to consider the importance of using proper notation for inverses in groups. Your answer only needs to be a sentence or two. 
+## Suppose a,b, and x are elements of a _nonabelian_ group G, and that we want to solve thte equation $ax=b$ for x. Why would it be incorrect and unclear to say that the solution is $x=\frac{b}{a}$
 
