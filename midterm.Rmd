@@ -214,7 +214,7 @@ Then $(f\circ g)(x)=f(g(x))=(x+1)^2$, but $(g\circ f)(x)=g(f(x))=x^2+1$.
 
 Let A be a set. An $\underline{\text{operation}}$ * on A is a rule which assigns to each ordered pair of elements of A exactly one element $a*b\in A$. 
 
-**Remarkds :**
+**Remarks :** 
 
 1. a*b must be defined for every choice of $a,b\in A$.
 
