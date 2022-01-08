@@ -1,0 +1,51 @@
+---
+title: "MTH 344-001 Winter 2022 HW 1"
+author: "Randi Bolt"
+date: "1/14/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. Do the following define operations on the given set? Why or why not? (Your answers only need to be a sentance or two; if these do define operations, you do not need to check if they're commutative, associatve, ect. in this problem.)
+
+### (a) $a*b=4a-b$ on $\mathbb{Z}$
+
+### (b) $a*b=3^b$ on $\mathbb{Q}$
+
+### (c) $a*b=\frac{a}{ab+2}$ on $\mathbb{R}$
+
+### (d) $a*b=\frac{1}{ab+2}$ on $\mathbb{R}^+$
+
+## 2. Define an operation * on $\mathbb{R}$ by $a*b=3a-4b+2$
+
+### (a) Is * commutative?
+
+### (b) Is * associative?
+
+### (c) Is there an identity element $e\in \mathbb{R}$ w.r.t. *?
+
+### (d) Does every element $a\in\mathbb{R}$ have an inverse w.r.t. *?
+
+## 3. Define an operation * on $\mathbb{R}$ by $a*b=a+b-ab$. 
+
+### (a) Is * commutative?
+
+### (b) Is * associative?
+
+### (c) Is there an identity element $e\in \mathbb{R}$ w.r.t. *?
+
+### (d) Does every element $a\in\mathbb{R}$ have an inverse w.r.t. *?
+
+## 4. Define an operation * on the set $G=\{(x,y)\in\mathbb{R}\times\mathbb{R}|x\ne 0\}$ by $$(a,b)*(c,d)=(ac,ad+bc).$$ Prove that $\langle G,*\rangle$ is an abelian group. (You do not need to check associativity. We will show this in class.)
+
+## 5. 
+
+### (a)
+
+### (b)
+
+## 6. This problem asks you to consider the importance of using proper notation for inverses in groups. Your answer only needs to be a sentence or two. 
+

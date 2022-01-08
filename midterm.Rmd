@@ -7,6 +7,7 @@ knit: (function(input_file, encoding) {
  output_file=file.path(dirname(input_file), out_dir, 'midterm.html'))})
 output:
   html_document:
+    css: style.css
     toc: true
     toc_float: TRUE
     theme: cerulean
