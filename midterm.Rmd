@@ -210,7 +210,159 @@ Then $(f\circ g)(x)=f(g(x))=(x+1)^2$, but $(g\circ f)(x)=g(f(x))=x^2+1$.
 
 # W1 D3: Jan. 7th, 2022
 
-# Properties of Operations Cont. 
+## Ch. 2 - Operations, Cont. 
 
+Let A be a set. An $\underline{\text{operation}}$ * on A is a rule which assigns to each ordered pair of elements of A exactly one element $a*b\in A$. 
 
+**Remarkds :**
+
+1. a*b must be defined for every choice of $a,b\in A$.
+
+2. For each choice of a and b in A, $a*b$ can only equal one element. (We can't have something like $a*b=\pm 3$.)
+
+3. For each choice of a and b in A, a*b must also be in the set A. 
+
+### Properties of Operations 
+
+1. We say * is $\underline{\text{commutative}}$ if $a*b=b*a$ for all $a,b\in A$ 
+
+2. We say * is $\underline{\text{associative}}$ if $(a*b)*c=a*(b*c)\forall a,b,c\in A$. 
+
+Examples :
+
+- $+$ is associative. 
+
+- Multiplication of numbers and square matrices are associative perations.
+
+- Subtraction of numbers $\underline{\text{isn't}}$ associative : 
+
+  - $(1-2)-3=-1-3=-4$
+  
+  - $1-(2-3)=1-(-1)=2$
+  
+  - NOT EQUAL !! 
+  
+3. If there exists $e\in A$ such that $e*a=a*e=a$ for all $a\in A$ we call e the $\underline{\text{identity element}}$ in A with respect to *. 
+
+Examples : 
+
+- zero is the identity w.r.t addition. 
+
+- $1\in \mathbb{R}$ is the identy w.r.t. multiplication of numebrs
+
+- zero isn't the identity w.r.t. subtraction, since 0-b=-b instead of b. 
+
+4. If $e\in A$ is the identity w.r.t. * and $a,b\in A$ are such that $$a*b=b*a=e$$, we call a and b $\underline{\text{inverses}}$ of one another. 
+
+$\underline{\text{Notation: }}$ $a=b^{-1}\quad$ and $b=a^{-1}$
+
+Examples : 
+
+- The inverese of $a\in \mathbb{R}$ w.r.t. + and -a, since $a+(-a)=(-a)+a=0$.
+
+- The inverse of $a\in \mathbb{R}^*$ w.r.t. multiplication is $\frac{1}{a}$ since $$a\cdot\frac{1}{a}=\frac{1}{a}\cdot a=1$$
+
+### Example 1: (Similar to #2, 3 on HW 1)
+
+Define * on $\mathbb{R}$ by $a*b=a+2b+4$. 
+
+- "First # plus two times the second # plus 4"
+
+For example, $3*7=3+2\cdot 7+4=21$ and $7*3=7+2\cdot3+4=17$
+
+(a) Since $3*7=7*3$, the operation * is not commutative. 
+
+(b) Is * associative? 
+
+\begin{equation}
+\label{d3 b1}
+\begin{split}
+(a*b)*c &= (a+2b+4)*c\\
+&=a+2b+4+2c+4\\
+&=a+2b+2c+8
+\end{split}
+\end{equation}
+
+\begin{equation}
+\label{d3 b2}
+\begin{split}
+a*(b*c) &= a*(b+2c+4)\\
+&=a+2(b+2c+4)+4\\
+&=a+2b+4c+12
+\end{split}
+\end{equation}
+
+Since $(a*b)*c\ne a*(b*c)$, * isn't associative. 
+
+(c) Is there an identity $e\in\mathbb{R}$ wrt *?
+
+The process : Pretend $e\in\mathbb{R}$ exists. This means $e*a=a$. 
+
+If so, then this value of c is the identity. If not, there is no identity. 
+
+\begin{equation}
+\label{d3 c}
+\begin{split}
+e*a = a &\Rightarrow a+2e+4=a\\
+&\Rightarrow 2e+4=0\\
+&\Rightarrow e=-2
+\end{split}
+\end{equation}
+
+"When solving for e, the answer must be a constant element of the set, i.e. Can't involve variables."
+
+Check other order:
+
+$$e*a=-2*a=-2+2a+4=2a+2$$
+
+Since $-2*a\ne a$, then no there is no identity in $\mathbb{R}$ w.r.t. *. 
+
+### Example 2: 
+
+Define * on $\mathbb{R}$ by $a*b=a+b+ab$
+
+(a) Show that * is commutative : 
+
+\begin{equation}
+\label{d3 2a}
+\begin{split}
+a*b &= a+b+ab\\
+&= b+a+ab\quad\text{ since + is commutative}\\
+&= b+a+ba\quad\text{since }\cdot\text{ is commutative}\\
+&= b*a
+\end{split}
+\end{equation}
+
+(b) Is there an identity w.r.t. *? Yes, lets show $0\in\mathbb{R}$ is the identity: $a*0=a+0+a\cdot 0=a$
+
+Why must it be true that $0*a=a$ as well? We already showed * is commutative.
+
+(c) Which elements $a\in\mathbb{R}$ have inverses w.r.t. *?
+
+Process : 
+
+Suppose $b=a^{-1}$. Then $a*b=0$. (Identity found in part (c))
+
+Try to solve this equation for b. 
+
+Once we solve for b, check if $b*a=0$ as well. 
+
+\begin{equation}
+\label{d3 2c}
+\begin{split}
+a*b=0 &\Rightarrow a+b+ab=0\\
+&\Rightarrow b(1+a)=-a\\
+&\Rightarrow b =\frac{-a}{1+a}
+\end{split}
+\end{equation}
+
+So every $a\in\mathbb{R}$ except -1 has an inverse given by $$a^{-1}=\frac{-a}{1+a}$$. 
+
+Note: We didn't need to check that when $\frac{-a}{1+a}$, $b*a=0$ as well, since we know * is commutative. 
+
+# W2 D4: Jan. 10th, 2022
+
+# W2 D5: Jan. 12th, 2022
+
+# W2 D6: Jan. 14th, 2022
 
