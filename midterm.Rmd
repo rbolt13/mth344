@@ -271,7 +271,7 @@ Define * on $\mathbb{R}$ by $a*b=a+2b+4$.
 
 For example, $3*7=3+2\cdot 7+4=21$ and $7*3=7+2\cdot3+4=17$
 
-(a) Since $3*7=7*3$, the operation * is not commutative. 
+(a) Since $3*7\ne7*3$, the operation * is not commutative. 
 
 (b) Is * associative? 
 
