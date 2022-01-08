@@ -284,6 +284,8 @@ For example, $3*7=3+2\cdot 7+4=21$ and $7*3=7+2\cdot3+4=17$
 \end{split}
 \end{equation}
 
+- think of (a+2b+4) is first # and c is the 2nd # 
+
 \begin{equation}
 \label{d3 b2}
 \begin{split}
@@ -297,9 +299,11 @@ Since $(a*b)*c\ne a*(b*c)$, * isn't associative.
 
 (c) Is there an identity $e\in\mathbb{R}$ wrt *?
 
-The process : Pretend $e\in\mathbb{R}$ exists. This means $e*a=a$. 
+The process : Pretend $e\in\mathbb{R}$ exists. This means $e*a=a\forall a\in\mathbb{R}$.
 
-If so, then this value of c is the identity. If not, there is no identity. 
+Rewrite this equation, then solve for e. If we find a solution for $e\in\mathbb{R}$, check if $$e*a=a$$
+
+If so, then this value of e is the identity. If not, there is no identity. 
 
 \begin{equation}
 \label{d3 c}

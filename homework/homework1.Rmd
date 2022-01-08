@@ -23,6 +23,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### (a) Is * commutative?
 
+\begin{equation}
+\label{2a}
+\begin{split}
+a*b &= a+b-ab\\
+&= b+a-ab\quad\text{ since + is commutative}\\
+&= b+a-ba\quad\text{since }\cdot\text{ is commutative}\\
+&= b*a
+\end{split}
+\end{equation}
+
 ### (b) Is * associative?
 
 ### (c) Is there an identity element $e\in \mathbb{R}$ w.r.t. *?

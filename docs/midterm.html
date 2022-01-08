@@ -585,7 +585,7 @@ div.tocify {
 </ul>
 <p>For example, <span class="math inline">\(3*7=3+2\cdot 7+4=21\)</span> and <span class="math inline">\(7*3=7+2\cdot3+4=17\)</span></p>
 <ol style="list-style-type: lower-alpha">
-<li><p>Since <span class="math inline">\(3*7=7*3\)</span>, the operation * is not commutative.</p></li>
+<li><p>Since <span class="math inline">\(3*7\ne7*3\)</span>, the operation * is not commutative.</p></li>
 <li><p>Is * associative?</p></li>
 </ol>
 <p><span class="math display">\[\begin{equation}
@@ -596,6 +596,9 @@ div.tocify {
 &amp;=a+2b+2c+8
 \end{split}
 \end{equation}\]</span></p>
+<ul>
+<li>think of (a+2b+4) is first # and c is the 2nd #</li>
+</ul>
 <p><span class="math display">\[\begin{equation}
 \label{d3 b2}
 \begin{split}
@@ -608,8 +611,9 @@ a*(b*c) &amp;= a*(b+2c+4)\\
 <ol start="3" style="list-style-type: lower-alpha">
 <li>Is there an identity <span class="math inline">\(e\in\mathbb{R}\)</span> wrt *?</li>
 </ol>
-<p>The process : Pretend <span class="math inline">\(e\in\mathbb{R}\)</span> exists. This means <span class="math inline">\(e*a=a\)</span>.</p>
-<p>If so, then this value of c is the identity. If not, there is no identity.</p>
+<p>The process : Pretend <span class="math inline">\(e\in\mathbb{R}\)</span> exists. This means <span class="math inline">\(e*a=a\forall a\in\mathbb{R}\)</span>.</p>
+<p>Rewrite this equation, then solve for e. If we find a solution for <span class="math inline">\(e\in\mathbb{R}\)</span>, check if <span class="math display">\[e*a=a\]</span></p>
+<p>If so, then this value of e is the identity. If not, there is no identity.</p>
 <p><span class="math display">\[\begin{equation}
 \label{d3 c}
 \begin{split}
