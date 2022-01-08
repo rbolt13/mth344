@@ -338,11 +338,13 @@ a*b &= a+b+ab\\
 \end{split}
 \end{equation}
 
-(b) Is there an identity w.r.t. *? Yes, lets show $0\in\mathbb{R}$ is the identity: $a*0=a+0+a\cdot 0=a$
+(b) skip associativity for time
+
+(c) Is there an identity w.r.t. *? Yes, lets show $0\in\mathbb{R}$ is the identity: $a*0=a+0+a\cdot 0=a$
 
 Why must it be true that $0*a=a$ as well? We already showed * is commutative.
 
-(c) Which elements $a\in\mathbb{R}$ have inverses w.r.t. *?
+(d) Which elements $a\in\mathbb{R}$ have inverses w.r.t. *?
 
 Process : 
 

@@ -23,17 +23,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### (a) Is * commutative?
 
+No, let a=1, and let b=2. 
+
 \begin{equation}
-\label{2a}
+\label{1a}
 \begin{split}
-a*b &= a+b-ab\\
-&= b+a-ab\quad\text{ since + is commutative}\\
-&= b+a-ba\quad\text{since }\cdot\text{ is commutative}\\
-&= b*a
+3a-4b+2= 3b-4a+2\\
+3(1)-4(2)+2 &= 3(2)-4(1)+2\\
+3-8+2 &= 6-4+2\\
+-3 &\ne 4
 \end{split}
 \end{equation}
 
+
+
 ### (b) Is * associative?
+
+
 
 ### (c) Is there an identity element $e\in \mathbb{R}$ w.r.t. *?
 
@@ -42,6 +48,16 @@ a*b &= a+b-ab\\
 ## 3. Define an operation * on $\mathbb{R}$ by $a*b=a+b-ab$. 
 
 ### (a) Is * commutative?
+
+\begin{equation}
+\label{1a}
+\begin{split}
+a*b &= a+b-ab\\
+&= b+a-ab\quad\text{ since + is commutative}\\
+&= b+a-ba\quad\text{since }\cdot\text{ is commutative}\\
+&= b*a
+\end{split}
+\end{equation}
 
 ### (b) Is * associative?
 
