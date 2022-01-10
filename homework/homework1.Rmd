@@ -13,44 +13,200 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### (a) $a*b=4a-b$ on $\mathbb{Z}$
 
+No, because the operation * is neither commutative, or associative. 
+
+Commutative : Let $a=1$, and $b=2$ , 
+
+$$a*b=4a-b=4(1)-2=4-2=2$$
+
+$$b*a=4b-a=4(2)-a=8-1=7$$
+
+$$2\ne 7$$
+
+$\square$
+
+Associative : 
+
+$$(a*b)*c=(4a-b)*c=4(4a-b)-c=16a-4b-c$$
+
+$$a*(b*c)=4a-(4b-c)=4a-4b+c$$
+
+$$16a-4b-c\ne 4a-4b+c$$
+
+$\square$
+
 ### (b) $a*b=3^b$ on $\mathbb{Q}$
+
+No, because * is neither commutative, or associative.
+
+Commutative : Let $a=1$ and $b=2$ then, 
+
+$$a*b=3^2=9\ne 3=3^1=b*a$$
+
+$\square$
+
+Associative :
+
+$$a*(b*c)=(3^c)^{3^c}\ne 3^c=(a*b)*c$$
+
+$\square$
 
 ### (c) $a*b=\frac{a}{ab+2}$ on $\mathbb{R}$
 
+No, because the operation * is neither commutative, or associative. 
+
+Commutative : Let $a=1$, and $b=2$ ,
+
+$$a*b=\frac{a}{ab+2}=\frac{1}{4}\ne\frac{1}{2}=\frac{b}{ba+2}=b*a$$
+
+$\square$
+
+Associative :
+
+$$a*(b*c)=a*\frac{b}{bc+2}=\frac{a}{a\frac{b}{bc+2}+2}=\frac{\frac{a}{1}}{\frac{ab+2(bc+2)}{bc+2}}=\frac{a(bc+2)}{ab+2(bc+2)}=\frac{abc+2}{ab+2bc+4}$$
+
+$$(a*b)*c=\frac{a}{ab+2}*c=\frac{\frac{a}{ab+2}}{\frac{a}{ab+2}c+2}=\frac{\frac{a}{ab+2}}{\frac{ac+2(ab+2)}{ab+2}}=\frac{a(ab+2)}{(ac+2(ab+2))(ab+2)}=\frac{a^2b+2a}{(ac+2ab+4)(ab+2)}$$
+
+$$a*(b*c)\ne(a*b)*c$$
+
+$\square$
+
 ### (d) $a*b=\frac{1}{ab+2}$ on $\mathbb{R}^+$
+
+No, because the operation * is not associative.
+
+$$a*(b*c)=a*(\frac{1}{bc+2})=\frac{1}{a(\frac{1}{bc+2})+2}=\frac{\frac{1}{1}}{\frac{a+2(bc+2)}{bc+2}}=\frac{bc+2}{a+2bc+4}$$
+
+Let $a=1$, $b=2$, $c=3$, 
+
+$$\frac{bc+2}{a+2bc+4}=\frac{2(3)+2}{1+2(2)(3)+4}=\frac{8}{17}\approx 0.470588$$
+
+$$(a*b)*c=(\frac{1}{ab+2})*c=\frac{1}{(\frac{1}{ab+2})c+2}=\frac{\frac{1}{1}}{\frac{c+2(ab+2)}{ab+2}}=\frac{ab+2}{c+2ab+4}$$
+
+Let $a=1$, $b=2$, $c=3$,
+
+$$\frac{ab+2}{c+2ab+4}=\frac{4}{3+4+4}=\frac{4}{11}\approx 0.3636$$
+
+$$\frac{8}{17}\ne\frac{4}{11}$$
+
+$\square$
 
 ## 2. Define an operation * on $\mathbb{R}$ by $a*b=3a-4b+2$
 
 ### (a) Is * commutative?
 
-No, let a=1, and let b=2. 
+No, let $a=1$, and $b=2$. 
 
 \begin{equation}
 \label{1a}
 \begin{split}
-3a-4b+2= 3b-4a+2\\
+3a-4b+2 &= 3b-4a+2\\
 3(1)-4(2)+2 &= 3(2)-4(1)+2\\
 3-8+2 &= 6-4+2\\
 -3 &\ne 4
 \end{split}
 \end{equation}
 
+Since $a*b\ne b*a$, then * is NOT commutative. 
 
+$\square$
 
 ### (b) Is * associative?
 
+No, 
 
+\begin{equation}
+\label{1b}
+\begin{split}
+(a*b)*c &= (3a-4b+2)*c\\
+&= 3(3a-4b+2)-4c+2\\
+&= 9a-12b+6-4c+2\\
+&= 9a-12b-4c+8
+\end{split}
+\end{equation}
+
+\begin{equation}
+\label{1b-2}
+\begin{split}
+a*(b*c) &= a*(3b-4c+2)\\
+&= 3a-4(3b-4c+2)+2\\
+&= 3a-12b+16c-8+2\\
+&= 3a-12b+16c-6
+\end{split}
+\end{equation}
+
+Since $(a*b)*c\ne a*(b*c)$, then * isn't associative. 
+
+$\square$
 
 ### (c) Is there an identity element $e\in \mathbb{R}$ w.r.t. *?
 
+No, let $e\in\mathbb{R}$ such that $e*a=a\forall a\in\mathbb{R}$.
+
+\begin{equation}
+\label{1c}
+\begin{split}
+e*a=a\Rightarrow 3a-4e+2 &= a \\
+&\Rightarrow 4e = 2a+2\\
+&\Rightarrow e = \frac{1}{4}(2a+2)= \frac{1}{2}a+\frac{1}{2}
+\end{split}
+\end{equation}
+
+Checking the other order,
+
+\begin{equation}
+\label{1c2}
+\begin{split}
+e*a &= 3(\frac{1}{2}a+\frac{1}{2})-4a+2\\
+&= \frac{3a}{2}+\frac{3}{2}-\frac{8a}{2}+\frac{4}{2}\\
+&= \frac{5a}{2}+\frac{7}{2}\\
+&\ne a
+\end{split}
+\end{equation}
+
+Since $e*a\ne a$ there is no identity in $\mathbb{R}$ w.r.t. *. 
+
+$\square$
+
 ### (d) Does every element $a\in\mathbb{R}$ have an inverse w.r.t. *?
+
+No, suppose $b=a^{-1}$, then $a*b=0$.
+
+\begin{equation}
+\label{1d}
+\begin{split}
+a*b=0\Rightarrow  3a-4b+2=0\\
+&\Rightarrow 3a+2=4b\\
+&\Rightarrow b=\frac{3a+2}{4}\\
+&\Rightarrow a^{-1}=\frac{3a+2}{4}
+\end{split}
+\end{equation}
+
+Checking the other order,
+
+\begin{equation}
+\label{1d2}
+\begin{split}
+b*a=0 &\Rightarrow 3b-4a+2=0\\
+&\Rightarrow 3(\frac{3a+2}{4})=4a-2\\
+&\Rightarrow 9a+6=a-\frac{1}{2}\\
+&\Rightarrow 8a=-5.5\\
+&\rightarrow a=\frac{-5.5}{8}=0.6875\ne 0
+\end{split}
+\end{equation}
+
+Since $b*a\ne 0$ there is no inverse in $\mathbb{R}$ w.r.t. *. 
+
+$\square$
 
 ## 3. Define an operation * on $\mathbb{R}$ by $a*b=a+b-ab$. 
 
 ### (a) Is * commutative?
 
+Yes, 
+
 \begin{equation}
-\label{1a}
+\label{3a}
 \begin{split}
 a*b &= a+b-ab\\
 &= b+a-ab\quad\text{ since + is commutative}\\
@@ -59,11 +215,59 @@ a*b &= a+b-ab\\
 \end{split}
 \end{equation}
 
+Since $a*b=b*a$ then * is commutative. 
+
+$\square$
+
 ### (b) Is * associative?
+
+Yes, 
+
+\begin{equation}
+\label{3b}
+\begin{split}
+a*(b*c) &= a*(b+c-bc)\\
+&= a+(b+c-bc)-a(b+c-bc)\\
+&= a+b+c-ab-ac-bc+abc
+\end{split}
+\end{equation}
+
+\begin{equation}
+\label{3b2}
+\begin{split}
+(a*b)*c &= (a+b-ab)*c\\
+&= (a+b-ab)+c-c(a+b-ab)\\
+&= a+b-ab+c-ca+cb-abc\\
+&= a+b+c-ab-ac-bc+abc
+\end{split}
+\end{equation}
+
+Since $a*(b*c)=(a*b)*c$ then * is associative. 
+
+$\square$
 
 ### (c) Is there an identity element $e\in \mathbb{R}$ w.r.t. *?
 
+Yes, since $0\in\mathbb{R}$ $a*0=0*a=a+0-a(0)=a$. Therefore there is an identity element $e=0$ w.r.t. *. 
+
+$\square$
+
 ### (d) Does every element $a\in\mathbb{R}$ have an inverse w.r.t. *?
+
+Yes, suppose $b=a^{-1}$, then $a*b=b*a=0$ (Identity found if part c). 
+
+\begin{equation}
+\label{3d}
+\begin{split}
+a*b=0 &\Rightarrow a+b-ab=0\\
+&\Rightarrow b(1-a)=-a\\
+&\Rightarrow b=\frac{-a}{1-a}
+\end{split}
+\end{equation}
+
+Therefore $\forall a\in\mathbb{R}$ except for 1 has an inverse given by: $a^{-1}=\frac{-a}{1-a}$. 
+
+$\square$
 
 ## 4. Define an operation * on the set $G=\{(x,y)\in\mathbb{R}\times\mathbb{R}|x\ne 0\}$ by $$(a,b)*(c,d)=(ac,ad+bc).$$ Prove that $\langle G,*\rangle$ is an abelian group. (You do not need to check associativity. We will show this in class.)
 

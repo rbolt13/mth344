@@ -369,6 +369,116 @@ Note: We didn't need to check that when $\frac{-a}{1+a}$, $b*a=0$ as well, since
 
 # W2 D4: Jan. 10th, 2022
 
+## Ch.3 - The Definition of a Group 
+
+Let G be a set and * an operation on G. Suppose
+
+(i) * is associative (i.e. $(a*b)*c=a*(b*c))\forall a,b,c\in G$.
+
+(ii) There is an identity element $e\in G$. (Recall, $e*a=a*e=a\forall a\in G$)
+
+(iii) Every element $a\in G$ has an inverse $a^{-1}\in G$. (Recall, $a*a^{-1}=a^{-1}*a=e$.) 
+
+Then we calle $\langle G,*\rangle$ a $\underline{\text{group}}$. 
+
+If, in addition, * is commutative we call $\langle G,*\rangle$ an $\underline{\text{abelian group}}$. 
+
+## Examples (and nonexamples)
+
+1. $\langle \mathbb{Z},+\rangle$ , $\langle\mathbb{Q},+\rangle$, and $\langle\mathbb{R},+\rangle$ are abelian groups (the identity is e=0 [addititve identity] and the inverse of a is $a^{-1}$ [additive inverse or negative])
+
+2. $\langle\mathbb{Z},\cdot\rangle$ isn't a group since $2\in\mathbb{Z}$ but the multiplicative inverse of 2, which is $\frac{1}{2}$, isn't in $\mathbb{Z}$. 
+
+3. $\langle \mathbb{N},+\rangle$ isn't a group since the additive identity, 0, isn't in $\mathbb{N}$.
+
+4. $\langle\mathbb{Q}^*,\cdot\rangle$, $\langle\mathbb{R}^*,\cdot\rangle$, $\langle\mathbb{Q}^+,\cdot\rangle$, $\langle\mathbb{R}^+,\cdot\rangle$ are abelian grops. (the identity is e=1 and the inverse of a is $\frac{1}{a}$)
+
+--- 
+
+We call a group $\langle G,*\rangle$ a $\underline{\text{finite group}}$ if $|G|<\infty$, i.e. the # of elements in G is finite. We call $|G|$ the $\underline{\text{order}}$ of G. 
+
+## Examples of finite group:
+
+Define $\mathbb{Z}_6=\{0,1,2,3,4,5\}$, called the $\underline{\text{integers mod 6}}$. 
+
+Define an operation +, called addition mod 6 as follows : 
+
+![](img/img11.png)
+
+To Compute $4+5$: start at 4 and move 5 spaces clockwise. So in $\mathbb{Z}_6$
+
+$$4+5=3$$
+
+The identity element in $\mathbb{Z}_6$ is zero. What's the inverse of 4 in $\mathbb{Z}$?
+
+Think of it this way: what needs to be added to 4 to get 0? 
+
+In $\mathbb{Z}$, $4+2=0$, so 2 is the inverse of 4. 
+
+---
+
+For any $n\geq 2$, define $\mathbb{Z}_n=\{0,1,2,3,...,n-1\}$. With addition mod n this forms a finite abelian group. 
+
+The inverse of 0 is 0. For any nonzero $a\in\mathbb{Z}_n$, the inverse of a is $n-a$, since in $\mathbb{Z}_n$
+
+$$a+(n-a)=0$$
+
+Ex: In $\mathbb{Z}_8$, 7+5=4 (since 12 is 4 more than 8 in $\mathbb{Z}$). 
+
+## HW 1 #4
+
+Let $G=\{(x,y)\in\mathbb{R}\times\mathbb{R}|x\ne0\}$. Define * on G by $$(a,b)*(c,d)=(ac,ad+bc)$$
+
+In this problem, show $\langle G,*\rangle$ is an abelian group. 
+
+For eample, 
+
+$(1,3)*(5,2)=(1\cdot 5, 1\cdot 2+3\cdot 5)=(5,17)$. 
+
+"Look at Ch. 3 B for similar problems."
+
+Lets show * is associative : 
+
+\begin{equation}
+\label{d4e1}
+\begin{split}
+((a,b)*(c,d))*(f,g) &= (ac,ad+bc)*(f,g)\\
+&= (acf,acg+(ad+bc)f)\\
+&= (acf, acg+adf+bcf)
+\end{split}
+\end{equation}
+
+\begin{equation}
+\label{d4e2}
+\begin{split}
+(a,b)*((c,d)*(f,g)) &= (a,b)*(af,cg+df)\\
+&= (acf,a(cg+df)+bcf)\\
+&= (acf, acg+adf+bcf)
+\end{split}
+\end{equation}
+
+Identity : Solve $(a,b)*(e_1,e_2)=(a,b)$ for $e_1,e_2\in\mathbb{R}$.
+
+- $e_1$ and $e_2$ are the identities 
+
+## Examples of nonabelian group
+
+The $\underline{\text{dihedral group}}$ of degree 3, $D_3$, is the group of symmetries of an equilateral triangle. 
+
+![](img/img12.png)
+
+The group has 6 elements : $D_3=\{1,r,r^2,s,sr,sr^2\}$ , where, for example sr meants rotate first then reflect. (Why are we going right to left? We will view this group's operation as function compostion starting in Ch. 7.)
+
+Why isn't $r^3$ in the set? We consider $r^3=1$ since the triangle looks the same after $360^o$ rotation. Similarly, $s^2=1$. 
+
+To see that $D_3$ is nonabelian, check that $sr\ne rs$.
+
+![](img/img13.png)
+
+Before Wednesday, consider rs using triangles. 
+
+- rs : the operation goes right to left, so rs means reflect first then rotate. 
+
 # W2 D5: Jan. 12th, 2022
 
 # W2 D6: Jan. 14th, 2022
