@@ -19,7 +19,7 @@ These notes are from [A Book of Abstract Algebra by Charles C. Pinter](http://ww
 
 ```
 
-# Intro. (1/3) 
+# Intro.  
 
 ## Origins
 
@@ -126,7 +126,7 @@ Note : a ring is a set _A_ with two operations, usually symbolized by + and $\cd
 - Evariste Galoris (born ~ 1812) tied problems of finding the roots of equations with new discovereies on permutations, but was overlooked (and forgotten) by Cauchy, Fourier, and Poisson. His papers weren't published until 10 years after he died. 
 
 
-# Ch. 2 : Operations (1/5)
+# Ch. 2 : Operations 
 
 An operation * on A is a rule which assigns to each ordered pair (a,b) of elements of A exactly one element of a*b in A.
 
@@ -144,7 +144,7 @@ There are three aspects of this definition which need to be stressed:
 
 An operations is a way of combining two elements, so associiative law is important when considering 3 or more elements
 
-# Ch. 3 : The Definition of Groups (1/7)
+# Ch. 3 : The Definition of Groups 
 
 A group is a set with a defined operation that is associative, has a neutral element, and for which each element has an inverse. This group can be represented $<G,*>$.
 
@@ -174,7 +174,7 @@ _A groups of integers modulo n_ (where n is any positive integer greate than 1) 
 
 - Commutative is not true in every group 
 
-# Ch. 4 : Elementary Properties of Groups (1/12)
+# Ch. 4 : Elementary Properties of Groups 
 
 Every group has exactly one idently element. 
 
@@ -238,7 +238,7 @@ Proof (ii) : $aa^{-1}=e$ , so by T.2 a is the inverse of $a^{-1}$, that is $a=(a
 
 If G is a finite group, the number of elements in G is called the _order_ of G. It is customary to denote the order of G by the symbol |G|. 
 
-# Ch. 5 : Subgroups (1/14)
+# Ch. 5 : Subgroups 
 
 Let G be a group, and S a nonempty subset of G. 
 

@@ -383,7 +383,7 @@ Then we call $\langle G,*\rangle$ a $\underline{\text{group}}$.
 
 If, in addition, * is commutative we call $\langle G,*\rangle$ an $\underline{\text{abelian group}}$. 
 
-## Examples (and nonexamples)
+## Examples of Infinite Groups (and nonexamples)
 
 1. $\langle \mathbb{Z},+\rangle$ , $\langle\mathbb{Q},+\rangle$, and $\langle\mathbb{R},+\rangle$ are abelian groups (the identity is e=0 [addititve identity] and the inverse of a is $-a$ [additive inverse or negative]
 
@@ -395,7 +395,7 @@ If, in addition, * is commutative we call $\langle G,*\rangle$ an $\underline{\t
 
 --- 
 
-We call a group $\langle G,*\rangle$ a $\underline{\text{finite group}}$ if $|G|<\infty$, i.e. the # of elements in G is finite. We call $|G|$ the $\underline{\text{order}}$ of G. 
+We call a group $\langle G,*\rangle$ a $\underline{\text{finite group}}$ if $|G|<\infty$, i.e. the # of elements in G is finite. We call $|G|$ the $\underline{\text{order}}$ (size) of G. 
 
 ## Examples of finite group:
 
@@ -408,6 +408,8 @@ Define an operation +, called addition mod 6 as follows :
 To Compute $4+5$: start at 4 and move 5 spaces clockwise. So in $\mathbb{Z}_6$
 
 $$4+5=3$$
+
+- note : we can also think that $4+5=9-6=3$. 
 
 The identity element in $\mathbb{Z}_6$ is zero. What's the inverse of 4 in $\mathbb{Z}$?
 
@@ -431,7 +433,7 @@ Let $G=\{(x,y)\in\mathbb{R}\times\mathbb{R}|x\ne0\}$. Define * on G by $$(a,b)*(
 
 In this problem, show $\langle G,*\rangle$ is an abelian group. 
 
-For eample, 
+For example, 
 
 $(1,3)*(5,2)=(1\cdot 5, 1\cdot 2+3\cdot 5)=(5,17)$. 
 
@@ -467,7 +469,9 @@ The $\underline{\text{dihedral group}}$ of degree 3, $D_3$, is the group of symm
 
 ![](img/img12.png)
 
-The group has 6 elements : $D_3=\{1,r,r^2,s,sr,sr^2\}$ , where, for example sr meants rotate first then reflect. (Why are we going right to left? We will view this group's operation as function composition starting in Ch. 7.)
+The group has 6 elements : $D_3=\{1,r,r^2,s,sr,sr^2\}$ , where, for example sr means rotate first then reflect. (Why are we going right to left? We will view this group's operation as function composition starting in Ch. 7.)
+
+- 6 is the smallest size nonabelian, dihedral group
 
 Why isn't $r^3$ in the set? We consider $r^3=1$ since the triangle looks the same after $360^o$ rotation. Similarly, $s^2=1$. 
 

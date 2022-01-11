@@ -271,6 +271,76 @@ $\square$
 
 ## 4. Define an operation * on the set $G=\{(x,y)\in\mathbb{R}\times\mathbb{R}|x\ne 0\}$ by $$(a,b)*(c,d)=(ac,ad+bc).$$ Prove that $\langle G,*\rangle$ is an abelian group. (You do not need to check associativity. We will show this in class.)
 
+Let $G=\{(x,y)\in\mathbb{R}\times\mathbb{R}|x\ne0\}$. Define * on G by $$(a,b)*(c,d)=(ac,ad+bc)$$
+
+For $\langle G,*\rangle$ is an abelian group it must be commutative, associative, have an identity element, and each element has an inverse. 
+
+(i) Commutative 
+
+Let $a=1$, $b=2$, $c=3$, $d=4$, 
+
+\begin{equation}
+\label{4i1}
+\begin{split}
+(a,b)*(c,d) &= (ac, ad+bc)\\
+&= (1(3),1(4)+2(3))\\
+&= (3,10)
+\end{split}
+\end{equation}
+
+\begin{equation}
+\label{4i1}
+\begin{split}
+(c,d)*(a,b) &= (ca, cb+da)\\
+&= (3(1),3(2)+4(1)\\
+&= (3,10)
+\end{split}
+\end{equation}
+
+Since $(a,b)*(c,d)=(c,d)*(a,b)$ then * is commutative. 
+
+(ii) Associative 
+
+done in class. 
+
+(iii) Identity 
+
+Let $(a,b)*(e_1,e_2)=(a,b)$ for $e_1,e_2\in\mathbb{R}$.
+
+\begin{equation}
+\label{4iii1}
+\begin{split}
+(a,b)*(e_1,e_2)=(a,b)\Rightarrow (ae_1,ae_2,be_2)=(a,b) \\
+&\Rightarrow (e_1,e_2)=\\
+&\Rightarrow e = \frac{1}{4}(2a+2)= \frac{1}{2}a+\frac{1}{2}
+\end{split}
+\end{equation}
+
+Checking the other order,
+
+\begin{equation}
+\label{1c2}
+\begin{split}
+e*a &= 3(\frac{1}{2}a+\frac{1}{2})-4a+2\\
+&= \frac{3a}{2}+\frac{3}{2}-\frac{8a}{2}+\frac{4}{2}\\
+&= \frac{5a}{2}+\frac{7}{2}\\
+&\ne a
+\end{split}
+\end{equation}
+
+Since $e*a\ne a$ there is no identity in $\mathbb{R}$ w.r.t. *. 
+
+$\square$
+
+
+
+
+(iv) Inverse 
+
+
+
+By parts i - iv, G is commutative, associative, has an identity element, and every element has an inverse. 
+
 ## 5. Let a,b,c,x be elements of a group G. Solve the following system of equations for x : 
 
 ### (a) $bx^2=ax^{-1}\quad$ and $x^4=c$
