@@ -385,7 +385,7 @@ If, in addition, * is commutative we call $\langle G,*\rangle$ an $\underline{\t
 
 ## Examples (and nonexamples)
 
-1. $\langle \mathbb{Z},+\rangle$ , $\langle\mathbb{Q},+\rangle$, and $\langle\mathbb{R},+\rangle$ are abelian groups (the identity is e=0 [addititve identity] and the inverse of a is $a^{-1}$ [additive inverse or negative])
+1. $\langle \mathbb{Z},+\rangle$ , $\langle\mathbb{Q},+\rangle$, and $\langle\mathbb{R},+\rangle$ are abelian groups (the identity is e=0 [addititve identity] and the inverse of a is $-a$ [additive inverse or negative])
 
 2. $\langle\mathbb{Z},\cdot\rangle$ isn't a group since $2\in\mathbb{Z}$ but the multiplicative inverse of 2, which is $\frac{1}{2}$, isn't in $\mathbb{Z}$. 
 
