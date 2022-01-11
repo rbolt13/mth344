@@ -379,7 +379,7 @@ Let G be a set and * an operation on G. Suppose
 
 (iii) Every element $a\in G$ has an inverse $a^{-1}\in G$. (Recall, $a*a^{-1}=a^{-1}*a=e$.) 
 
-Then we calle $\langle G,*\rangle$ a $\underline{\text{group}}$. 
+Then we call $\langle G,*\rangle$ a $\underline{\text{group}}$. 
 
 If, in addition, * is commutative we call $\langle G,*\rangle$ an $\underline{\text{abelian group}}$. 
 
