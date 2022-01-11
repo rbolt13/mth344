@@ -373,7 +373,7 @@ Note: We didn't need to check that when $\frac{-a}{1+a}$, $b*a=0$ as well, since
 
 Let G be a set and * an operation on G. Suppose
 
-(i) * is associative (i.e. $(a*b)*c=a*(b*c))\forall a,b,c\in G$.
+(i) `*` is associative (i.e. $(a*b)*c=a*(b*c))\forall a,b,c\in G$.
 
 (ii) There is an identity element $e\in G$. (Recall, $e*a=a*e=a\forall a\in G$)
 
@@ -467,7 +467,7 @@ The $\underline{\text{dihedral group}}$ of degree 3, $D_3$, is the group of symm
 
 ![](img/img12.png)
 
-The group has 6 elements : $D_3=\{1,r,r^2,s,sr,sr^2\}$ , where, for example sr meants rotate first then reflect. (Why are we going right to left? We will view this group's operation as function compostion starting in Ch. 7.)
+The group has 6 elements : $D_3=\{1,r,r^2,s,sr,sr^2\}$ , where, for example sr meants rotate first then reflect. (Why are we going right to left? We will view this group's operation as function composition starting in Ch. 7.)
 
 Why isn't $r^3$ in the set? We consider $r^3=1$ since the triangle looks the same after $360^o$ rotation. Similarly, $s^2=1$. 
 
