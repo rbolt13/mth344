@@ -297,7 +297,7 @@ Let $a=1$, $b=2$, $c=3$, $d=4$,
 \end{split}
 \end{equation}
 
-Since $(a,b)*(c,d)=(c,d)*(a,b)$ then * is commutative. 
+Since $(a,b)*(c,d)=(c,d)*(a,b)$ then $\langle G,*\rangle$ is commutative. 
 
 (ii) Associative 
 
@@ -310,43 +310,82 @@ Let $(a,b)*(e_1,e_2)=(a,b)$ for $e_1,e_2\in\mathbb{R}$.
 \begin{equation}
 \label{4iii1}
 \begin{split}
-(a,b)*(e_1,e_2)=(a,b)\Rightarrow (ae_1,ae_2,be_2)=(a,b) \\
-&\Rightarrow (e_1,e_2)=\\
-&\Rightarrow e = \frac{1}{4}(2a+2)= \frac{1}{2}a+\frac{1}{2}
+(a,b)*(e_1,e_2)=(a,b)&\Rightarrow (ae_1,ae_2+be_1)=(a,b) \\
+&\Rightarrow (e_1,e_2)=(1,0)
 \end{split}
 \end{equation}
 
 Checking the other order,
 
 \begin{equation}
-\label{1c2}
+\label{4iii2}
 \begin{split}
-e*a &= 3(\frac{1}{2}a+\frac{1}{2})-4a+2\\
-&= \frac{3a}{2}+\frac{3}{2}-\frac{8a}{2}+\frac{4}{2}\\
-&= \frac{5a}{2}+\frac{7}{2}\\
-&\ne a
+(e_1,e_2)*(a,b)=(1,0)*(a,b) &= (1a,1b+a0) \\
+&= (a,b)
 \end{split}
 \end{equation}
 
-Since $e*a\ne a$ there is no identity in $\mathbb{R}$ w.r.t. *. 
+Since $(a,b)*(e_1,e_2)=(a,b)$ there is an identity in $\mathbb{R}$ w.r.t. $\langle G,*\rangle$. 
 
 $\square$
 
-
-
-
 (iv) Inverse 
 
+Suppose $(c,d)=(a,b)^{-1}$, then $(a,b)*(c,d)=(1,0)$ (identity found in part iii). 
 
+\begin{equation}
+\label{4iv}
+\begin{split}
+(a,b)*(c,d)=(1,0)&\Rightarrow(ac,ad+bc)=(1,0) \\
+&\Rightarrow (c,d)=(\frac{1}{a},-b)\\
+&\Rightarrow (a,b)^{-1}=(\frac{1}{a},-b)
+\end{split}
+\end{equation}
 
-By parts i - iv, G is commutative, associative, has an identity element, and every element has an inverse. 
+Therefore $\forall (a,b)\in\mathbb{R}$, $\langle G,*\rangle$ has an inverse given by $(\frac{1}{a},-b)$.
+
+$\square$
+
+By parts i - iv, G is commutative, associative, has an identity element, and every element has an inverse. Therefore $\langle G,*\rangle$ is an abelian group.
+
+$\square$
 
 ## 5. Let a,b,c,x be elements of a group G. Solve the following system of equations for x : 
 
 ### (a) $bx^2=ax^{-1}\quad$ and $x^4=c$
 
+$x^4=c\Rightarrow x=c^{1/4}$
+
+$bx^2=ax^{-1}\Rightarrow b(c^{1/4})^2=a(c^{1/4})^{-1}\Rightarrow bc^{2/4}=ac^{-1/4}$
+
+$\Rightarrow b=a\frac{c^{-1/4}}{c^{2/4}}=ac^{-3/4}$
+
+$\Rightarrow a=b\frac{c^{2/4}}{c^{-1/4}}=ac^{3/4}$
+
 ### (b) $x^2c=bxa^{-1}\quad$ and $xca=cax$
+
+\begin{equation}
+\label{5b}
+\begin{split}
+x^2b&=bxa^{-1}\\
+\Rightarrow x^{-1}x^2c &=x^{-1}bxa\\
+\Rightarrow xc &= x^{-1}bxa^{-1}\\
+\Rightarrow xca &= x^{-1}bx\\
+\Rightarrow cax &= x^{-1}bx\\
+\Rightarrow caxx^{-1} &= x^{-1}bxx^{-1}\\
+\Rightarrow ca &= x^{-1}b\\
+\Rightarrow xca &= xx^{-1}b\\
+\Rightarrow xca &= b
+\end{split}
+\end{equation}
+
+$\Rightarrow b = xca$
+
+$\Rightarrow a=cx^{-1}b$
+
+$\Rightarrow c=x^{-1}ba^{-1}$
 
 ## 6. This problem asks you to consider the importance of using proper notation for inverses in groups. Your answer only needs to be a sentence or two. 
 ## Suppose a,b, and x are elements of a _nonabelian_ group G, and that we want to solve thte equation $ax=b$ for x. Why would it be incorrect and unclear to say that the solution is $x=\frac{b}{a}$
 
+It would be incorrect and unclear to say that $x=\frac{b}{a}$ for a _nonabelian_ group G, because a _nonabelian_ group wouldn't be commutative. Meaning that $(ax=b)\Rightarrow (x=\frac{b}{a})\ne(\frac{a}{b}=x)\Leftarrow (bx=a)$. 
