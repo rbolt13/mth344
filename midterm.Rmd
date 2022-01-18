@@ -17,7 +17,7 @@ output:
 
 ```
 
-# W1 D1: Jan. 3rd, 2022
+# W1D1: Jan. 3rd, 2022
 
 Discussed Chapter 1 (literally). 
 
@@ -87,7 +87,7 @@ Placing an asterisk in the superscript means delete zero : $\mathbb{R}^*=\{x\in\
 
 Placing a + in the superscript means the set only contains $\mathbb{R}^+=\{x\in\mathbb{R}|x>0\}$. 
 
-# W1 D2: Jan. 5th, 2022
+# W1D2: Jan. 5th, 2022
 
 ## Definitions
 
@@ -209,7 +209,7 @@ Let $f(x)=x^2$ and $g(x)=x+1$.
 
 Then $(f\circ g)(x)=f(g(x))=(x+1)^2$, but $(g\circ f)(x)=g(f(x))=x^2+1$. 
 
-# W1 D3: Jan. 7th, 2022
+# W1D3: Jan. 7th, 2022
 
 ## Ch. 2 - Operations, Cont. 
 
@@ -367,7 +367,7 @@ So every $a\in\mathbb{R}$ except -1 has an inverse given by $$a^{-1}=\frac{-a}{1
 
 Note: We didn't need to check that when $\frac{-a}{1+a}$, $b*a=0$ as well, since we know * is commutative. 
 
-# W2 D4: Jan. 10th, 2022
+# W2D4: Jan. 10th, 2022
 
 ## Ch.3 - The Definition of a Group 
 
@@ -483,7 +483,271 @@ Before Wednesday, consider rs using triangles.
 
 - rs : the operation goes right to left, so rs means reflect first then rotate. 
 
-# W2 D5: Jan. 12th, 2022
+# W2D5: Jan. 12th, 2022
 
-# W2 D6: Jan. 14th, 2022
+Let G be a set and `*` be an operation on G. We call $\langle G,*\rangle$ a $\underline{\text{group}}$ if 
+
+(i) `*` is associative 
+
+(ii) $\exists $ identity element $e\in G$. 
+
+(iii) $\forall$ elements $a\in G$ has an inverse $a^{-1}\in G$. 
+
+$\underline{\text{Comment on notation:}}$ We'll write G instead of $\langle G, *\rangle$ when there is no confusion about what the operation * is. 
+
+## Ch.4 - Properties of Groups 
+
+### Proposition 1
+
+Let G be a group. Then G has exactly one identity element. 
+
+$\underline{\text{Proof}}$: Suppose $e_1,e_2\in G$ are identity elements. 
+
+Since $e\in G$ is an identity, $$e_1*e_2=e_2.$$
+
+Similarly, since $e_2\in G$ is an identity, $$e_1*e_2=e_1.$$
+
+Combining, we get $$e_2=e_1*e_2=e_1\quad\Rightarrow\quad e_2=e_1.$$
+
+So, G has exactly one identity element. $\square$
+
+### Proposition 2
+
+Every element of G has exactly one inverse. 
+
+$\underline{\text{Proof:}}$ Let $a\in G$. Suppose $b_1,b_2\in G$ are inverses of a. By definition $$b_1*(a*b_2)=b_1*e=b_1.$$
+
+Similarly, $$(b_1*a)*b_2=e*b_2=b_2$$
+
+By associativity, $b_1*(a*b_2)=(b_1*a)*b_2$, implying $b_1=b_2$. Hence, the element $a\in G$ has exactly one inverse in G. Since $a\in G$ was arbitrary, every element of G has exactly one inverse. $\square$. 
+
+$\underline{\text{Comment about notation:}}$ In arbitrary groups, we'll write ab instead of $a*b$. We'll call ab the $\underline{\text{product}}$ of a and b in G (even if the operation isn't multiplication). 
+
+- "can't assume inverse"
+
+### Theorem 1 (Cancellation Law)
+
+Let G be a group and let $a,b,c\in G$ Then 
+
+(i) $ab=ac\quad\Rightarrow\quad b=c$
+
+(ii) $ba=ca\quad\Rightarrow\quad b=c$
+
+**$\underline{\text{Warning}}$** In an arbitrary group, $ab=ca$ doesn't imply that $b=c$. 
+
+$\underline{\text{Ex}}$ : Recall $D_3=\{1,r,r^2,s,sr,sr^2\}$ is the group of symmetries of an equilateral triangle. 
+
+![](img/img12.png)
+
+In $D_3$, you can show that $sr=r^2s$. However, $r\ne r^2$. So, we can't cancel the s's in the equation $sr=r^2s$. 
+
+### Proof of part (iii) of the Cacellation Theorem
+
+Assume that $ba=ca$. We know the element $a\in G$ has an inverse $a^{-1}\in G$. Let's "multiply" by $a^{-1}$ on the right: 
+
+\begin{equation}
+\label{cancellation (iii)}
+\begin{split}
+ba=ca &\Rightarrow (ba)a^{-1}=(ca)a^{-1}\\
+&\Rightarrow b(aa^{-1})=c(aa^{-1})\text{ ,by associativity}\\
+&\Rightarrow be=ce\quad\text{, since }aa^{-1}=e\\
+&\Rightarrow b=c
+\end{split}
+\end{equation}
+
+$\underline{\text{Ex}}$: Let G be a group and let $a,b,c,x\in G$. Solve the following for x: 
+
+\begin{equation}
+\label{d5e solve for x}
+\begin{split}
+x^2b=xa^{-1}c &\Rightarrow xxb=xa^{-1}c\\
+&\Rightarrow xb=a^{-1}c\quad\text{by left cancellation}\\
+&\Rightarrow xbb^{-1}=a^{-1}cb^{-1}\\
+&\Rightarrow x=a^{-1}cb^{-1}
+\end{split}
+\end{equation}
+
+Note: HW problem about division, "the side matters"
+
+$\underline{\text{Ex}}$: Solve this system of equations for x: $ax^2=b$ and $x^3=e$
+
+\begin{equation}
+\label{d5e solve soe}
+\begin{split}
+ax^2=b &\Rightarrow ax^2x=bx\\
+&\Rightarrow ax^3=bx\\
+&\Rightarrow ae=bx\text{ , since }x^3=e\\
+&\Rightarrow a=bx\text{ , since }e\text{ is the identity}\\
+&\Rightarrow b^{-1}a=b^{-1}bx\\
+&\Rightarrow x=b^{-1}a
+\end{split}
+\end{equation}
+
+### Theorem 2
+
+Let G be a group and let $a,b\in G$. If $ab=e$, then a and b are inverses, i.e. $a=b^{-1}$ and $b=a^{-1}$. 
+
+(Note: we don't ahve to check if $ba=e$ as well.)
+
+$\underline{\text{Proof:}}$ Suppose $ab=e$. Let's show that $a=b^{-1}$. 
+
+\begin{equation}
+\label{T2 Proof}
+\begin{split}
+ab=e &\Rightarrow ab=b^{-1}b\text{ , since }b^{-1}b=e\\
+&\Rightarrow a=b^{-1}
+\end{split}
+\end{equation}
+
+When solving equations or simplifying expressions in an _arbitrary_ group, we can: 
+
+1. use left or right cancellation 
+
+2. "Multiply" both sides of an equation by the same element, as long as we're consistent with placing the element on the left or right. 
+
+3. Take the inverse of both sides of an equation. 
+
+### Theorem 3
+
+Let G be a group and let $a,b\in G$. 
+
+(i) (Socks and Shoes) $$(ab)^{-1}=b^{-1}a^{-1}$$
+
+(ii) $(a^{-1})^{-1}=a$
+
+$\underline{\text{Proof:}}$ 
+
+(i) We want to show that $ab$ and $b^{-1}a^{-1}$ are inverses of one another. By Theorem 2, we just need to show their product is e:
+
+\begin{equation}
+\label{T3 Proof}
+\begin{split}
+(ab)(b^{-1}a^{-1})&=a(bb^{-1})a^{-1}\text{ , by associativity}\\
+&= aea^{-1} \quad\text{, since }bb^{-1}=e\\
+&= aa^{-1}\quad\text{, since }ae=a\\
+&= e\quad\text{, since } aa^{-1}.
+\end{split}
+\end{equation}
+
+So, by Theorem 2, $ab$ and $b^{-1}a^{-1}$ are inverses, i.e. $$(ab)^{-1}=b^{-1}a^{-1}.$$
+
+(ii) We want to show that the inverse of $a^{-1}$ is a. By Theorem 2, we just need to consider their product: 
+
+$$a^{-1}a=e\quad\Rightarrow\quad(a^{-1})^{-1}=a.\quad\quad\quad\quad\quad\square$$
+
+$\underline{\text{Note: }}(abc)^{-1}=c^{-1}b^{-1}a^{-1}$ and $(abcd)^{-1}=d^{-1}c^{-1}b^{-1}a^{-1}$, ect.  
+
+# W2D6: Jan. 14th, 2022
+
+Reminder : PSU closed Monday 1/17, so there's no class
+
+## Ch 4. Continued 
+
+Let G be a finite group. 
+
+$\underline{\text{Fact}}$: Every row and column of G's operation tble contains each element of G exactly once. 
+
+Let $x,g\in G$. Show that g appears in the row for the element x. 
+
+![](img/img14.png)
+
+Now lets show g can't appear twice in x's row: 
+
+![](img/img15.png)
+
+This contradicts the way we make operation tables. (We list each element above the table only once.) So g appears only once in x's row. 
+
+### Examples 
+
+$\underline{\text{Ex}}$: Consider $\mathbb{Z}_4=\{0,1,2,3\}$, with addition mod 4. 
+
+![](img/img16.png)
+
+$\underline{\text{Ex}}$: Let $G=\{e,a,b,c\}$ be a group of size 4 such that $$a^2=b^2=c^2=e.$$
+
+(This group is called the Klein 4 Group)
+
+There is only one way to fill out the operation table : 
+
+![](img/img17.png)
+
+### Direct Product of Groups (Ch 4 G Problems)
+
+Let $\langle G,*_G\rangle$ and $\langle H,*_H\rangle$ be groups. The $\underline{\text{direct product}}$ of G and H is the set $$G\times H=\{(g,h)|g\in G\text{ and } h\in H\}$$
+
+with operation $$(g_1,h)(g_2,h_2)=(g_1*_Gg_2,h_1*_Hh_2)=\underline{(g_1g_2,h_1h_2)}\quad\leftarrow\text{ simplifying notation}$$
+
+Identity in $G\times H$: $e_G,e_H$
+
+Inverses in $G\times H$: $(g,h)^{-1}=(g^{-1},h^{-1})$
+
+### Examples 
+
+$\underline{\text{Ex}}$: List the elements of $\mathbb{Z}_2\times\mathbb{Z}_3$. 
+
+$$\mathbb{Z}_2\times\mathbb{Z}_3=\{(0,0),(0,1),(0,2),(1,0),(1,1),(1,2)\}$$
+
+In this group : $(1,1)+(1,1)=(1+1,1+1)=(0,2)$
+
+and the invese of $(1,1)$ is $(1,2)$, since $(1,1)+(1+2)=(0,0)$. 
+
+$\underline{\text{Ex}}$: This group has the property that any element added to itself is the identity: 
+
+For example, $(0,1)+(0,1)=(0+0,1+1)=(0,0)$
+
+## Ch.5 - Subgroups 
+
+Let G be a group. A subset $H\subseteq G$ is called a $\underline{\text{subgroup}}$ of G if : 
+
+(i) $e\in H$ (Note : e is the identity from the group G.)
+
+(ii) For all $a,b\in H$ , $ab \in H$ (We say H is closed under the operation)
+
+(iii) For all $a\in H$ , $a^{-1}\in H$. (We say H is closed under inverses)
+
+Note: If H is a subgroup of G, H and G must have the same operation. 
+
+What does this definition look like if the operation is +?
+
+(i) $0\in H$
+
+(ii) $\forall a,b\in H$ , $a+b\in H$.
+
+(iii) $\forall a\in H$ , $-a\in H$.
+
+### Ex: Subgroups of $\langle\mathbb{Z},+\rangle$
+
+1. Why isn't $\mathbb{Z}_4$ a subgroup of $\mathbb{Z}$? These groups have different operations (addition vs. addition mod 4). 
+
+2. $\{0\}$ is called a trivial subgroup of $\mathbb{Z}$.
+
+3. $\emptyset=\{\}$ is called a trivial subgroup of $\mathbb{Z}$. 
+
+4. The even integers $2\mathbb{Z}=\{...,-4,-2,0,2,4,6,...\}$ are a subgroup of $\mathbb{Z}$. 
+
+Proof : 
+
+(i) $0\in 2\mathbb{Z}$ because $0=2\cdot0$
+
+(ii) Let $a,b\in\mathbb{Z}$. Then $a=2m$ and $b=2n$, for some $m,n\in\mathbb{Z}$. So, $$a+b=2m+2n=2(m+n)\in2\mathbb{Z}$$, since $m+n\in\mathbb{Z}$. Therefore $2\mathbb{Z}$ is colsed under +. 
+
+(iii) Let $a\in\mathbb{Z}$. Then $a=2m$ for some $m\in\mathbb{Z}$. So, $$-a=-2m=2(-m)\in2\mathbb{Z}\quad\quad \square$$
+
+5. For any fixed integer $k\in\mathbb{Z}$, $$k\mathbb{Z}=\{...,-2k,-k,0,k,2k,3k,...\}$$ is a subgroup of $\mathbb{Z}$. 
+
+### Example 
+
+Show $H=\{0,3,6,9\}$ is a subgroup of $\mathbb{Z}_{12}$ (with the operation of addition mod 12). 
+
+Make the operation table for H : 
+
+![](img/img18.png)
+
+(ii) H is closed under + since all elements in the table are in H. 
+
+(iii) Since every row and column contains zero, H is closed under inverses. (For example, the highlighted row and column above show that the inverse of 9 in H is 3. )
+
+# W3D7: Jan. 19th, 2022
+
+# W3D8: Jan. 21st, 2022
 

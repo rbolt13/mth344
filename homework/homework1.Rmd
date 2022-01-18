@@ -13,103 +13,29 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### (a) $a*b=4a-b$ on $\mathbb{Z}$
 
-No, because the operation * is neither commutative, or associative. 
-
-Commutative : Let $a=1$, and $b=2$ , 
-
-$$a*b=4a-b=4(1)-2=4-2=2$$
-
-$$b*a=4b-a=4(2)-a=8-1=7$$
-
-$$2\ne 7$$
-
-$\square$
-
-Associative : 
-
-$$(a*b)*c=(4a-b)*c=4(4a-b)-c=16a-4b-c$$
-
-$$a*(b*c)=4a-(4b-c)=4a-4b+c$$
-
-$$16a-4b-c\ne 4a-4b+c$$
-
-$\square$
+Yes, a*b should work for any two elements in $\mathbb{Z}$, and produce a unique output that exists in $\mathbb{Z}$. 
 
 ### (b) $a*b=3^b$ on $\mathbb{Q}$
 
-No, because * is neither commutative, or associative.
-
-Commutative : Let $a=1$ and $b=2$ then, 
-
-$$a*b=3^2=9\ne 3=3^1=b*a$$
-
-$\square$
-
-Associative :
-
-$$a*(b*c)=(3^c)^{3^c}\ne 3^c=(a*b)*c$$
-
-$\square$
+No, because an operation needs two elements a and b, and a*b only performs an operation on one element. 
 
 ### (c) $a*b=\frac{a}{ab+2}$ on $\mathbb{R}$
 
-No, because the operation * is neither commutative, or associative. 
-
-Commutative : Let $a=1$, and $b=2$ ,
-
-$$a*b=\frac{a}{ab+2}=\frac{1}{4}\ne\frac{1}{2}=\frac{b}{ba+2}=b*a$$
-
-$\square$
-
-Associative :
-
-$$a*(b*c)=a*\frac{b}{bc+2}=\frac{a}{a\frac{b}{bc+2}+2}=\frac{\frac{a}{1}}{\frac{ab+2(bc+2)}{bc+2}}=\frac{a(bc+2)}{ab+2(bc+2)}=\frac{abc+2}{ab+2bc+4}$$
-
-$$(a*b)*c=\frac{a}{ab+2}*c=\frac{\frac{a}{ab+2}}{\frac{a}{ab+2}c+2}=\frac{\frac{a}{ab+2}}{\frac{ac+2(ab+2)}{ab+2}}=\frac{a(ab+2)}{(ac+2(ab+2))(ab+2)}=\frac{a^2b+2a}{(ac+2ab+4)(ab+2)}$$
-
-$$a*(b*c)\ne(a*b)*c$$
-
-$\square$
+No, because it is possible for $ab=-2$ which would make a*b undefined. 
 
 ### (d) $a*b=\frac{1}{ab+2}$ on $\mathbb{R}^+$
 
-No, because the operation * is not associative.
-
-$$a*(b*c)=a*(\frac{1}{bc+2})=\frac{1}{a(\frac{1}{bc+2})+2}=\frac{\frac{1}{1}}{\frac{a+2(bc+2)}{bc+2}}=\frac{bc+2}{a+2bc+4}$$
-
-Let $a=1$, $b=2$, $c=3$, 
-
-$$\frac{bc+2}{a+2bc+4}=\frac{2(3)+2}{1+2(2)(3)+4}=\frac{8}{17}\approx 0.470588$$
-
-$$(a*b)*c=(\frac{1}{ab+2})*c=\frac{1}{(\frac{1}{ab+2})c+2}=\frac{\frac{1}{1}}{\frac{c+2(ab+2)}{ab+2}}=\frac{ab+2}{c+2ab+4}$$
-
-Let $a=1$, $b=2$, $c=3$,
-
-$$\frac{ab+2}{c+2ab+4}=\frac{4}{3+4+4}=\frac{4}{11}\approx 0.3636$$
-
-$$\frac{8}{17}\ne\frac{4}{11}$$
-
-$\square$
+Yes, a*b should work for any two elements in $\mathbb{R}^+$, and product a unique output that also exists in $\mathbb{R}^+$. 
 
 ## 2. Define an operation * on $\mathbb{R}$ by $a*b=3a-4b+2$
 
 ### (a) Is * commutative?
 
-No, let $a=1$, and $b=2$. 
+No, it is given that $a*b=3a-4b+2$, but $b*a=3b-4a+2$, which is clearly not the same. 
 
-\begin{equation}
-\label{1a}
-\begin{split}
-3a-4b+2 &= 3b-4a+2\\
-3(1)-4(2)+2 &= 3(2)-4(1)+2\\
-3-8+2 &= 6-4+2\\
--3 &\ne 4
-\end{split}
-\end{equation}
+To show by this by example let $a=1$, and $b=2$. We see that $a*b=3a-4b+2=3(1)-4(2)+2=-3$ and $b*a=3b-4a+2=3(2)-4(1)+2=4$. 
 
-Since $a*b\ne b*a$, then * is NOT commutative. 
-
-$\square$
+Since $a*b\ne b*a$, then * is NOT commutative. $\quad\quad\square$
 
 ### (b) Is * associative?
 
@@ -135,9 +61,7 @@ a*(b*c) &= a*(3b-4c+2)\\
 \end{split}
 \end{equation}
 
-Since $(a*b)*c\ne a*(b*c)$, then * isn't associative. 
-
-$\square$
+Since $(a*b)*c\ne a*(b*c)$, then * isn't associative. $\quad\quad\square$
 
 ### (c) Is there an identity element $e\in \mathbb{R}$ w.r.t. *?
 
@@ -152,52 +76,11 @@ e*a=a\Rightarrow 3a-4e+2 &= a \\
 \end{split}
 \end{equation}
 
-Checking the other order,
-
-\begin{equation}
-\label{1c2}
-\begin{split}
-e*a &= 3(\frac{1}{2}a+\frac{1}{2})-4a+2\\
-&= \frac{3a}{2}+\frac{3}{2}-\frac{8a}{2}+\frac{4}{2}\\
-&= \frac{5a}{2}+\frac{7}{2}\\
-&\ne a
-\end{split}
-\end{equation}
-
-Since $e*a\ne a$ there is no identity in $\mathbb{R}$ w.r.t. *. 
-
-$\square$
+Since the identity element must be constant then there is no identity in $\mathbb{R}$ w.r.t. *. $\quad\quad\square$
 
 ### (d) Does every element $a\in\mathbb{R}$ have an inverse w.r.t. *?
 
-No, suppose $b=a^{-1}$, then $a*b=0$.
-
-\begin{equation}
-\label{1d}
-\begin{split}
-a*b=0\Rightarrow  3a-4b+2=0\\
-&\Rightarrow 3a+2=4b\\
-&\Rightarrow b=\frac{3a+2}{4}\\
-&\Rightarrow a^{-1}=\frac{3a+2}{4}
-\end{split}
-\end{equation}
-
-Checking the other order,
-
-\begin{equation}
-\label{1d2}
-\begin{split}
-b*a=0 &\Rightarrow 3b-4a+2=0\\
-&\Rightarrow 3(\frac{3a+2}{4})=4a-2\\
-&\Rightarrow 9a+6=a-\frac{1}{2}\\
-&\Rightarrow 8a=-5.5\\
-&\rightarrow a=\frac{-5.5}{8}=0.6875\ne 0
-\end{split}
-\end{equation}
-
-Since $b*a\ne 0$ there is no inverse in $\mathbb{R}$ w.r.t. *. 
-
-$\square$
+No, since there is no identity then are no inverse in $\mathbb{R}$ w.r.t. *. $\quad\quad \square$
 
 ## 3. Define an operation * on $\mathbb{R}$ by $a*b=a+b-ab$. 
 
@@ -215,9 +98,7 @@ a*b &= a+b-ab\\
 \end{split}
 \end{equation}
 
-Since $a*b=b*a$ then * is commutative. 
-
-$\square$
+Since $a*b=b*a$ then * is commutative. $\quad\quad\square$
 
 ### (b) Is * associative?
 
@@ -242,15 +123,11 @@ a*(b*c) &= a*(b+c-bc)\\
 \end{split}
 \end{equation}
 
-Since $a*(b*c)=(a*b)*c$ then * is associative. 
-
-$\square$
+Since $a*(b*c)=(a*b)*c$ then * is associative. $\quad\quad\square$
 
 ### (c) Is there an identity element $e\in \mathbb{R}$ w.r.t. *?
 
-Yes, since $0\in\mathbb{R}$ $a*0=0*a=a+0-a(0)=a$. Therefore there is an identity element $e=0$ w.r.t. *. 
-
-$\square$
+Yes, since $0\in\mathbb{R}$ $a*0=0*a=a+0-a(0)=a$. Therefore there is an identity element $e=0$ w.r.t. *. $\quad\quad\square$
 
 ### (d) Does every element $a\in\mathbb{R}$ have an inverse w.r.t. *?
 
@@ -265,39 +142,45 @@ a*b=0 &\Rightarrow a+b-ab=0\\
 \end{split}
 \end{equation}
 
-Therefore $\forall a\in\mathbb{R}$ except for 1 has an inverse given by: $a^{-1}=\frac{-a}{1-a}$. 
-
-$\square$
+Therefore $\forall a\in\mathbb{R}$ except for 1 has an inverse given by: $a^{-1}=\frac{-a}{1-a}$. $\quad\quad\square$
 
 ## 4. Define an operation * on the set $G=\{(x,y)\in\mathbb{R}\times\mathbb{R}|x\ne 0\}$ by $$(a,b)*(c,d)=(ac,ad+bc).$$ Prove that $\langle G,*\rangle$ is an abelian group. (You do not need to check associativity. We will show this in class.)
 
 Let $G=\{(x,y)\in\mathbb{R}\times\mathbb{R}|x\ne0\}$. Define * on G by $$(a,b)*(c,d)=(ac,ad+bc)$$
 
-For $\langle G,*\rangle$ is an abelian group it must be commutative, associative, have an identity element, and each element has an inverse. 
+For $\langle G,*\rangle$ is an abelian group it must be commutative, associative, have an identity element, and each element must have an inverse.
 
 (i) Commutative 
 
-Let $a=1$, $b=2$, $c=3$, $d=4$, 
+For $(a,b)*(c,d)$ to be commutative then $(a,b)*(c,d)=(d,a)*(b,c)=(c,d)*(a,b)=(b,c)*(d,a)$. 
 
-\begin{equation}
-\label{4i1}
-\begin{split}
-(a,b)*(c,d) &= (ac, ad+bc)\\
-&= (1(3),1(4)+2(3))\\
-&= (3,10)
-\end{split}
-\end{equation}
+Each can be defined: 
 
-\begin{equation}
-\label{4i1}
-\begin{split}
-(c,d)*(a,b) &= (ca, cb+da)\\
-&= (3(1),3(2)+4(1)\\
-&= (3,10)
-\end{split}
-\end{equation}
+$(a,b)*(c,d)=(ac,ad+bc)$
 
-Since $(a,b)*(c,d)=(c,d)*(a,b)$ then $\langle G,*\rangle$ is commutative. 
+$(d,a)*(b,c)=(db,dc+ab)$
+
+$(c,d)*(a,b)=(ca,cb+da)$
+
+$(b,c)*(d,a)=(bd,ba+cd)$
+
+Since multiplication and addition are communicative on $\mathbb{R}$, we can also show that 
+
+(1) $(a,b)*(c,d)=(ac,ad+bc)=(ca,da+cb)=(ca,cb+da)=(c,d)*(a,b)$
+
+and 
+
+(2) $(d,a)*(b,c)=(db,dc+ab)=(db,cd+ba)=(db,ba+cd)=(b,c)*(d,a)$
+
+However (1) $\ne$ (2).
+
+To show this by example let $a=1$, $b=2$ , $c=3$, and $d=4$. Then, 
+
+(1) $(a,b)*(c,d)=(ac,ad+bc)=(1(3),1(4)+2(3))=(3,10)$
+
+(2) $(d,a)*(b,c)=(db,dc+ab)=(4(2),4(3)+1(2))=(8,14)$
+
+Since $(3,10)\ne (8,14)$ and $(a,b)*(c,d)=(c,d)*(a,b)\ne (d,a)*(b,c)=(b,c)*(d,a)$ then $\langle G,*\rangle$ is not commutative. $\quad\quad\square$
 
 (ii) Associative 
 
@@ -325,9 +208,7 @@ Checking the other order,
 \end{split}
 \end{equation}
 
-Since $(a,b)*(e_1,e_2)=(a,b)$ there is an identity in $\mathbb{R}$ w.r.t. $\langle G,*\rangle$. 
-
-$\square$
+Since $(a,b)*(e_1,e_2)=(a,b)$ there is an identity in $\mathbb{R}$ w.r.t. $\langle G,*\rangle$.$\quad\quad\square$
 
 (iv) Inverse 
 
@@ -337,55 +218,50 @@ Suppose $(c,d)=(a,b)^{-1}$, then $(a,b)*(c,d)=(1,0)$ (identity found in part iii
 \label{4iv}
 \begin{split}
 (a,b)*(c,d)=(1,0)&\Rightarrow(ac,ad+bc)=(1,0) \\
-&\Rightarrow (c,d)=(\frac{1}{a},-b)\\
-&\Rightarrow (a,b)^{-1}=(\frac{1}{a},-b)
+&\Rightarrow (c,ad)=(\frac{1}{a},-bc)\\
+&\Rightarrow (c,a^{-1}ad)=(\frac{1}{a},a^{-1}(-b)c)\\
+&\Rightarrow (c,d)=(\frac{1}{a},-ba^{-1}c)\\
+&\Rightarrow (c,d)=(\frac{1}{a},-ba^{-1}a^{-1})\\
+&\Rightarrow (a,b)^{-1}=(\frac{1}{a},-ba^{-2})
 \end{split}
 \end{equation}
 
-Therefore $\forall (a,b)\in\mathbb{R}$, $\langle G,*\rangle$ has an inverse given by $(\frac{1}{a},-b)$.
+Therefore $\forall (a,b)\in\mathbb{R}$, $\langle G,*\rangle$ has an inverse given by $(\frac{1}{a},-ba^{-2})$. $\quad\quad\square$
 
-$\square$
-
-By parts i - iv, G is commutative, associative, has an identity element, and every element has an inverse. Therefore $\langle G,*\rangle$ is an abelian group.
-
-$\square$
+By parts ii - iv, G is associative, has an identity element, and every element has an inverse. Therefore $\langle G,*\rangle$ is an group, but because it isn't commutative, then $\langle G,*\rangle$ is not an abelian group. $\quad\quad\square$
 
 ## 5. Let a,b,c,x be elements of a group G. Solve the following system of equations for x : 
 
 ### (a) $bx^2=ax^{-1}\quad$ and $x^4=c$
 
-$x^4=c\Rightarrow x=c^{1/4}$
+$bx^2=ax^{-1}\Rightarrow b=ax^{-3}\Rightarrow a^{-1}b=x^{-3}$
 
-$bx^2=ax^{-1}\Rightarrow b(c^{1/4})^2=a(c^{1/4})^{-1}\Rightarrow bc^{2/4}=ac^{-1/4}$
+$x^4=c\Rightarrow x=cx^{-3}=ca^{-1}b=a^{-1}bc$
 
-$\Rightarrow b=a\frac{c^{-1/4}}{c^{2/4}}=ac^{-3/4}$
-
-$\Rightarrow a=b\frac{c^{2/4}}{c^{-1/4}}=ac^{3/4}$
+Therefore $x=a^{-1}bc$. $\quad\quad\square$
 
 ### (b) $x^2c=bxa^{-1}\quad$ and $xca=cax$
 
 \begin{equation}
 \label{5b}
 \begin{split}
-x^2b&=bxa^{-1}\\
-\Rightarrow x^{-1}x^2c &=x^{-1}bxa\\
-\Rightarrow xc &= x^{-1}bxa^{-1}\\
-\Rightarrow xca &= x^{-1}bx\\
-\Rightarrow cax &= x^{-1}bx\\
-\Rightarrow caxx^{-1} &= x^{-1}bxx^{-1}\\
-\Rightarrow ca &= x^{-1}b\\
-\Rightarrow xca &= xx^{-1}b\\
-\Rightarrow xca &= b
+x^2c &= bxa^{-1}\\
+\Rightarrow xxc &= bxa^{-1}\\
+\Rightarrow xxca &= bxa^{-1}a\\
+\Rightarrow x(xca) &= bx(a^{-1}a)\\
+\Rightarrow x(cax) &= bx(e)\\
+\Rightarrow xcaxx^{-1} &= bxx^{-1}\\
+\Rightarrow xca(xx^{-1}) &= b(xx^{-1})\\
+\Rightarrow xca(e) &= b(e)\\
+\Rightarrow xc(aa^{-1}) &=ba^{-1}\\
+\Rightarrow x(cc^{-1}) &= ba^{-1}c^{-1}\\
+\Rightarrow x &= ba^{-1}c^{-1}
 \end{split}
 \end{equation}
 
-$\Rightarrow b = xca$
-
-$\Rightarrow a=cx^{-1}b$
-
-$\Rightarrow c=x^{-1}ba^{-1}$
+Therefore $x=ba^{-1}c^{-1}$. $\quad\quad\square$. 
 
 ## 6. This problem asks you to consider the importance of using proper notation for inverses in groups. Your answer only needs to be a sentence or two. 
 ## Suppose a,b, and x are elements of a _nonabelian_ group G, and that we want to solve thte equation $ax=b$ for x. Why would it be incorrect and unclear to say that the solution is $x=\frac{b}{a}$
 
-It would be incorrect and unclear to say that $x=\frac{b}{a}$ for a _nonabelian_ group G, because a _nonabelian_ group wouldn't be commutative. Meaning that $(ax=b)\Rightarrow (x=\frac{b}{a})\ne(\frac{a}{b}=x)\Leftarrow (bx=a)$. 
+It would be incorrect and unclear to say that $x=\frac{b}{a}$ for a _nonabelian_ group G, because a _nonabelian_ group wouldn't be commutative. This is important because the side an operation happens on matters. Meaning that $(ax=b)\Rightarrow (x=\frac{b}{a})\ne(\frac{a}{b}=x)\Leftarrow (bx=a)$. 
