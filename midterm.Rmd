@@ -641,15 +641,19 @@ $\underline{\text{Note: }}(abc)^{-1}=c^{-1}b^{-1}a^{-1}$ and $(abcd)^{-1}=d^{-1}
 
 Reminder : PSU closed Monday 1/17, so there's no class
 
+Homework 2 will be posted over the weekend. 
+
 ## Ch 4. Continued 
 
 Let G be a finite group. 
 
-$\underline{\text{Fact}}$: Every row and column of G's operation tble contains each element of G exactly once. 
+$\underline{\text{Fact}}$: Every row and column of G's operation table contains each element of G exactly once. 
 
 Let $x,g\in G$. Show that g appears in the row for the element x. 
 
 ![](img/img14.png)
+
+- "x times what will be equal to g?"
 
 Now lets show g can't appear twice in x's row: 
 
@@ -691,6 +695,10 @@ In this group : $(1,1)+(1,1)=(1+1,1+1)=(0,2)$
 
 and the invese of $(1,1)$ is $(1,2)$, since $(1,1)+(1+2)=(0,0)$. 
 
+$\underline{\text{Ex}}$: Another group size 4 : $\mathbb{Z}_2\times \mathbb{Z}_2=\{(0,0),(0,1),(0,2),(1,0), (1,1), (1,2),(2,0),(2,1),(2,2)\}$
+
+This group has the property that any element added to itself is the idenity : $$(0,1)+(0,1)=(0+0,1+1)=(0,0)$$
+
 $\underline{\text{Ex}}$: This group has the property that any element added to itself is the identity: 
 
 For example, $(0,1)+(0,1)=(0+0,1+1)=(0,0)$
@@ -721,7 +729,7 @@ What does this definition look like if the operation is +?
 
 2. $\{0\}$ is called a trivial subgroup of $\mathbb{Z}$.
 
-3. $\emptyset=\{\}$ is called a trivial subgroup of $\mathbb{Z}$. 
+3. $\emptyset=\{\}$ isn't a subgroup because it doesn't contain the identity. 
 
 4. The even integers $2\mathbb{Z}=\{...,-4,-2,0,2,4,6,...\}$ are a subgroup of $\mathbb{Z}$. 
 
@@ -740,6 +748,8 @@ Proof :
 Show $H=\{0,3,6,9\}$ is a subgroup of $\mathbb{Z}_{12}$ (with the operation of addition mod 12). 
 
 Make the operation table for H : 
+
+Note : we don't know if H is a group yet, so we can't use sudoku property (hence green writing). 
 
 ![](img/img18.png)
 
