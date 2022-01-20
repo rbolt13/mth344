@@ -920,13 +920,13 @@ Subgroups of $\mathcal{F}(\mathbb{R})$:
 
 If $f(0)=0$ and $g(0)=0$. Then $(f+g)(0)=f(0)+g(0)=0+0=0$ and $-f(0)=-0=0$. 
 
-### Two step subgroup test:
+### Two-step subgroup test:
 
-Let G be a group.  subset $H\subseteq G$ is a $\underline{\text{subgroup}}$ of G if: 
+Let G be a group. A subset $H\subseteq G$ is a $\underline{\text{subgroup}}$ of G if: 
 
 (i) $e\in H$
 
-(ii) for all $a,b\in H$ , $ab^{-1}\in H$.
+(ii) for all $a,b\in H$ , $ab^{-1}\in H$. (this combines parts two and three of our first definition of a subgroup)
 
 What does this look like if the operation in G is addition? 
 
