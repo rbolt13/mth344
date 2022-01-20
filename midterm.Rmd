@@ -771,13 +771,15 @@ Let G be a group. We call a subset $h\subseteq G$ a $\underline{\text{subgroup}}
 
 $\underline{\text{Note:}}$ If H is a subgroup of G. H and G have the same operation. 
 
+- don't have to check associativity because it is assumed becasue G is a group. 
+
 $\underline{\text{Notation:}}$ $H\leq G$
 
 ### Example: not a subgroup 
 
 Let $G=\mathbb{Z}_5=\{0,1,2,3,4\}$. Why isn't $H=\{0,2,4\}$ a subgroup of G? 
 
-One reason : $2,4\in H$ , but $2+4=1\in H$ (we'ew using the operation from $\mathbb{Z}$)'s). 
+One reason : $2,4\in H$ , but $2+4=1\in H$ (we'er using the operation from $\mathbb{Z}$'s). 
 
 Another reason : $4\in H$ , but the inverse of 4 in $\mathbb{Z}$'s (which is 1) isn't in H. 
 
@@ -789,7 +791,7 @@ One way we can generate subgroups of $\mathbb{R}^*$ is to take a fixed element, 
 
 $\underline{\text{Note:}}$ This is the smallest subgroup of $\mathbb{R^*}$ that contains 7. 
 
-### Example: cyclic group
+### Example: cyclic subgroups
 
 List the cyclic subgroups of $\mathbb{Z}_6=\{0,1,2,3,4,5\}$. 
 
@@ -801,7 +803,7 @@ $\langle 2\rangle=\{0,2,4\}$
 
 $\langle 3\rangle=\{0,3\}$
 
-You can show that $\langle 4\rangle=\langle 2\rangle$ and $\langle 5\rangle=\mathbb{Z}_6$. We will see more about subgroups of $\mathbb{Z}_n$ in Ch. 11. 
+You can show that $\langle 4\rangle=\{0,4,2\}=\langle 2\rangle$ and $\langle 5\rangle=\{0,5,4,3,2,1\}=\mathbb{Z}_6$. We will see more about subgroups of $\mathbb{Z}_n$ in Ch. 11. 
 
 Since $\mathbb{Z}_6=\langle 1\rangle$, we call $\mathbb{Z_6}$ a $\underline{\text{cyclic group}}$ with generator 1. 
 
@@ -855,7 +857,7 @@ Proof:
 \text{So,}\quad (ab)^2 &= abab\\
 &=aabb\quad\text{, since G is abelian}\\
 &= a^2b^2\\
-&= ee
+&= ee\\
 &=e
 \end{split}
 \end{equation}
