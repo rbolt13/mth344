@@ -938,5 +938,175 @@ $H\subseteq G$ is a $\underline{\text{subgroup}}$ of G if.
 
 # W3D8: Jan. 21st, 2022
 
+$\underline{\text{Equivalent definition of a subgroup:}}$
+
+A subset H of group G is a subgorup of G if 
+
+(i) $e\in H$
+
+(ii) For all $a,b\in H$, $ab^{-1}\in H$. 
+
+### Example
+
+Let G be an abelian group, and let H and K be subgroups of G. 
+
+Show that the set $$HK=\{hk|h\in H,k\in K\}$$ is also a subgroup of G. 
+
+$\underline{\text{Proof:}}$
+
+(i) Since $H,K\leq G$, $e\in H$ and $e\in K$. So $$e=ee\in HK$$
+
+(ii) Let $a,b\in HK$. Then $a=h_1k_1$ and $b=h_2k_2$ fro some $h_1,h_2\in H$ and $j_1,k_2\in K$. So, 
+
+\begin{equation}\label{d8a}
+\begin{split}
+ab^{-1} &= (h_1k_1)(h_2k_2)^{-1}\\
+&=h_1k_1k_2^{-1}h_2^{-1}\quad\quad\quad\text{by T.3(i) from CH. 4}\\
+&=h_1h_2^{-1}k_1k_2^{-1}\quad\quad\quad\text{since G is abelian}
+\end{split}
+\end{equation}
+
+$\Rightarrow ab^{-1}\in HK$
+
+$\Rightarrow HK\leq G$
+
+$\square$
+
+Note :
+
+- $h_1h_2^{-1}$ is in H because H is a subgroup of G. 
+
+- $k_1k_2^{-1}$ is in K because K is a subgroup of G 
+
+## Ch. 6 - Functions:
+
+Let A and B be sets. A $\underline{\text{function}}$ f from A to B is a rule that assigns to each element $a\in A$ exactly one element in $f(a)\in B$. 
+
+$\underline{\text{Notation:}}$ $f: A\rightarrow B$
+
+The set A is called the $\underline{\text{domain}}$ and the set B is called the $\underline{\text{codomain}}$. 
+
+The $\underline{\text{range}}$ of $f:A\rightarrow B$ si the set $$ran(f)=\{f(a)|a\in A\}\subseteq B.$$
+
+### Example 
+
+We can describe functions using diagrams: 
+
+![](img/img19.png)
+
+We can also decsribe this function as follows : $$f=(\begin{smallmatrix} 1 & 2 & 3\\ a & b&c\end{smallmatrix})$$
+
+- top line is inputs
+
+- bottom line is corresponding outputs
+
+### Definitions 
+
+1. A function $f:A\rightarrow B$ is called $\underline{\text{injective}}$ or $\underline{\text{one-to-one}}$ if $$f(x_1)=f(x_2)\quad\Rightarrow\quad x_1=x_2$$
+
+2. $f:A\rightarrow B$ is $\underline{\text{surjective}}$ or $\underline{\text{onto}}$ fi for all $y\in B$ there exists $x\in A$ such that $$f(x)=y.$$
+
+$\underline{\text{Ex:}}f=(\begin{smallmatrix} 1 & 2 & 3\\ a & b&c\end{smallmatrix})$ from $A=\{1,2,3\}$ to $B=\{a,b,c\}$ is neither one-to-one nor onto (since there is a repetition in the second row and $c\in B$ doesn't appear in the second row)
+
+3. If $A\Rightarrow B$ is both one-to-one and onto, we call $f$ a $\underline{\text{bijection}}$ or $\underline{\text{bijective}}$. 
+
+### Example : Show f is a bijection
+
+Let G be a group and let $a\in G$ be constant. Define $f: G\rightarrow G$ by $$f(x)=a\times a^{-1}$$
+
+(note: that this, $a^{-1}$, is called conjugation by a)
+
+Let's show $f$ is a bijection. 
+
+1. Suppose that for some $x_1$,$x_2\in G$, $f(x_1)=f(x_2)$. 
+
+$$f(x_1)=f(x_2)\Rightarrow ax_1a^{-1}=ax_2a^{-1}\Rightarrow x_1=x_2.$$
+
+So, $f$ is one-to-one. 
+
+2 Take any $y\in G$. We need to find $x\in G$ such that $f(x)=y$. 
+
+\begin{equation}\label{d8b}
+\begin{split}
+f(x)=y &\Rightarrow axa^{-1}=y \\
+&\Rightarrow a^{-1}axa^{-1}a=a^{-1}ya\\
+&\Rightarrow x=a^{-1}ya
+\end{split}
+\end{equation}
+
+Check : If $x=a^{-1}ya$, $$f(x)=f(a^{-1}ya)=aa^{-1}yaa^{-1}=y$$
+
+So, f is also onto. 
+
+### Composition 
+
+Let $f: A\rightarrow B$ and $a:B\rightarrow C$. The $\underline{\text{compostion}}$ of f with g is the function $g\circ f:A\rightarrow C$ defined by 
+
+![](img/img20.png)
+
+$\underline{\text{Ex:}}$ Let $f:G\rightarrow G$ be given by $f(x)=axa^{-1}$. 
+
+Define $g:G\rightarrow G$ by $g(x)=bxb^{-1}$, for some constant $b\in G$. 
+
+Find a formula for $f\circ g$:
+
+$$(f\circ g)(x)=f(g(x))=f(bxb^{-1})$$
+
+
+Note : conjugation by ab 
+
+### Inverse 
+
+The $\underline{\text{inverse}}$ of a function $f:A\rightarrow B$ (if it exists) is the function $f^{-1}:B\rightarrow A$ satisfying: 
+
+![](img/img21.png)
+
+$\underline{\text{Comment:}}$ If $f:A\rightarrow B$ has an inverse, then for all $x\in A$ and $y\in B$, $(f^{-1}\circ f)(x)=x$ and $(f\circ f^{-1})(y)=y$. 
+
+$\underline{\text{Fact:}}$ A function $f:A\rightarrow B$ has an inverse $f^{-1}:B\rightarrow A$ if and only if f is bisjective. 
+
+Why? Suppose f isn't one-to-one. Then $\exists$ $x_1\ne x_2$ such that $f(x_1)=f(x_2)$
+
+![](img/img22.png)
+
+Now suppose $f$ isn't onto. Then there is $y]in B$ that isn't in $\text{ran}(f)$.
+
+![](img/img23.png)
+
+$\underline{\text{Ex:}}$ Let $f:G\rightarrow G$ be define by $f(x)=axa^{-1}$. Find $f^{-1}$. 
+
+1. Write $y=f(x)$.
+
+2. Solve the above equation for x. 
+
+3. Switch the x's to y's to get formula for $f^{-1}$.
+
+\begin{equation}\label{d8c}
+\begin{split}
+y=f(x) &\Rightarrow y=axa^{-1} \\
+&\Rightarrow x=a^{-1}axa^{-1}a\quad\quad\text{see earlier example}\\
+&\Rightarrow f^{-1}(x)=a^{-1}ya
+\end{split}
+\end{equation}
+
+# W4D9: Jan. 24th, 2022
+
+# W4D10: Jan. 26th, 2022
+
+# W4D11: Jan. 28th, 2022
+
+# W5D12: Jan. 31st, 2022
+
+# W5D13: Feb. 2nd, 2022
+
+# W5D14: Feb. 4th, 2022
+
+# W6D15: Feb. 7th, 2022
+
+# W6D16: Feb. 9th, 2022
+
+# W6D17: Feb. 11th, 2022
+
+MIDTERM!!!
 
 
