@@ -946,7 +946,7 @@ A subset H of group G is a subgorup of G if
 
 (ii) For all $a,b\in H$, $ab^{-1}\in H$. 
 
-### Example
+### Example : Show a set is a subgroup 
 
 Let G be an abelian group, and let H and K be subgroups of G. 
 
@@ -986,9 +986,9 @@ $\underline{\text{Notation:}}$ $f: A\rightarrow B$
 
 The set A is called the $\underline{\text{domain}}$ and the set B is called the $\underline{\text{codomain}}$. 
 
-The $\underline{\text{range}}$ of $f:A\rightarrow B$ si the set $$ran(f)=\{f(a)|a\in A\}\subseteq B.$$
+The $\underline{\text{range}}$ of $f:A\rightarrow B$ is the set $$ran(f)=\{f(a)|a\in A\}\subseteq B.$$
 
-### Example 
+### Example : Diagrams 
 
 We can describe functions using diagrams: 
 
