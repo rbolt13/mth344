@@ -1050,7 +1050,7 @@ Define $g:G\rightarrow G$ by $g(x)=bxb^{-1}$, for some constant $b\in G$.
 
 Find a formula for $f\circ g$:
 
-$$(f\circ g)(x)=f(g(x))=f(bxb^{-1})$$
+$$(f\circ g)(x)=f(g(x))=f(bxb^{-1})=ab\times b^{-1}a^{-1}=ab(ab)^{-1}$$
 
 
 Note : conjugation by ab 
