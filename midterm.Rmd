@@ -1004,7 +1004,7 @@ We can also decsribe this function as follows : $$f=(\begin{smallmatrix} 1 & 2 &
 
 1. A function $f:A\rightarrow B$ is called $\underline{\text{injective}}$ or $\underline{\text{one-to-one}}$ if $$f(x_1)=f(x_2)\quad\Rightarrow\quad x_1=x_2$$
 
-2. $f:A\rightarrow B$ is $\underline{\text{surjective}}$ or $\underline{\text{onto}}$ fi for all $y\in B$ there exists $x\in A$ such that $$f(x)=y.$$
+2. $f:A\rightarrow B$ is $\underline{\text{surjective}}$ or $\underline{\text{onto}}$ if for all $y\in B$ there exists $x\in A$ such that $$f(x)=y.$$
 
 $\underline{\text{Ex:}}f=(\begin{smallmatrix} 1 & 2 & 3\\ a & b&c\end{smallmatrix})$ from $A=\{1,2,3\}$ to $B=\{a,b,c\}$ is neither one-to-one nor onto (since there is a repetition in the second row and $c\in B$ doesn't appear in the second row)
 
