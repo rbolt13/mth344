@@ -1061,7 +1061,7 @@ The $\underline{\text{inverse}}$ of a function $f:A\rightarrow B$ (if it exists)
 
 ![](img/img21.png)
 
-$\underline{\text{Comment:}}$ If $f:A\rightarrow B$ has an inverse, then for all $x\in A$ and $y\in B$, $(f^{-1}\circ f)(x)=x$ and $(f\circ f^{-1})(y)=y$. 
+$\underline{\text{Comment:}}$ If $f:A\rightarrow B$ has an inverse, then for all $x\in A$ and $y\in B$, $$(f^{-1}\circ f)(x)=x\quad\text{and}\quad(f\circ f^{-1})(y)=y.$$ 
 
 $\underline{\text{Fact:}}$ A function $f:A\rightarrow B$ has an inverse $f^{-1}:B\rightarrow A$ if and only if f is bisjective. 
 
