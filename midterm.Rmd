@@ -866,7 +866,7 @@ implying that $ab\in H$.
 
 (iii) let $a\in H$. Then $a^2=e$.
 
-  (We want to show $a^{-1}\in H$. To do this, we need to show $(a^{-1})^2=e$.)
+  (We want to show $a^{-1}\in H$. To do this, we need to show $(a^{-1})^2=e$.
   
 \begin{equation}
 \label{D7c}
