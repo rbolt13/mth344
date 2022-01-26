@@ -1091,6 +1091,129 @@ y=f(x) &\Rightarrow y=axa^{-1} \\
 
 # W4D9: Jan. 24th, 2022
 
+$\mathbb{R}\times\mathbb{R}=\{(x,y)|x,y\in \mathbb{R}\}=\mathbb{R}^2$
+
+operation  in $\mathbb{R}\times\mathbb{R}$ : $(a,b)+(c,d)=(a+c,b+d)$
+
+![](img/img24.png)
+
+## Ch. 6 - Functions 
+
+We're going to define a group whose elements are bijections from a set A to itself. 
+
+$\underline{\text{Facts}}$: Let $f:A\rightarrow A$ and $g:A\rightarrow A$ be bijections. 
+
+1. Since f and g are ont-to-one, so $g\circ f$.
+
+2. Since f and g are onto, so $g\circ f$. 
+
+### Proof
+
+1. Suppose $(g\circ f)(x_1)=(g\circ f)(x_2)$. Then 
+
+\begin{equation}\label{d9a}
+\begin{split}
+g(f(x_1))=g(f(x_2)) &\Rightarrow f(x_1)=f(x_2)\quad\quad\text{since g is 1-1}\\
+&\Rightarrow x_1=x_2\quad\quad\text{since f is 1-1}
+\end{split}
+\end{equation}
+
+Hence by definition, $g\circ f$ is one-to-one. 
+
+2. Take any $y\in A$. Find an $x\in A$ such that $(g\circ f)(x)=y$.
+
+![](img/img25.png)
+
+Since g is onto $\exists a\in A$ such that $g(a)=y$. Similarly, since $f$ is onto $\exists x\in A$ such that $f(x)=a$. 
+
+$\Rightarrow (g\circ f)(x)=g(f(x))=g(a)=y$. 
+
+Hence, $g\circ f$ is onto. $\quad\quad\square$
+
+As a consequence, the composition of two bijections is a bijections. 
+
+## Ch.7 - Permutation Groups 
+
+A $\underline{\text{permutation}}$ of a set A is a bijection from A to A. 
+
+### Example : Permutation 
+
+Let $A=\{1,2,3\}$. Then function $f=(\begin{smallmatrix} 1 & 2 & 3\\ 3 & 2 & 1\end{smallmatrix})$ is a permutation of A. 
+
+Another is $g=(\begin{smallmatrix}1 & 2 & 3\\2 & 3 & 1\end{smallmatrix})$. Let's compute $g^{-1}$. To do this just switch the rows :
+
+$$g^{-1}=(\begin{smallmatrix}2 & 3 & 1 \\1 & 2&3\end{smallmatrix})=(\begin{smallmatrix}1 & 2 & 3 \\3 & 1 & 2\end{smallmatrix}).$$
+
+How many permutations of $A=\{1,2,3\}$ are there? 
+
+![](img/img26.png)
+
+$\Rightarrow$ There are $3!=3\cdot 2\cdot 1=6$ permutations of $A=\{1,2,3\}$. 
+
+### Symmetric Group
+
+Let A be a set. The $\underline{\text{symmetric group}}$ on A, denoted $S_A$, is the group of all permutations of A with the operation of function composition. 
+
+Lets show function composition is associative. 
+
+Let f, g, h $\in S_A\forall x\in A$.
+
+$$(f\circ (g\circ h))(x)=f((g\circ h)(x))=f(g(h(x)))$$
+
+$$\updownarrow\text{the same}\updownarrow$$
+
+$$((f\circ g)\circ h)(x)=(f\circ h)(h(x))=f(g(h(x)))$$
+
+The identity function in $S_A$ is $\epsilon :A\rightarrow A$ defined by $$\epsilon (x)=x.$$
+
+Check : 
+
+$$(f\circ \epsilon)(x)=f(\epsilon(x))=f(x)\quad\Rightarrow \quad f\circ \epsilon =f$$
+
+$$(\epsilon\circ f)(x)=\epsilon(f(x))=f(x)\quad\Rightarrow\quad\epsilon\circ f=f$$
+
+### Examples - Symmetric Groups
+
+$\underline{\text{Ex}}$: Let $A=\mathbb{R}$. Then $\epsilon :\mathbb{R}\rightarrow\mathbb{R}$ is the function whose graph is the line $y=x$:
+
+![](img/img27.png)
+
+$\underline{\text{Ex}}$: Let $A=\{1,2,3\}$. Then $\epsilon = (\begin{smallmatrix} 1 & 2 & 3 \\ 1 & 2 &3\end{smallmatrix})$. 
+
+### Permutation Group
+
+A $\underline{\text{permutation group}}$ is any symmetric group or any subgroup of a symmetric group. 
+
+When $A=\{1,2,3,...,n\}$, we call the group of all permutations of A the $\underline{\text{symmetric group on n elements}}$ and denote it by $S_n$. 
+
+### Example - $S_3$
+
+$S_3$ contains 6 elements (the operation table and description are on page 71-72).  Let $f = (\begin{smallmatrix} 1 & 2 & 3 \\ 3 & 2 &1\end{smallmatrix})$ and $g = (\begin{smallmatrix} 1 & 2 & 3 \\ 2 & 3 &1\end{smallmatrix})$. Lets find $f\circ g$ and $g\circ f$: 
+
+![](img/img28.png)
+
+Hence, $f\circ g\ne g\circ g$. Therefore, the group $S_3$ is not commutative or nonabelian. 
+
+$\underline{\text{Fact}}$: $S_A$ is nonabelian whenever $|A|\geq 3$. 
+
+### Example - Dihedral Group 
+
+Let's return to the dihedral group $D_3=\{1,r,r^2,s,sr,sr^2\}$. 
+
+![](img/img12.png)
+
+We can view $D_3$ as $S_3$ "in disguise". We do this by labeling the verticies. 
+
+$$r=(\begin{smallmatrix}1 & 2 & 3 \\ 2 & 3 & 1 \end{smallmatrix})\quad\text{and}\quad s=(\begin{smallmatrix}1 & 2 & 3 \\ 3 & 2 & 1\end{smallmatrix})$$
+
+### Example - Square
+
+Consider the symmetries of a square.
+
+![](img/img29.png)
+
+$\underline{\text{Note}}$: The group $S_4$ contains all permutations of $\{1,2,3,4\}$. So, $|S_4|=4\cdot 3\cdot 2\cdot 1=24$. Not all 24 of these elemetns in $S_4$ correspon to a symmetry of a square. For example, $f=(\begin{smallmatrix} 1 & 2 & 3& 4\\ 2 & 1 & 3 & 4\end{smallmatrix})$ doesn't represent a symmetry of a square. The group $D_4$ has only 8 elements. 
+
 # W4D10: Jan. 26th, 2022
 
 # W4D11: Jan. 28th, 2022
