@@ -1194,7 +1194,7 @@ $S_3$ contains 6 elements (the operation table and description are on page 71-72
 
 Hence, $f\circ g\ne g\circ g$. Therefore, the group $S_3$ is not commutative or nonabelian. 
 
-$\underline{\text{Fact}}$: $S_A$ is nonabelian whenever $|A|\geq 3$. 
+$\underline{\text{Fact}}$: $S_A$ is nonabelian whenever $|A|\geq 3$. (all symmetric groups greater than or equal to 3)
 
 ### Example - Dihedral Group 
 
@@ -1212,7 +1212,7 @@ Consider the symmetries of a square.
 
 ![](img/img29.png)
 
-$\underline{\text{Note}}$: The group $S_4$ contains all permutations of $\{1,2,3,4\}$. So, $|S_4|=4\cdot 3\cdot 2\cdot 1=24$. Not all 24 of these elemetns in $S_4$ correspon to a symmetry of a square. For example, $f=(\begin{smallmatrix} 1 & 2 & 3& 4\\ 2 & 1 & 3 & 4\end{smallmatrix})$ doesn't represent a symmetry of a square. The group $D_4$ has only 8 elements. 
+$\underline{\text{Note}}$: The group $S_4$ contains all permutations of $\{1,2,3,4\}$. So, $|S_4|=4\cdot 3\cdot 2\cdot 1=24$. Not all 24 of these elements in $S_4$ correspond to a symmetry of a square. For example, $f=(\begin{smallmatrix} 1 & 2 & 3& 4\\ 2 & 1 & 3 & 4\end{smallmatrix})$ (twisting the top of the square but leaving the bottom) doesn't represent a symmetry of a square. The group $D_4$ (of the symmetries of the square) has only 8 elements. 
 
 # W4D10: Jan. 26th, 2022
 
