@@ -1226,23 +1226,27 @@ The identity permutation is the function $\epsilon : A\rightarrow A$ defined by 
 
 The inverse of $f\in S_A$ is defined as follows: $$f(x)=y\quad\Rightarrow\quad f^{-1}(y)=x.$$
 
-### Ex: 
+### Ex. Symmetries of a Square (Permutation Group)
 
 Last class we considered the group symmetries: 
 
 ![](img/img30.png)
 
-There are 8 symmetries of the square. THis set forms an 8 element subgroup of $S_4$. (Recall, $|S_4|=24$.)
+There are 8 symmetries of the square. This set forms an 8 element subgroup of $S_4$. (Recall, $|S_4|=24$.)
 
 Let H be the group of symmetries of the square. Since everything from H can be obtained from $r,s\in S_4$, we write: $$H=\langle(\begin{smallmatrix}1&2&3&4\\2&3&4&1\end{smallmatrix}),(\begin{smallmatrix}1&2&3&4\\4&3&2&1\end{smallmatrix})\rangle$$
 
-### Ex: 
+### Ex: Prove H (a subgroup) is a subgroup of the $S_{\mathbb{Z}}\text{  }$ (another subgroup)
+
+(Similar to problem on Homework 2)
 
 In this example, we're going to find a subgroup of $S_{\mathbb{Z}}$. $\forall n\in \mathbb{Z}$ define $f_n:\mathbb{Z}\rightarrow\mathbb{Z}$ by $f_n(x)=n+x$. 
 
 We'll show $H=\{f_n|n\in\mathbb{Z}\}$ is a subgroup of $S_{\mathbb{Z}}$. 
 
-i) Show that $H\subseteq S_{\mathbb{Z}}$, i.e. $f_n\in S_\mathbb{Z}\forall n\in \mathbb{Z}$.
+**i) Show that $H\subseteq S_{\mathbb{Z}}$, i.e. $f_n\in S_\mathbb{Z}\forall n\in \mathbb{Z}$.**
+
+(show one-to-one and onto)
 
 First, suppose $f_n(x_1)=f_n(x_2)$ for some $x_1,x_2\in\mathbb{Z}$. 
 
@@ -1259,27 +1263,27 @@ Now take any $y\in\mathbb{Z}$ and let $x=y-n\in\mathbb{Z}$. Then $$f_n(x)=f_n(y-
 
 Thus, $f_n$ is onto. 
 
-(ii) No, we'll show that $\epsilon\in H=\{...,f_{-2}, f_{-1},f_{0},f_{1},f_{2},...\}$. 
+**(ii) No, we'll show that $\epsilon\in H=\{...,f_{-2}, f_{-1},f_{0},f_{1},f_{2},...\}$.** 
 
 Since $f_0(x)=0+x=x$, $f_0=\epsilon$ ($\epsilon$ is the identity permutation). Hence, $\epsilon\in H$. 
 
-(iii) Now take any $f_n$ and $f_m$ in H. For all $x\in\mathbb{Z}$, $$(f_n\circ f_m)(x)=f_n(f_m(x))=f_n(m+x)=n+m+x.$$
+**(iii) Now take any $f_n$ and $f_m$ in H. For all $x\in\mathbb{Z}$, $$(f_n\circ f_m)(x)=f_n(f_m(x))=f_n(m+x)=n+m+x.$$**
 
 Since, $f_{n+m}(x)=n+m+x$ as well, $f_n\circ f_m = f_{n+m}\in H$. 
 
-(iv) Now we need to show that H is closed under inverses. 
+**(iv) Now we need to show that H is closed under inverses.** 
 
 I claim that the inverse of $f_n$ is $f_{-n}$: $$f_n\circ f_{-n}=f_{n+(-n)}=f_0=\epsilon$$
 
 So by Theorem 2 from Ch. 4, $(f_n)^{-1}=f_{-n}\in H$. 
 
-Since $H\subseteq S_{\mathbb{Z}}$ contains the idenety, is closed under $\circ$, and closed under inverses, $H\leq S_{\mathbb{Z}}$. 
+Since $H\subseteq S_{\mathbb{Z}}$ contains the idenety, is closed under $\circ$ (composition), and closed under inverses, $H\leq S_{\mathbb{Z}}$. 
 
 ## Ch.8 Permutations of a Finite Set
 
 If $A=\{1,2,3,...n\}$, for some $n\geq 1$, we use $S_n$ to denote the symmetric group on A. 
 
-### Ex: 
+### Ex. Cycle function $\in S_5$
 
 Let $f=(\begin{smallmatrix}1&2&3&4&5\\3&4&1&1&5\end{smallmatrix})\in S_5$. 
 
@@ -1295,7 +1299,7 @@ We write $f=(1\quad3\quad2\quad4)$
 
 - note: closing parentheses indicates that the last number is sent to the beginning of the cycle. 
 
-### Ex.
+### Ex. Cycle Decomposition $\in S_7$
 
 Let $g=(\begin{smallmatrix}1&2&3&4&5&6&7\\5&3&1&7&2&6&4\end{smallmatrix})\in S_7$
 
@@ -1305,11 +1309,13 @@ $\Rightarrow g=(1523)(47)$
 
 This is called the $\underline{\text{cycle decomposition}}$ of g. 
 
-We call two cycles $\underline{\text{disjoin}}$ if they have no numbers in common. 
+### Def. Disjoint
+
+We call two cycles $\underline{\text{disjoint}}$ if they have no numbers in common. 
 
 $\underline{\text{Fact}}$: disjoint cycles in $S_n$ commute. 
 
-### Ex.
+### Ex. Rewritting Cycle Decompositions
 
 Let $g=(1523)(47)\in S_7$. We can also write this as follows: 
 
@@ -1322,9 +1328,9 @@ g &= (47)(1523)\\
 \end{split}
 \end{equation}
 
-$\underline{\text{Fact}}$: Cycles that aren't dijoint don't necessary commute. 
+$\underline{\text{Fact}}$: Cycles that aren't disjoint don't necessary commute. 
 
-### Ex. 
+### Ex. Composition of non-disjoint cycles 
 
 Let $f=(12)$ and $g=(23)$ in $S_3$. 
 
@@ -1332,7 +1338,7 @@ Let's compute $f\circ g$ and $g\circ f$.
 
 ![](img/img34.png)
 
-### Ex.
+### Ex. Find the inverse of a cycle
 
 How can we find the inverse of $h=(1432)\in S_4$?
 
