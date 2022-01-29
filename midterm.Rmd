@@ -367,7 +367,7 @@ So every $a\in\mathbb{R}$ except -1 has an inverse given by $$a^{-1}=\frac{-a}{1
 
 Note: We didn't need to check that when $\frac{-a}{1+a}$, $b*a=0$ as well, since we know * is commutative. 
 
-# W2D4: Jan. 10th, 2022
+# <span style="color: deepskyblue;">W2D4: Jan. 10th, 2022</span>
 
 ## Ch.3 - The Definition of a Group 
 
@@ -483,7 +483,7 @@ Before Wednesday, consider rs using triangles.
 
 - rs : the operation goes right to left, so rs means reflect first then rotate. 
 
-# W2D5: Jan. 12th, 2022
+# <span style="color: deepskyblue;">W2D5: Jan. 12th, 2022</span>
 
 Let G be a set and `*` be an operation on G. We call $\langle G,*\rangle$ a $\underline{\text{group}}$ if 
 
@@ -637,7 +637,7 @@ $$a^{-1}a=e\quad\Rightarrow\quad(a^{-1})^{-1}=a.\quad\quad\quad\quad\quad\square
 
 $\underline{\text{Note: }}(abc)^{-1}=c^{-1}b^{-1}a^{-1}$ and $(abcd)^{-1}=d^{-1}c^{-1}b^{-1}a^{-1}$, ect.  
 
-# W2D6: Jan. 14th, 2022
+# <span style="color: deepskyblue;">W2D6: Jan. 14th, 2022</span>
 
 Reminder : PSU closed Monday 1/17, so there's no class
 
@@ -1089,7 +1089,7 @@ y=f(x) &\Rightarrow y=axa^{-1} \\
 \end{split}
 \end{equation}
 
-# W4D9: Jan. 24th, 2022
+# <span style="color: deepskyblue;">W4D9: Jan. 24th, 2022</span>
 
 $\mathbb{R}\times\mathbb{R}=\{(x,y)|x,y\in \mathbb{R}\}=\mathbb{R}^2$
 
@@ -1214,7 +1214,7 @@ Consider the symmetries of a square.
 
 $\underline{\text{Note}}$: The group $S_4$ contains all permutations of $\{1,2,3,4\}$. So, $|S_4|=4\cdot 3\cdot 2\cdot 1=24$. Not all 24 of these elements in $S_4$ correspond to a symmetry of a square. For example, $f=(\begin{smallmatrix} 1 & 2 & 3& 4\\ 2 & 1 & 3 & 4\end{smallmatrix})$ (twisting the top of the square but leaving the bottom) doesn't represent a symmetry of a square. The group $D_4$ (of the symmetries of the square) has only 8 elements. 
 
-# W4D10: Jan. 26th, 2022
+# <span style="color: deepskyblue;">W4D10: Jan. 26th, 2022</span>
 
 ## Ch.7 Permutation Groups, Cont. 
 
@@ -1346,7 +1346,7 @@ How can we find the inverse of $h=(1432)\in S_4$?
 
 We can find $h^{-1}$ by writing the numbers in h backwards: $$h^{-1}=(2341)=(1234)$$
 
-# W4D11: Jan. 28th, 2022
+# <span style="color: deepskyblue;">W4D11: Jan. 28th, 2022</span>
 
 ## Ch.8 Permutations of Finite Set, continued: 
 
@@ -1481,11 +1481,11 @@ You can check that $\alpha^4=\alpha\circ\alpha\circ\alpha\circ\alpha=\epsilon$.
 
 # W5D14: Feb. 4th, 2022
 
-# W6D15: Feb. 7th, 2022
+# <span style="color: deepskyblue;">W6D15: Feb. 7th, 2022</span>
 
-# W6D16: Feb. 9th, 2022
+# <span style="color: deepskyblue;">W6D16: Feb. 9th, 2022</span>
 
-# W6D17: Feb. 11th, 2022
+# <span style="color: deepskyblue;">W6D17: Feb. 11th, 2022</span>
 
 MIDTERM!!!
 
