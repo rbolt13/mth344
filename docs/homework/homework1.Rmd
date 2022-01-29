@@ -1,0 +1,267 @@
+---
+title: "MTH 344-001 Winter 2022 HW 1"
+author: "Randi Bolt"
+date: "1/14/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. Do the following define operations on the given set? Why or why not? (Your answers only need to be a sentance or two; if these do define operations, you do not need to check if they're commutative, associatve, ect. in this problem.)
+
+### (a) $a*b=4a-b$ on $\mathbb{Z}$
+
+Yes, a*b should work for any two elements in $\mathbb{Z}$, and produce a unique output that exists in $\mathbb{Z}$. 
+
+### (b) $a*b=3^b$ on $\mathbb{Q}$
+
+No, because an operation needs two elements a and b, and a*b only performs an operation on one element. 
+
+### (c) $a*b=\frac{a}{ab+2}$ on $\mathbb{R}$
+
+No, because it is possible for $ab=-2$ which would make a*b undefined. 
+
+### (d) $a*b=\frac{1}{ab+2}$ on $\mathbb{R}^+$
+
+Yes, a*b should work for any two elements in $\mathbb{R}^+$, and product a unique output that also exists in $\mathbb{R}^+$. 
+
+## 2. Define an operation * on $\mathbb{R}$ by $a*b=3a-4b+2$
+
+### (a) Is * commutative?
+
+No, it is given that $a*b=3a-4b+2$, but $b*a=3b-4a+2$, which is clearly not the same. 
+
+To show by this by example let $a=1$, and $b=2$. We see that $a*b=3a-4b+2=3(1)-4(2)+2=-3$ and $b*a=3b-4a+2=3(2)-4(1)+2=4$. 
+
+Since $a*b\ne b*a$, then * is NOT commutative. $\quad\quad\square$
+
+### (b) Is * associative?
+
+No, 
+
+\begin{equation}
+\label{1b}
+\begin{split}
+(a*b)*c &= (3a-4b+2)*c\\
+&= 3(3a-4b+2)-4c+2\\
+&= 9a-12b+6-4c+2\\
+&= 9a-12b-4c+8
+\end{split}
+\end{equation}
+
+\begin{equation}
+\label{1b-2}
+\begin{split}
+a*(b*c) &= a*(3b-4c+2)\\
+&= 3a-4(3b-4c+2)+2\\
+&= 3a-12b+16c-8+2\\
+&= 3a-12b+16c-6
+\end{split}
+\end{equation}
+
+Since $(a*b)*c\ne a*(b*c)$, then * isn't associative. $\quad\quad\square$
+
+### (c) Is there an identity element $e\in \mathbb{R}$ w.r.t. *?
+
+No, let $e\in\mathbb{R}$ such that $e*a=a\forall a\in\mathbb{R}$.
+
+\begin{equation}
+\label{1c}
+\begin{split}
+e*a=a\Rightarrow 3a-4e+2 &= a \\
+&\Rightarrow 4e = 2a+2\\
+&\Rightarrow e = \frac{1}{4}(2a+2)= \frac{1}{2}a+\frac{1}{2}
+\end{split}
+\end{equation}
+
+Since the identity element must be constant then there is no identity in $\mathbb{R}$ w.r.t. *. $\quad\quad\square$
+
+### (d) Does every element $a\in\mathbb{R}$ have an inverse w.r.t. *?
+
+No, since there is no identity then are no inverse in $\mathbb{R}$ w.r.t. *. $\quad\quad \square$
+
+## 3. Define an operation * on $\mathbb{R}$ by $a*b=a+b-ab$. 
+
+### (a) Is * commutative?
+
+Yes, 
+
+\begin{equation}
+\label{3a}
+\begin{split}
+a*b &= a+b-ab\\
+&= b+a-ab\quad\text{ since + is commutative}\\
+&= b+a-ba\quad\text{since }\cdot\text{ is commutative}\\
+&= b*a
+\end{split}
+\end{equation}
+
+Since $a*b=b*a$ then * is commutative. $\quad\quad\square$
+
+### (b) Is * associative?
+
+Yes, 
+
+\begin{equation}
+\label{3b}
+\begin{split}
+a*(b*c) &= a*(b+c-bc)\\
+&= a+(b+c-bc)-a(b+c-bc)\\
+&= a+b+c-ab-ac-bc+abc
+\end{split}
+\end{equation}
+
+\begin{equation}
+\label{3b2}
+\begin{split}
+(a*b)*c &= (a+b-ab)*c\\
+&= (a+b-ab)+c-c(a+b-ab)\\
+&= a+b-ab+c-ca+cb-abc\\
+&= a+b+c-ab-ac-bc+abc
+\end{split}
+\end{equation}
+
+Since $a*(b*c)=(a*b)*c$ then * is associative. $\quad\quad\square$
+
+### (c) Is there an identity element $e\in \mathbb{R}$ w.r.t. *?
+
+Yes, since $0\in\mathbb{R}$ $a*0=0*a=a+0-a(0)=a$. Therefore there is an identity element $e=0$ w.r.t. *. $\quad\quad\square$
+
+### (d) Does every element $a\in\mathbb{R}$ have an inverse w.r.t. *?
+
+Yes, suppose $b=a^{-1}$, then $a*b=b*a=0$ (Identity found if part c). 
+
+\begin{equation}
+\label{3d}
+\begin{split}
+a*b=0 &\Rightarrow a+b-ab=0\\
+&\Rightarrow b(1-a)=-a\\
+&\Rightarrow b=\frac{-a}{1-a}
+\end{split}
+\end{equation}
+
+Therefore $\forall a\in\mathbb{R}$ except for 1 has an inverse given by: $a^{-1}=\frac{-a}{1-a}$. $\quad\quad\square$
+
+## 4. Define an operation * on the set $G=\{(x,y)\in\mathbb{R}\times\mathbb{R}|x\ne 0\}$ by $$(a,b)*(c,d)=(ac,ad+bc).$$ Prove that $\langle G,*\rangle$ is an abelian group. (You do not need to check associativity. We will show this in class.)
+
+Let $G=\{(x,y)\in\mathbb{R}\times\mathbb{R}|x\ne0\}$. Define * on G by $$(a,b)*(c,d)=(ac,ad+bc)$$
+
+For $\langle G,*\rangle$ is an abelian group it must be commutative, associative, have an identity element, and each element must have an inverse.
+
+(i) Commutative 
+
+For $(a,b)*(c,d)$ to be commutative then $(a,b)*(c,d)=(d,a)*(b,c)=(c,d)*(a,b)=(b,c)*(d,a)$. 
+
+Each can be defined: 
+
+$(a,b)*(c,d)=(ac,ad+bc)$
+
+$(d,a)*(b,c)=(db,dc+ab)$
+
+$(c,d)*(a,b)=(ca,cb+da)$
+
+$(b,c)*(d,a)=(bd,ba+cd)$
+
+Since multiplication and addition are communicative on $\mathbb{R}$, we can also show that 
+
+(1) $(a,b)*(c,d)=(ac,ad+bc)=(ca,da+cb)=(ca,cb+da)=(c,d)*(a,b)$
+
+and 
+
+(2) $(d,a)*(b,c)=(db,dc+ab)=(db,cd+ba)=(db,ba+cd)=(b,c)*(d,a)$
+
+However (1) $\ne$ (2).
+
+To show this by example let $a=1$, $b=2$ , $c=3$, and $d=4$. Then, 
+
+(1) $(a,b)*(c,d)=(ac,ad+bc)=(1(3),1(4)+2(3))=(3,10)$
+
+(2) $(d,a)*(b,c)=(db,dc+ab)=(4(2),4(3)+1(2))=(8,14)$
+
+Since $(3,10)\ne (8,14)$ and $(a,b)*(c,d)=(c,d)*(a,b)\ne (d,a)*(b,c)=(b,c)*(d,a)$ then $\langle G,*\rangle$ is not commutative. $\quad\quad\square$
+
+(ii) Associative 
+
+done in class. 
+
+(iii) Identity 
+
+Let $(a,b)*(e_1,e_2)=(a,b)$ for $e_1,e_2\in\mathbb{R}$.
+
+\begin{equation}
+\label{4iii1}
+\begin{split}
+(a,b)*(e_1,e_2)=(a,b)&\Rightarrow (ae_1,ae_2+be_1)=(a,b) \\
+&\Rightarrow (e_1,e_2)=(1,0)
+\end{split}
+\end{equation}
+
+Checking the other order,
+
+\begin{equation}
+\label{4iii2}
+\begin{split}
+(e_1,e_2)*(a,b)=(1,0)*(a,b) &= (1a,1b+a0) \\
+&= (a,b)
+\end{split}
+\end{equation}
+
+Since $(a,b)*(e_1,e_2)=(a,b)$ there is an identity in $\mathbb{R}$ w.r.t. $\langle G,*\rangle$.$\quad\quad\square$
+
+(iv) Inverse 
+
+Suppose $(c,d)=(a,b)^{-1}$, then $(a,b)*(c,d)=(1,0)$ (identity found in part iii). 
+
+\begin{equation}
+\label{4iv}
+\begin{split}
+(a,b)*(c,d)=(1,0)&\Rightarrow(ac,ad+bc)=(1,0) \\
+&\Rightarrow (c,ad)=(\frac{1}{a},-bc)\\
+&\Rightarrow (c,a^{-1}ad)=(\frac{1}{a},a^{-1}(-b)c)\\
+&\Rightarrow (c,d)=(\frac{1}{a},-ba^{-1}c)\\
+&\Rightarrow (c,d)=(\frac{1}{a},-ba^{-1}a^{-1})\\
+&\Rightarrow (a,b)^{-1}=(\frac{1}{a},-ba^{-2})
+\end{split}
+\end{equation}
+
+Therefore $\forall (a,b)\in\mathbb{R}$, $\langle G,*\rangle$ has an inverse given by $(\frac{1}{a},-ba^{-2})$. $\quad\quad\square$
+
+By parts ii - iv, G is associative, has an identity element, and every element has an inverse. Therefore $\langle G,*\rangle$ is an group, but because it isn't commutative, then $\langle G,*\rangle$ is not an abelian group. $\quad\quad\square$
+
+## 5. Let a,b,c,x be elements of a group G. Solve the following system of equations for x : 
+
+### (a) $bx^2=ax^{-1}\quad$ and $x^4=c$
+
+$bx^2=ax^{-1}\Rightarrow b=ax^{-3}\Rightarrow a^{-1}b=x^{-3}$
+
+$x^4=c\Rightarrow x=cx^{-3}=ca^{-1}b=a^{-1}bc$
+
+Therefore $x=a^{-1}bc$. $\quad\quad\square$
+
+### (b) $x^2c=bxa^{-1}\quad$ and $xca=cax$
+
+\begin{equation}
+\label{5b}
+\begin{split}
+x^2c &= bxa^{-1}\\
+\Rightarrow xxc &= bxa^{-1}\\
+\Rightarrow xxca &= bxa^{-1}a\\
+\Rightarrow x(xca) &= bx(a^{-1}a)\\
+\Rightarrow x(cax) &= bx(e)\\
+\Rightarrow xcaxx^{-1} &= bxx^{-1}\\
+\Rightarrow xca(xx^{-1}) &= b(xx^{-1})\\
+\Rightarrow xca(e) &= b(e)\\
+\Rightarrow xc(aa^{-1}) &=ba^{-1}\\
+\Rightarrow x(cc^{-1}) &= ba^{-1}c^{-1}\\
+\Rightarrow x &= ba^{-1}c^{-1}
+\end{split}
+\end{equation}
+
+Therefore $x=ba^{-1}c^{-1}$. $\quad\quad\square$. 
+
+## 6. This problem asks you to consider the importance of using proper notation for inverses in groups. Your answer only needs to be a sentence or two. 
+## Suppose a,b, and x are elements of a _nonabelian_ group G, and that we want to solve thte equation $ax=b$ for x. Why would it be incorrect and unclear to say that the solution is $x=\frac{b}{a}$
+
+It would be incorrect and unclear to say that $x=\frac{b}{a}$ for a _nonabelian_ group G, because a _nonabelian_ group wouldn't be commutative. This is important because the side an operation happens on matters. Meaning that $(ax=b)\Rightarrow (x=\frac{b}{a})\ne(\frac{a}{b}=x)\Leftarrow (bx=a)$. 

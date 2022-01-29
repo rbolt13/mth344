@@ -1,0 +1,122 @@
+---
+title: "HW 2"
+subtitle: "MTH 344-001 Winter 2022"
+author: "Randi Bolt"
+date: "1/28/2022"
+output: pdf_document
+---
+
+# 1. 
+
+(a) $2,5\in H$, but $1+5=6\notin H$
+
+(b) Any positive number say $a>0\in H$, but their inverse $-a$ does not exists in H.
+
+(c) Let $(a_1,a_2),(b_1,b_2)\in H$, then by the definition given $a_2=\sqrt{a_1}$. So, $(a_1,a_2)+(b_1,b_2)=(a_1+b_1, a_2+b_2)=(a_1+b_1, \sqrt{a_1}+\sqrt{b_1})\notin H$. Since $a_1$ and $b_1$ cannot be factored out of the $\sqrt{}$, it is not closed under coordinate-wise addition and therefore H is not a subgroup of G. 
+
+# 2. 
+
+(a) 
+
+Proof: 
+
+Let $H=\{3^m4^n|m,n\in\mathbb{Z}\}$. 
+
+We want to show that $H\leq G=\mathbb{R}^*$. 
+
+i. Since $3\cdot 4=3^14^1$, then the identity 1 is in H. 
+
+ii. Let $a_1, a_2, b_1, b_2\in H$. Then by definition $(a_1,a_2)=3^{a_1}4^{a_2}$ and $(b_1,b_2)=3^{b_1}4^{b_2}$. So, $(a_1,a_2)(b_1,b_2)=(a_1b_1,a_2b_2)=(3^{a_1b_1}4^{a_2b_2})=(3^{a_1}3^{b_1}4^{a_2}4^{b_2})=(3^{a_1}4^{a_2}3^{b_1}4^{b_2})\in H$. $\Rightarrow$ H is closed under multiplication. 
+
+iii. Let $a_1, a_2\in H$. Then by definition $(a_1,a_2)=3^{a_1}4^{a_2}$. So, $-(a_1,a_2)=(-a_1,-a_2)=3^{-a_1}4^{-a_2}=\frac{1}{3^{a_1}}\frac{1}{4^{a_2}}\in H$. $\Rightarrow$ H is closed under inverses. 
+
+Completing the proof that $H\leq G\quad\quad\square$.
+
+(b)
+
+Proof:
+
+Let $H=\{(x,y)|y=-3x\}$. 
+
+We want to show that $H\leq G=\mathbb{R}\times\mathbb{R}$. 
+
+i. Since $0=-3\cdot0$, the identity $(0,0)$ is in H. 
+
+ii. Let $a_1, a_2, b_1, b_2\in H$. Then by definition $a_2=-3a_1$ and $b_2=-3b_1$. So, $(a_1,a_2)+(b_1,b_2)=(a_1+b_1,a_2+b_2)=(a_1+b_1,-3a_1-3b_1)=(a_1+b_1, -3(a_1+b_1))\in H$. $\Rightarrow$ H is closed under coordinate-wise addition. 
+
+iii. Let $a_1, a_2\in H$. Then by definition $a_2=-3a_1$. So, $-(a_1,a_2)=(-a_1,-a_2)=(-a_1, -(-3a_1))=(-a_1,-3(-a_1))\in H$. $\Rightarrow$ H is closed under inverses.
+
+Completing the proof that $H\leq G\quad\quad\square$.
+
+# 3. 
+
+Let G be a group. We say that elements $a,x\in G$ _commute_ if $ax=xa$. Prove that if a and x commute, then $a^{-1}$ and x also commute, i.e. $a^{-1}x=xa^{-1}$.
+
+Proof: 
+\begin{equation}
+\label{3}
+\begin{split}
+ax=xa & \Leftrightarrow axa^{-1}=xaa^{-1}\\
+&\Leftrightarrow axa^{-1}=x\\
+&\Leftrightarrow a^{-1}axa^{-1}=a^{-1}x\\
+&\Leftrightarrow xa^{-1}=a^{-1}x\\
+&\Leftrightarrow a^{-1}x=xa^{-1}
+\end{split}
+\end{equation}
+
+Therefore $a,x\in G$ commutes $\quad\quad\square$. 
+
+# 4. 
+
+Let G be a group. The _center_ of G is the set C of all elements of G that commute with every other element of G: $$C=\{g\in G|xg=gx\forall x\in G\}.$$ 
+
+Prove that C is a subgroup of G. (Hint: Use problem 3 when showing C is closed under inverses.)
+
+Proof:
+
+Let $C=\{g\in G|xg=gx\forall x\in G\}$. 
+
+We want to show that $C\leq G$.
+
+i. Since $g=g\cdot e=e\cdot g$, the identity $e=1$ is in C. 
+
+ii. Let $a_1, a_2, b_1, b_2\in C$. Then by definition $a_1b_1=b_1a_1$ and $a_2b_2=b_2a_2$. So, $(a_1,a_2)(b_1,b_2)=(a_1b_1,a_2b_2)=(b_1a_1,b_2a_2)\in C$. $\Rightarrow$ C is closed under multiplication. 
+
+iii.  Let $a_1, a_2\in C$. Then by definition $a_1a_2=a_2a_1$. So, $-(a_1a_2)=-(a_2a_1)$. We also showed in 3 that if $ax=xa\Rightarrow a^{-1}x=xa^{-1}$. Therefore C is closed underinverses. 
+
+# 5. 
+
+Let H be a subgroup of G and let $a\in G$ be a constant. Show that $$K=\{aha^{-1}|h\in H\}$$ is also a subgroup of G. 
+
+Proof: 
+
+i. Since $H\leq G$, $e\in H$. Then $e=aea^{-1}\in K$. 
+
+ii. Let $x,y\in K$. Then $x=a_1h_1a_1^{-1}$ and $y=a_2h_2a_2^{-1}$ for some $a_1,a_2\in G$ and $h_1,h_2\in H$. So, $xy^{-1}=(a_1h_1a_1^{-1})(a_2h_2a_2^{-1})^{-1}=a_1h_1a_1^{-1}a_2^{-1}h_2^{-1}a_2$. $\Rightarrow xy^{-1}\in K\Rightarrow K\leq G\quad\quad\square.$
+
+# 6. 
+
+(a) Prove that $f_a$ is a bijection. 
+
+i. Suppose $x_1,x_2\in G$, $f(x_1)=f(x_2)$. Then $f(x_1)=f(x_2)\Rightarrow ax_1=ax_2\Rightarrow x_1=x_2$. So, f is one-to-one. 
+
+ii. Choose any $x\in G$ such that $a^{-1}x\in G$. Then $f(a^{-1}x)=a(a^{-1}x)=(aa^{-1})x=x$.  So, f is also onto. 
+
+(b) Show that $f_a\circ f_b=f_{ab}$. 
+
+Define $f:G\rightarrow G$ where $f_a(x)=ax$ and $f_b(x)=bx$. Then $f_a\circ f_b$: $(f_a\circ f_b)(x)=f_a(f_b(x))=f_a(bx)=abx$. Therefore $f_{ab}=abx$. 
+
+(c) Find a formula for $f_a^{-1}$. 
+
+\begin{equation}
+\label{6}
+\begin{split}
+y=f(x) & \Rightarrow y=ax\\
+&\Rightarrow a^{-1}y=x\\
+&\Rightarrow x=a^{-1}y\\
+&\Rightarrow f^{-1}(x)=a^{-1}y
+\end{split}
+\end{equation}
+
+
+
