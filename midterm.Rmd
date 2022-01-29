@@ -1352,17 +1352,17 @@ We can find $h^{-1}$ by writing the numbers in h backwards: $$h^{-1}=(2341)=(123
 
 $S_n$ denotes the group of permutations of the set $\{1,2,3,...,n\}$. 
 
-A cycle in $S_n$ is a permutation of the form $f=(a_1,a_2,a_3,...a_k)$ when $f(a_i)=a_{i+1}\forall 1\leq i\leq k-1$ and $f(a_k)=a_1$. 
+A cycle in $S_n$ is a permutation of the form $f=(a_1,a_2,a_3,...a_k)$ where $f(a_i)=a_{i+1}\forall 1\leq i\leq k-1$ (any number but 1) and $f(a_k)=a_1$. 
 
 Any number not appearing in the cycle $(a_1\quad a_2\quad a_3\quad\dots\quad a_k)$ is fixed by f. 
 
 ![](img/img36.png)
 
-### Theorem 1
+### Th. 8.1: Permutations in $S_n$
 
 Every permutation in $S_n$ is either the identity, a cycle or a composition (the book will say "product" here instead) of dijoint cycles. 
 
-### Ex. 
+### Ex. Permutation $\in S_8$
 
 Let $f=(\begin{smallmatrix}1&2&3&4&5&6&7&8\\8&4&5&1&6&3&7&2\end{smallmatrix})\in S_8$
 
@@ -1376,7 +1376,7 @@ The number of integers in a cycle is called its $\underline{\text{length}}$.
 
 A cycle of length 2 is called a $\underline{\text{transposition}}$. 
 
-### Ex.
+### Ex. $\epsilon =f\circ f\text{ }$ for $\text{ }f=(12)\in S_3$
 
 Let $f=(12)\in S_3$. What is $f\circ f$? Since f switches 1 and 2, composing with f will switch them back. 
 
@@ -1388,19 +1388,19 @@ $\underline{\text{Fact}}$: Every transposition in $S_n$ is equal to its own inve
 
 $\underline{\text{Fact}}$: Every permutation in $S_n$ can be written as a composition of transpositions. 
 
-### Ex. 
+### Ex. Rewrite $g=(127643)\in S_7$
 
 Let $g=(127643)\in S_7$. We can write g as follows: $$g=(12)(27)(76)(64)(43)$$
 
 Here's another way: $$g=(34)(36)(37)(32)(31)$$
 
-### Theorem 
+### Th. 8.2: Parity of transpositions is unique
 
 When writing a permutation as a composition of transpositions, the parity (even/odd) of the number of transpositions is unique. 
 
-For example can't write a permutation as a compostion of 3 transposition and also as a composition of 4 transpositions. 
+For example, we can't write a permutation as a composition of 3 transposition and also as a composition of 4 transpositions (because one is odd and one is even). 
 
-### Ex. 
+### Ex. Number of transpositions changes but stays even
 
 In $S_3$, $(123)=(12)(23)=(13)(23)(12)(13)$
 
@@ -1408,9 +1408,11 @@ A permutation in $S_n$ is called $\underline{\text{even/odd}}$ if it can be writ
 
 $\underline{\text{Fact}}$: There are the same # of even permutations and odd permutations in $S_n$. 
 
+### Def. Alternating Group
+
 The set of all even permutations in $S_n$ is a subgroup called the $\underline{\text{alternating group}}$, which is denoted $A_n$. 
 
-### Ex. 
+### Ex. Even length implies odd permutation
 
 Let $g=(127643)\in S_7$. The length of g is even. But $$g=(12)(27)(76)(64)(43),$$
 
@@ -1422,7 +1424,7 @@ $\underline{\text{Facts}}$:
 
 2. If the length of a cycle is odd, then the cycle is an even permutation. 
 
-### Ex. 
+### Ex. Even plus odd permutation
 
 Is $h=(158)(2346)\in S_8$ an even or odd permutation? 
 
@@ -1430,15 +1432,15 @@ Is $h=(158)(2346)\in S_8$ an even or odd permutation?
 
 Since even+odd=odd, the permutaion h is odd. 
 
-### Ex. 
+### Ex. Composition of two even permutations | Proof that $A_n$ is a subgroup of $S_n$
 
-(i) What happens if we compose two even permutations? 
+**(i) What happens if we compose two even permutations?** 
 
 The result will be an even permutation since 
 
 even + even = even. 
 
-(ii) If f is an even/ odd permutation, then so is $f^{-1}$. 
+**(ii) If f is an even/ odd permutation, then so is $f^{-1}$.** 
 
 For example, if $h=(158)(2346)$, then 
 
@@ -1448,7 +1450,7 @@ These imply that $A_n$ (the set of even permutations in $S_n$) is closed under c
 
 The identity $\epsilon$ is even since $\epsilon = (12)(12)$. So $\epsilon \in A_n$, completing the proof that $A_n$ is a subgroup of $S_n$. 
 
-### Ex. 
+### Ex. $S_3$ (non-abelian group) is NOT a subgroup of H
 
 In Ch.5, we showed that if G is abelian then $$H=\{x\in G|x^2=e\}$$ is a subgroup of G. 
 
