@@ -1462,6 +1462,8 @@ Then $\alpha = (12)$ and $\beta=(13)$ are in the set H, since $$\alpha^2=\alpha\
 
 But $\alpha\circ \beta=(12)(13)=(132)$ and $(132)(132)=(123)\ne\epsilon$. 
 
+(Right to left)
+
 We've shown that in $S_3$, the set $H=\{x\in H|x^2=\epsilon\}$ is not a subgroup because $\alpha$, $\beta\in H$, but $\alpha\circ\beta\notin H$. 
 
 ### Question for Ch. 10
