@@ -1481,6 +1481,134 @@ You can check that $\alpha^4=\alpha\circ\alpha\circ\alpha\circ\alpha=\epsilon$.
 
 # W5D12: Jan. 31st, 2022
 
+## Ch. 9 - Isomorphism
+
+In CH4, we made the operation table for a group $G_1=\{e,a,b,c\}$ of size 4 with the property $e^2=a^2=b^2=c^2=e$. 
+
+Another group of size 4 with this property is $G_2=\mathbb{Z}_2\times \mathbb{Z}_2$. 
+
+![](img/img50.png)
+
+The function $f:G_1\rightarrow G_2$ given by 
+
+![](img/img51.png)
+
+transforms the table for $G_1$ into the table for $G_2$. This function is called an $\underline{\text{isomorphism}}$ from $G_1$ to $G_2$. 
+
+An isopmorphism from a group $G_1$ to $G_2$ will have to be a bijection. What does it mean for $f$ to "transform" the table for $G_1$ into the table for $G_2$?
+
+![](img/img52.png)
+
+$\forall a,b,\in G$ we want f to take $ab\in G$ to the element $f(a)f(b)\in G_2$. 
+
+### Def. Isomorphism 
+
+A function $f:G_1\rightarrow G_2$ is called an $\underline{\text{isomorphism}}$ if f is a bijection and for all $a,b\in G$, $$\text{operation in }G_1\rightarrow\quad f(ab)=f(a)f(b)\quad\leftarrow\text{operation in }G_2$$
+
+If the operation in $G_1$ and / or $G_2$ is "+", the above equation might look like $f(a+b)=f(a)f(b)$, $f(ab)=f(a)+f(b)$, or $f(a+b)=f(a)+f(b)$. 
+
+If f is an isomorphism from $G_1$ to $G_2$, we call $G_1$ and $G_2$ $\underline{\text{isomporphic}}$ and we write $G_1\cong G_2$. 
+
+### Ex. Show $\langle\mathbb{R},+\rangle\cong\langle\mathbb{R},\cdot\rangle$
+
+I claim $f(x)=10^x$ is an isomorphism from $\mathbb{R}$ to $\mathbb{R}^+$.
+
+![](img/img53.png)
+
+This is a bijection: 
+
+\begin{equation}\label{D121}
+\begin{split}
+f(x_1)=f(x_2) &\Rightarrow 10^{x_1}=10^{x_2}\\
+&\Rightarrow log(10^{x_1})=log(10^{x_2})\\
+&\Rightarrow x_1=x_2
+\end{split}
+\end{equation}
+
+So, f is one-to-one.
+
+Now let $y\in \mathbb{R}^+$ and $x=log(y)\in \mathbb{R}$. Then $$f(x)=10^x=10^{log(y)}=y,$$
+
+proving f is onto. 
+
+Last, take any $a,b\in\mathbb{R}$. Then $$f(a+b)=10^{1+b}=10^a10^b=f(a)f(b)$$. 
+
+Hence, $\langle\mathbb{R},+\rangle\cong\langle\mathbb{R},\cdot\rangle$. 
+
+### Ex. Show that $\langle\mathbb{Z},+\rangle\cong\langle7\mathbb{Z},+\rangle$
+
+Recall, $7\mathbb{Z}=\{...,-14,-7, 0, 7, 14, 28, ...\}$
+
+Define $f:\mathbb{Z}\rightarrow 7\mathbb{Z}$, by $f(n)=7n$. (You can check this is a bijection.)
+
+Take $a,b\in \mathbb{Z}$, then $$f(a+b)=7(a+b)=7a+yb=f(a)+f(b)$$
+
+So $\mathbb{Z}\cong 7\mathbb{Z}$. 
+
+### Ex. Construct an isomorphism 
+
+Let $G_1=\mathbb{Z}_4=\{0,1,2,3,\}=\langle 1\rangle$. 
+
+$\rightarrow$ all elements of $\mathbb{Z}_4$ can be obtained from 1 using repeated addition mod 4. 
+
+Let $G_2=\{1,-1,i,-i\}\subseteq\mathbb{C}$ with the operation of complex multiplication. 
+
+Since $i^2=-1$, $i^3=-i$, and $i^4=1$, $G_2=\langle i\rangle$. 
+
+We'll construct an isomorphism $f:G_1\rightarrow G_2$ by specifying that $f(1)=i$. 
+
+Then,  
+
+$$f(2)=f(1+1)=f(1)f(1)=i^2=-1$$
+
+$$f(2)=f(1+2)=f(1)f(2)=i(-1)=-i$$
+
+$$f(0)=f(1+3)=f(1)f(3)=i(-i)=1$$ 
+
+(Note: $f(0)=f(2+2)=f(2)f(2)=(-1)(-1)=1$.)
+
+So, we constructed an isomorphism $f:\mathbb{Z}_4\rightarrow G_2$: 
+
+$$f=(\begin{smallmatrix} 0 & 1 & 2 & 3\\ 1 & i & -1 & -i\end{smallmatrix})$$
+
+Notice: 1 and 3 are inverses in $\mathbb{Z}_4$. Similarly, i and $-i$ are inverses in $G_2$. 
+
+### Prop. 1: If f is an isomorphism 
+
+Let $f:G_1\rightarrow G_2$ be an isomorphism. Then 
+
+(i) $f(e_1)=e_2$
+
+(ii) $\forall a\in G$, $f(a)$ and $f(a^{-1})$ are inverses in $G_2$, i.e. $$f(a^{-1)}=[f(a)]^{-1}$$
+
+(iii) If $G_1=\langle a\rangle$, then $G_2=\langle f(a)\rangle$.
+
+### Proof of Prop. 1
+
+(i) Let $e_1$ and $e_2$ be the identites in $G_1$ and $G_2$, respectively. Then 
+
+\begin{equation}\label{D12,2}
+\begin{split}
+f(e_1)e_2 &= f(e_1)\\
+&= f(e_1e_1)\\
+&= f(e_1)f(e_1)\quad\text{since f is an isomorphism}
+\end{split}
+\end{equation}
+
+$\Rightarrow e_2=f(e_2)$, by left cancellation. 
+
+(ii) To show $f(a)$ and $f(a^{-1})$ are inverses, let's show their product is the identity $e_2\in G$: 
+
+\begin{equation}\label{12,3}
+\begin{split}
+f(a)f(a^{-1}) &= f(aa^{-1})\\
+&=f(e_1)\\
+&= e_2\quad\text{ by part(i)}
+\end{split}
+\end{equation}
+
+Therefore, $f(a^{-1})=(f(a))^{-1}$ by Theorem 2 from Ch. 4. 
+
 # W5D13: Feb. 2nd, 2022
 
 # W5D14: Feb. 4th, 2022
