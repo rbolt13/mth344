@@ -1539,8 +1539,8 @@ g &amp;= (47)(1523)\\
 <div id="def.-isomorphism" class="section level3">
 <h3>Def. Isomorphism</h3>
 <p>A function <span class="math inline">\(f:G_1\rightarrow G_2\)</span> is called an <span class="math inline">\(\underline{\text{isomorphism}}\)</span> if f is a bijection and for all <span class="math inline">\(a,b\in G\)</span>, <span class="math display">\[\text{operation in }G_1\rightarrow\quad f(ab)=f(a)f(b)\quad\leftarrow\text{operation in }G_2\]</span></p>
-<p>If the operation in <span class="math inline">\(G_1\)</span> and / or <span class="math inline">\(G_2\)</span> is “+”, the above equation might look like <span class="math inline">\(f(a+b)=f(a)f(b)\)</span>, <span class="math inline">\(f(ab)=f(a)+f(b)\)</span>, or <span class="math inline">\(f(a+b)=f(a)+f(b)\)</span>.</p>
-<p>If f is an isomorphism from <span class="math inline">\(G_1\)</span> to <span class="math inline">\(G_2\)</span>, we call <span class="math inline">\(G_1\)</span> and <span class="math inline">\(G_2\)</span> <span class="math inline">\(\underline{\text{isomporphic}}\)</span> and we write <span class="math inline">\(G_1\cong G_2\)</span>.</p>
+<p>If the operation in <span class="math inline">\(G_1\)</span> and / or <span class="math inline">\(G_2\)</span> is “+”, the above equation might look like <span class="math inline">\(f(a+b)=f(a)f(b)\)</span>, <span class="math inline">\(f(ab)=f(a)+f(b)\)</span>, or <span class="math inline">\(f(a+b)=f(a)+f(b)\)</span>. (Left side might use addition, right side might use addition, both sides might use addition)</p>
+<p>If f is an isomorphism from <span class="math inline">\(G_1\)</span> to <span class="math inline">\(G_2\)</span>, we call <span class="math inline">\(G_1\)</span> and <span class="math inline">\(G_2\)</span> <span class="math inline">\(\underline{\text{isomorphic}}\)</span> and we write <span class="math inline">\(G_1\cong G_2\)</span>.</p>
 </div>
 <div id="ex.-show-langlemathbbrrangleconglanglemathbbrcdotrangle" class="section level3">
 <h3>Ex. Show <span class="math inline">\(\langle\mathbb{R},+\rangle\cong\langle\mathbb{R},\cdot\rangle\)</span></h3>
@@ -1557,11 +1557,12 @@ f(x_1)=f(x_2) &amp;\Rightarrow 10^{x_1}=10^{x_2}\\
 <p>So, f is one-to-one.</p>
 <p>Now let <span class="math inline">\(y\in \mathbb{R}^+\)</span> and <span class="math inline">\(x=log(y)\in \mathbb{R}\)</span>. Then <span class="math display">\[f(x)=10^x=10^{log(y)}=y,\]</span></p>
 <p>proving f is onto.</p>
-<p>Last, take any <span class="math inline">\(a,b\in\mathbb{R}\)</span>. Then <span class="math display">\[f(a+b)=10^{1+b}=10^a10^b=f(a)f(b)\]</span>.</p>
+<p>Last, take any <span class="math inline">\(a,b\in\mathbb{R}\)</span>. Then <span class="math display">\[f(a+b)=10^{a+b}=10^a10^b=f(a)f(b)\]</span>.</p>
 <p>Hence, <span class="math inline">\(\langle\mathbb{R},+\rangle\cong\langle\mathbb{R},\cdot\rangle\)</span>.</p>
 </div>
 <div id="ex.-show-that-langlemathbbzrangleconglangle7mathbbzrangle" class="section level3">
 <h3>Ex. Show that <span class="math inline">\(\langle\mathbb{Z},+\rangle\cong\langle7\mathbb{Z},+\rangle\)</span></h3>
+<p>Note: Integers will always be under addition.</p>
 <p>Recall, <span class="math inline">\(7\mathbb{Z}=\{...,-14,-7, 0, 7, 14, 28, ...\}\)</span></p>
 <p>Define <span class="math inline">\(f:\mathbb{Z}\rightarrow 7\mathbb{Z}\)</span>, by <span class="math inline">\(f(n)=7n\)</span>. (You can check this is a bijection.)</p>
 <p>Take <span class="math inline">\(a,b\in \mathbb{Z}\)</span>, then <span class="math display">\[f(a+b)=7(a+b)=7a+yb=f(a)+f(b)\]</span></p>
@@ -1569,28 +1570,31 @@ f(x_1)=f(x_2) &amp;\Rightarrow 10^{x_1}=10^{x_2}\\
 </div>
 <div id="ex.-construct-an-isomorphism" class="section level3">
 <h3>Ex. Construct an isomorphism</h3>
-<p>Let <span class="math inline">\(G_1=\mathbb{Z}_4=\{0,1,2,3,\}=\langle 1\rangle\)</span>.</p>
+<p>Let <span class="math inline">\(G_1=\mathbb{Z}_4=\{0,1,2,3\}=\langle 1\rangle\)</span>.</p>
 <p><span class="math inline">\(\rightarrow\)</span> all elements of <span class="math inline">\(\mathbb{Z}_4\)</span> can be obtained from 1 using repeated addition mod 4.</p>
 <p>Let <span class="math inline">\(G_2=\{1,-1,i,-i\}\subseteq\mathbb{C}\)</span> with the operation of complex multiplication.</p>
-<p>Since <span class="math inline">\(i^2=-1\)</span>, <span class="math inline">\(i^3=-i\)</span>, and <span class="math inline">\(i^4=1\)</span>, <span class="math inline">\(G_2=\langle i\rangle\)</span>.</p>
+<p>Since <span class="math inline">\(i^2=-1\)</span>, <span class="math inline">\(i^3=-i\)</span>, and <span class="math inline">\(i^4=1\)</span>, then <span class="math inline">\(G_2=\langle i\rangle\)</span>.</p>
 <p>We’ll construct an isomorphism <span class="math inline">\(f:G_1\rightarrow G_2\)</span> by specifying that <span class="math inline">\(f(1)=i\)</span>.</p>
 <p>Then,</p>
 <p><span class="math display">\[f(2)=f(1+1)=f(1)f(1)=i^2=-1\]</span></p>
-<p><span class="math display">\[f(2)=f(1+2)=f(1)f(2)=i(-1)=-i\]</span></p>
+<p><span class="math display">\[f(3)=f(1+2)=f(1)f(2)=i(-1)=-i\]</span></p>
 <p><span class="math display">\[f(0)=f(1+3)=f(1)f(3)=i(-i)=1\]</span></p>
 <p>(Note: <span class="math inline">\(f(0)=f(2+2)=f(2)f(2)=(-1)(-1)=1\)</span>.)</p>
 <p>So, we constructed an isomorphism <span class="math inline">\(f:\mathbb{Z}_4\rightarrow G_2\)</span>:</p>
 <p><span class="math display">\[f=(\begin{smallmatrix} 0 &amp; 1 &amp; 2 &amp; 3\\ 1 &amp; i &amp; -1 &amp; -i\end{smallmatrix})\]</span></p>
 <p>Notice: 1 and 3 are inverses in <span class="math inline">\(\mathbb{Z}_4\)</span>. Similarly, i and <span class="math inline">\(-i\)</span> are inverses in <span class="math inline">\(G_2\)</span>.</p>
+<p>(This is enough for cyclic groups)</p>
+<p>Also Notice: Identity elements are always paired (0 paired with 1). Two inverses paired up in the first group will be paired up with the inverses in the second.</p>
 </div>
-<div id="prop.-1-if-f-is-an-isomorphism" class="section level3">
-<h3>Prop. 1: If f is an isomorphism</h3>
+<div id="prop.-1-true-for-any-isomorphic-group" class="section level3">
+<h3>Prop. 1: True for any isomorphic group</h3>
 <p>Let <span class="math inline">\(f:G_1\rightarrow G_2\)</span> be an isomorphism. Then</p>
 <ol style="list-style-type: lower-roman">
 <li><p><span class="math inline">\(f(e_1)=e_2\)</span></p></li>
 <li><p><span class="math inline">\(\forall a\in G\)</span>, <span class="math inline">\(f(a)\)</span> and <span class="math inline">\(f(a^{-1})\)</span> are inverses in <span class="math inline">\(G_2\)</span>, i.e. <span class="math display">\[f(a^{-1)}=[f(a)]^{-1}\]</span></p></li>
 <li><p>If <span class="math inline">\(G_1=\langle a\rangle\)</span>, then <span class="math inline">\(G_2=\langle f(a)\rangle\)</span>.</p></li>
 </ol>
+<p>(If the first group )</p>
 </div>
 <div id="proof-of-prop.-1" class="section level3">
 <h3>Proof of Prop. 1</h3>
@@ -1604,7 +1608,7 @@ f(e_1)e_2 &amp;= f(e_1)\\
 &amp;= f(e_1)f(e_1)\quad\text{since f is an isomorphism}
 \end{split}
 \end{equation}\]</span></p>
-<p><span class="math inline">\(\Rightarrow e_2=f(e_2)\)</span>, by left cancellation.</p>
+<p><span class="math inline">\(\Rightarrow e_2=f(e_1)\)</span>, by left cancellation.</p>
 <ol start="2" style="list-style-type: lower-roman">
 <li>To show <span class="math inline">\(f(a)\)</span> and <span class="math inline">\(f(a^{-1})\)</span> are inverses, let’s show their product is the identity <span class="math inline">\(e_2\in G\)</span>:</li>
 </ol>
