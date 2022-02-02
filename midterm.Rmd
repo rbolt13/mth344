@@ -1619,6 +1619,119 @@ Therefore, $f(a^{-1})=(f(a))^{-1}$ by Theorem 2 from Ch. 4.
 
 # W5D13: Feb. 2nd, 2022
 
+## Ch. 9 - Isomorphism 
+
+A function $f:G_1\rightarrow G_2$ is called an $\underline{\text{isomorphism}}$ if f is a bijection and for all $a,b\in G$, $$f(ab)=f(a)f(b).$$
+
+### Ex. Show $G\cong \langle \mathbb{Z},+\rangle$
+
+Let $G\{(\begin{smallmatrix} 1 & n \\ 0 & 1\end{smallmatrix})|n\in \mathbb{Z}\}$ with the operation of matrix multiplication. Let's show $G\cong \langle \mathbb{Z},+\rangle$. 
+
+First, why is G a group? 
+
+1. identity = $(\begin{smallmatrix} 1 & 0 \\ 0 & 1\end{smallmatrix})\in G$
+
+2. $(\begin{smallmatrix} 1 & a \\ 0 & 1\end{smallmatrix})(\begin{smallmatrix} 1 & b \\ 0 & 1\end{smallmatrix})=(\begin{smallmatrix} 1\cdot 1 + a\cdot 0 & 1\cdot b+a\cdot 1 \\ 0\cdot 1+1\cdot 0 & 0\cdot b+1\cdot 1\end{smallmatrix})=(\begin{smallmatrix} 1 & a+b \\ 0 & 1\end{smallmatrix})\in G$. 
+
+3. $(\begin{smallmatrix} 1 & a \\ 0 & 1\end{smallmatrix})^{-1}=(\begin{smallmatrix} 1 & -a \\ 0 & 1\end{smallmatrix})\in G$
+
+Now let's show $G\cong\mathbb{Z}$. Define $f:\mathbb{Z}\rightarrow G$ by $$f(n)=(\begin{smallmatrix} 1 & n \\ 0 & 1\end{smallmatrix}).$$
+
+One-to-one:
+
+Suppose $f(n_1)=f(n_2)$ for some $n_1,n_2\in\mathbb{Z}$. Then $$(\begin{smallmatrix} 1 & n_1 \\ 0 & 1\end{smallmatrix})=(\begin{smallmatrix} 1 & n_2 \\ 0 & 1\end{smallmatrix})\quad\Rightarrow\quad n_1=n_2.$$
+
+Onto:
+
+Take any $(\begin{smallmatrix} 1 & n \\ 0 & 1\end{smallmatrix})\in G$. Then $n\in\mathbb{Z}$ and $f(n)=(\begin{smallmatrix} 1 & n \\ 0 & 1\end{smallmatrix})$. Take any $a,b\in\mathbb{Z}$. Then $$f(a+b)=(\begin{smallmatrix} 1 & a+b \\ 0 & 1\end{smallmatrix})=(\begin{smallmatrix} 1 & a \\ 0 & 1\end{smallmatrix})(\begin{smallmatrix} 1 & b \\ 0 & 1\end{smallmatrix})=f(a)f(b).$$
+
+### Groups that are isomorphic have the same algebraic properties
+
+Suppose that $G_1\cong G_2$. Then 
+
+1. $|G_1|=|G_2|$
+
+2. $G_1$ is abelian if and only if $G_2$ is abelian.
+
+3. $G_1$ is cyclic if and only if $G_2$ is cyclic.
+
+4. $G_1$ has the property that every element squared equals e if and only if $G_2$ has the same property. 
+
+5. Every subgroup of $G_1$ is isomorphic to a subgroup of $G_2$.
+
+$\vdots$
+
+### Ex. $\mathbb{Z}_4\ncong \mathbb{Z}_2\times \mathbb{Z}_2$
+
+Show that $\mathbb{Z}_4=\{0,1,2,3\}$ is not isomorphic to $\mathbb{Z}_2\times \mathbb{Z}_2$. 
+
+The group $\mathbb{Z}_4\langle 1\rangle$ is cyclic. The group $\mathbb{Z}_2\times \mathbb{Z}_2$ is not, since 
+
+![](img/img54.png)
+
+Another way to show $\mathbb{Z}_4\ncong \mathbb{Z}_2\times \mathbb{Z}_2$: 
+
+$\mathbb{Z}_2\times \mathbb{Z}_2$ has the property that every element added to itself is the identity. The group $\mathbb{Z}_4$ doesn't have this property: 
+
+$$1+1=2\ne 0\in \mathbb{Z}_4$$
+
+$\underline{\text{Fact}}$: (We'll prove this in ch. 11): Every group of size 4 is isomorphic to $\mathbb{Z}_4$ or $\mathbb{Z}_2\times\mathbb{Z}_2$. 
+
+### Ex. Symetries of a square $\cong \mathbb{Z}_2\times \mathbb{Z}_2$
+
+Let G be the group of symmetries of a (non-square) rectangle. Then $G=\{1,R,S_1,S_2\}$:
+
+![](img/img55.png)
+
+Any element of G times itself is the identity, so $G\cong \mathbb{Z}_2\times \mathbb{Z}_2$. 
+
+### Ex. Show $\langle \mathbb{R},+\rangle \ncong \langle \mathbb{R}^*,\cdot\rangle$
+
+The group $\mathbb{R}^*$ has a cyclic subgroup of size 2: $\langle -1\rangle =\{1,-1\}$. 
+
+The group $\mathbb{R}$ does not have a cyclic subgroup of size 2. The only finite cyclic subgroup of $\mathbb{R}$ is $\langle 0\rangle =\{0\}$, since $a\ne 0$, $$\langle a\rangle =\{...,-2a,-a,0,a,2a,3a,...\},$$
+
+which is infinite. 
+
+Alternatively, $\langle \mathbb{R}^*, \cdot \rangle$ has two elements that are their own inverse (1 and $-1$). In $\langle \mathbb{R}^*, + \rangle$ there is only one element that is its own inverse (the identity 0). 
+
+### Ex. Show $\langle\mathbb{C}^*,\cdot\rangle\ncong\langle \mathbb{R}\times\mathbb{R},+\rangle$
+
+\begin{equation}\label{D13}
+\begin{split}
+f((a_1+b_1i)+(a_2+b_2i)) &= f(a_1+a_2+(b_1+b_2)i)\\
+&= (a_1+a_2,b_1+b_2)\\
+&= (a_1,b_1) + (a_2,b_2)\\
+&= f(a_1+b_1i)+f(a_2+b_2i)
+\end{split}
+\end{equation}
+
+### Cayley's Theorem (1854)
+
+Every group is isomorphic to a permutation group. 
+
+$\underline{\text{Proof}}$: Let G be any group. For every $a\in G$, define a function $f_a:G\rightarrow G$ by $$f_a(x)=ax.$$
+
+Let $H=\{F_a|a\in G\}$. We'll show that H is a subgroup of $S_G$ (all permutations of G), and that $G\cong H$. 
+
+In Hw 2, you showed: 
+
+(a) Each function $f_a$ is a bijection, i.e. $H\subseteq S_G$. 
+
+(b) $f_a\circ f_b=f_{ab}$, i.e. H is closed under composition. 
+
+(c) $(f_a)^{-1}=f_{a^{-1}}$, i.e. H is closed under inverses. 
+
+Note that $f_e$, "left multiplication by e", is the identity permutation, since $$f_e(x)=ex=x=\epsilon(x).$$
+
+So H contains the identity permmutation. Hence, $H\leq S_G$, i.e. H is a permutation group. 
+
+Now let's show that $G\cong H$. Define a function $\alpha:G\rightarrow H$ by $$\alpha(a)=f_a.$$
+
+Then $\forall a,b\in G$, $$\alpha(ab)=f_{ab}=f_a\circ f_b=\alpha(a)\circ\alpha(b).$$
+
+(See the book for the proof that $\alpha$ is a bijection.) Hence, $\alpha$ is an isomorphism, proving $G\cong H$. $\quad\quad\square$
+
 # W5D14: Feb. 4th, 2022
 
 # <span style="color: deepskyblue;">W6D15: Feb. 7th, 2022</span>
