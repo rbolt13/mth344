@@ -1623,7 +1623,7 @@ Therefore, $f(a^{-1})=(f(a))^{-1}$ by Theorem 2 from Ch. 4.
 
 A function $f:G_1\rightarrow G_2$ is called an $\underline{\text{isomorphism}}$ if f is a bijection and for all $a,b\in G$, $$f(ab)=f(a)f(b).$$
 
-### Ex. Show $G\cong \langle \mathbb{Z},+\rangle$
+### Ex. Show matrix $G\cong \langle \mathbb{Z},+\rangle$
 
 Let $G\{(\begin{smallmatrix} 1 & n \\ 0 & 1\end{smallmatrix})|n\in \mathbb{Z}\}$ with the operation of matrix multiplication. Let's show $G\cong \langle \mathbb{Z},+\rangle$. 
 
@@ -1649,7 +1649,7 @@ Take any $(\begin{smallmatrix} 1 & n \\ 0 & 1\end{smallmatrix})\in G$. Then $n\i
 
 Suppose that $G_1\cong G_2$. Then 
 
-1. $|G_1|=|G_2|$
+1. $|G_1|=|G_2|$ (they have the same size)
 
 2. $G_1$ is abelian if and only if $G_2$ is abelian.
 
@@ -1675,7 +1675,7 @@ $\mathbb{Z}_2\times \mathbb{Z}_2$ has the property that every element added to i
 
 $$1+1=2\ne 0\in \mathbb{Z}_4$$
 
-$\underline{\text{Fact}}$: (We'll prove this in ch. 11): Every group of size 4 is isomorphic to $\mathbb{Z}_4$ or $\mathbb{Z}_2\times\mathbb{Z}_2$. 
+$\underline{\text{Fact}}$: (We'll prove this in ch. 11): Every group of size 4 is isomorphic to $\mathbb{Z}_4$ or $\mathbb{Z}_2\times\mathbb{Z}_2$. (This is either one or the other since we just showed these are not isomorphic to each other)
 
 ### Ex. Symetries of a square $\cong \mathbb{Z}_2\times \mathbb{Z}_2$
 
@@ -1684,6 +1684,8 @@ Let G be the group of symmetries of a (non-square) rectangle. Then $G=\{1,R,S_1,
 ![](img/img55.png)
 
 Any element of G times itself is the identity, so $G\cong \mathbb{Z}_2\times \mathbb{Z}_2$. 
+
+We could also show that this isn't cyclic so it wouldn't be in $\mathbb{Z}_4$, so therefore it is isomorphic to $\mathbb{Z}_2\times\mathbb{Z}_2$ (by fact above). 
 
 ### Ex. Show $\langle \mathbb{R},+\rangle \ncong \langle \mathbb{R}^*,\cdot\rangle$
 
@@ -1695,7 +1697,11 @@ which is infinite.
 
 Alternatively, $\langle \mathbb{R}^*, \cdot \rangle$ has two elements that are their own inverse (1 and $-1$). In $\langle \mathbb{R}^*, + \rangle$ there is only one element that is its own inverse (the identity 0). 
 
-### Ex. Show $\langle\mathbb{C}^*,\cdot\rangle\ncong\langle \mathbb{R}\times\mathbb{R},+\rangle$
+### Ex. Show $\langle\mathbb{C}^*,\cdot\rangle\ncong\langle \mathbb{R}^*,\cdot\rangle$
+
+The group $\mathbb{C}^*$ has a cyclic subgroup of size 4: $\langle i\rangle=\{1,-1,i,-i\}$ but $\mathbb{R}^*$ doesn't have a subgroup of size 4. 
+
+### Ex. Show $\langle\mathbb{C},+\rangle\ncong\langle \mathbb{R}\times\mathbb{R},+\rangle$
 
 \begin{equation}\label{D13}
 \begin{split}
@@ -1708,7 +1714,7 @@ f((a_1+b_1i)+(a_2+b_2i)) &= f(a_1+a_2+(b_1+b_2)i)\\
 
 ### Cayley's Theorem (1854)
 
-Every group is isomorphic to a permutation group. 
+Every group is isomorphic to a permutation group. (Like $S_4, $S_5$ ...)
 
 $\underline{\text{Proof}}$: Let G be any group. For every $a\in G$, define a function $f_a:G\rightarrow G$ by $$f_a(x)=ax.$$
 
