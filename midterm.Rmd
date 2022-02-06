@@ -1740,6 +1740,129 @@ Then $\forall a,b\in G$, $$\alpha(ab)=f_{ab}=f_a\circ f_b=\alpha(a)\circ\alpha(b
 
 # W5D14: Feb. 4th, 2022
 
+One more example from CH9:
+
+### Ex. Show $G_2$ also has same property as $G_1$
+
+Suppose $G_1\cong G_2$ and that $G_1$ has the property that every element squared equals the identity $e_1$. Show $G_2$ must also have this property. 
+
+$\underline{\text{Proof}}$:
+
+Since $G_1\cong G_2$ there is an isormorphism $f:G_1\rightarrow G_2$. 
+
+Take any $y\in G_2$. (We want to show $y^2=e_2$.)
+
+Since f is onto, there exists $x\in G$, such that $f(x)=y$. 
+
+Hence, 
+
+\begin{equation}\label{D14e1}
+\begin{split}
+y^2=(f(x))^2 &= f(x)f(x)\\
+&= f(xx)\quad\quad\text{, since f is an isomorphism}\\
+&= f(x^2)\\
+&= f(e_1)\quad\quad\text{, since the square of every element of G, equals e}\\
+&= e_2
+\end{split}
+\end{equation}
+
+$\Rightarrow$ Every element of $G_2$ squared equales the identity. $\quad\quad\square$
+
+## Ch. 10 - The Order of Group Elements
+
+Let G be a group and let $a\in G$. For any $n>0$
+
+![](img/img56.png)
+
+### Exponent Laws for Groups
+
+For all $m,n\in \mathbb{Z}$,
+
+(i) $a^{m+n}=a^ma^n$
+
+(ii) $a^{mn}=(a^m)^n$
+
+(iii) $a^{-n}=(a^{-1})^n=(a^n)^{-1}$
+
+The exponent law we can't necessarily use: $(ab)^n=a^nb^n$. 
+
+### Def. Order
+
+Let $a\in G$. The $\underline{\text{order}}$ of a, denoted $ord(a)$ or $|a|$, is the least positive integer n such that $$a^n=e.$$
+
+If $a^n\ne e$ for all poisitve integers n, we say $ord(a)=\infty$. 
+
+Let's rewrite the definition using +:
+
+$ord(a)$ is the least positive $n\in\mathbb{Z}$ such that
+
+![](img/img57.png)
+
+### Ex. Find the orders of all elements of $\mathbb{Z}_6=\{0,1,2,3,4,5\}.$
+
+![](img/img58.png)
+
+$\underline{\text{Comment}}$: Supppose every element of G squared equals the identity. This is equivalent to saying that every nonidentity element of G has order 2. 
+
+### Examples: 
+
+1. Whats the order of 12 in $\mathbb{Z}_{20}$? 
+
+We need a sum of 12's that is a multiple of 20. The least common multiple (lcm) of 12 and 20 is 60. We need to add 5 to 12's to get 60, so $$ord(12)=\frac{lcm(12,20)}{12}=\frac{60}{12}=5$$
+
+2. If $k\in \mathbb{Z}_n=\{0,1,2,...,n-1\}$ is nonzero, $$ord(k)=\frac{lcm(k,n)}{k}.$$
+
+
+3. Find the order of $f=(132)\in S_3$.
+
+![](img/img59.png)
+
+4. Find the order of $g=(125786)\in S_8$. 
+
+The order of a cycle in $S_n$ is equal to tits length. So, $$ord(g)=6.$$
+
+5. Whats the order of $h=(14)(2356)\in S_6$?
+
+For any $n>0$, 
+
+\begin{equation}\label{D14e5}
+\begin{split}
+h^n=[(14)(2356)]^n=(14)(2356)(14)(2356)...(14)(2356)\\
+&= (14)^n(2356)^n\quad\quad\text{, since disjoint cycles commute}
+\end{split}
+\end{equation}
+
+We need n to be a multiple of 2 so that $(14)^n=\epsilon$.
+
+We need n to be a multiple of 4 so that $(2356)^n=\epsilon$.
+
+Since $4=lcm(2,4)$, the order of $h=(14)(2356)$ is 4. 
+
+6. The order of a composition of **disjoint** cycles in $S_n$ is the lcm of the lengths of the cycles. $$\text{Ex:}\quad ord((2364)(157))=lcm(4,3)=12$$
+
+7. The group $S_4$ has no elements of order 6 (even though 6 is a divisor of $|S_4|=24$).
+
+Since $S_4$ is the group of permutations of $\{1,2,3,4\}$ it has no cycles of length 6. 
+
+Similarly, no element of $S_4$ can be written as a composition of two disjoint cycles with lengths 2 and 3. 
+
+8. What is the order of $(4,8)\in\mathbb{Z}_6\times\mathbb{Z}_{12}$?
+
+We need to add three 4's to get 0 in $\mathbb{Z}_6$. Similarly we need to add three 8's to get 0 in $\mathbb{Z}_{12}$.
+
+So, $(4,8)+(4,8)+(4,8)=(4+4+4,8+8+8)=(0,0)$
+
+$\Rightarrow ord((4,8))=3$.
+
+9. What is the order of $(4,6)\in \mathbb{Z}_6\times\mathbb{Z}_{12}$?
+
+We need to add two 6's to get 0 in $\mathbb{Z}_{12}$. Since we need to add three 4's to get 0 in $\mathbb{Z}_6$, 
+
+![](img/img60.png)
+
+10. In $G\times H$, the order of (g,h) is $$lcm (ord(g),ord(h))$$.
+
+
 # <span style="color: deepskyblue;">W6D15: Feb. 7th, 2022</span>
 
 # <span style="color: deepskyblue;">W6D16: Feb. 9th, 2022</span>
