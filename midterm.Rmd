@@ -1752,7 +1752,7 @@ Since $G_1\cong G_2$ there is an isormorphism $f:G_1\rightarrow G_2$.
 
 Take any $y\in G_2$. (We want to show $y^2=e_2$.)
 
-Since f is onto, there exists $x\in G$, such that $f(x)=y$. 
+Since f is onto, there exists $x\in G_1$, such that $f(x)=y$. 
 
 Hence, 
 
@@ -1768,7 +1768,13 @@ y^2=(f(x))^2 &= f(x)f(x)\\
 
 $\Rightarrow$ Every element of $G_2$ squared equales the identity. $\quad\quad\square$
 
+"isomorphisms take the identity (e) from the first group to the second group."
+
 ## Ch. 10 - The Order of Group Elements
+
+- not on HW or the midterm 
+
+- "ordr is related to a size but the two are different things"
 
 Let G be a group and let $a\in G$. For any $n>0$
 
@@ -1800,11 +1806,19 @@ $ord(a)$ is the least positive $n\in\mathbb{Z}$ such that
 
 ### Ex. Find the orders of all elements of $\mathbb{Z}_6=\{0,1,2,3,4,5\}.$
 
+- Additive 
+
+- "How many a's do you need to add together to get 6."
+
+- "For four you are finding a multiple of six, which is why it's ord(4)=3 since 4+4+4=0."
+
+- "Multiples of 6 work for the integers"
+
 ![](img/img58.png)
 
-$\underline{\text{Comment}}$: Supppose every element of G squared equals the identity. This is equivalent to saying that every nonidentity element of G has order 2. 
+$\underline{\text{Comment}}$: Supppose every element of G squared equals the identity. This is equivalent to saying that every non-identity element of G has order 2. 
 
-### Examples: 
+### 10 Examples 
 
 1. Whats the order of 12 in $\mathbb{Z}_{20}$? 
 
@@ -1817,9 +1831,15 @@ We need a sum of 12's that is a multiple of 20. The least common multiple (lcm) 
 
 ![](img/img59.png)
 
+- "To compose these cycles start are the right with 1. 1 goes to three and then three goes to two, so 1 goes to 2. Starting on the right again, 2 goes to 1 which goes to three. So 2 goes to three. "
+
 4. Find the order of $g=(125786)\in S_8$. 
 
-The order of a cycle in $S_n$ is equal to tits length. So, $$ord(g)=6.$$
+The order of a cycle in $S_n$ is equal to its length. So, $$ord(g)=6.$$
+
+- "Notice the previous example has 3 elements, and 3 arrows."
+
+- "We would get six different things until $f^6$"
 
 5. Whats the order of $h=(14)(2356)\in S_6$?
 
@@ -1827,7 +1847,7 @@ For any $n>0$,
 
 \begin{equation}\label{D14e5}
 \begin{split}
-h^n=[(14)(2356)]^n=(14)(2356)(14)(2356)...(14)(2356)\\
+h^n=[(14)(2356)]^n &= (14)(2356)(14)(2356)...(14)(2356)\\
 &= (14)^n(2356)^n\quad\quad\text{, since disjoint cycles commute}
 \end{split}
 \end{equation}
@@ -1848,7 +1868,9 @@ Similarly, no element of $S_4$ can be written as a composition of two disjoint c
 
 8. What is the order of $(4,8)\in\mathbb{Z}_6\times\mathbb{Z}_{12}$?
 
-We need to add three 4's to get 0 in $\mathbb{Z}_6$. Similarly we need to add three 8's to get 0 in $\mathbb{Z}_{12}$.
+We need to add three 4's to get 0 in $\mathbb{Z}_6$. Similarly,
+
+we need to add three 8's to get 0 in $\mathbb{Z}_{12}$.
 
 So, $(4,8)+(4,8)+(4,8)=(4+4+4,8+8+8)=(0,0)$
 
