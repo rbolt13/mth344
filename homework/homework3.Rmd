@@ -20,7 +20,7 @@ $\beta^{-1}=(\begin{smallmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\ 3 & 2 & 6 & 8 &
 
 Permutation: 
 
-$\alpha=(487)(152)$
+$\alpha=(152)(3)(487)(6)$
 
 Show $\alpha ^3 = \epsilon.$.
 
@@ -34,14 +34,67 @@ $\Rightarrow \alpha ^3=\epsilon$.
 
 ### (c) Write $\beta$ as a composition of transpositions. Is $\beta$ an even or odd permutation? 
 
-...
+\begin{equation}\label{1c}
+\begin{split}
+\beta &= (178463)(2)(5)\\
+&= (178463)\\
+&= (631784)\\
+&= (63)(61)(67)(68)(64)
+\end{split}
+\end{equation}
 
-Since $\beta$ can be written $\beta = (17) (78) (84) (46) (63) (31)$ implies that $\beta$ is an even permutation. 
+Since the number of compositions of transpositions of $\beta$ is odd, the permutation $\beta$ is odd.  
 
 ## 2. Let G be a group. Prove that the function: $f:G\rightarrow G$ given by $f(x)=x^{-1}$ is a permutation of G.
 
+Define $f:G\rightarrow G$ by $f(x)=x^{-1}$. 
+
+Since a permutation is a bijective we can show that $f(x)$ has an inverse $f^{-1}(x)=\frac{1}{x}$ by, 
+
+$f^{-1}(f(x))=f^{-1}(x^{-1})=f^{-1}(\frac{1}{x})=x$
+
+and 
+
+$f(f^{-1}(x))=f(\frac{1}{x})=(\frac{1}{x})^{-1}=x$
+
+Therefore, since $f(x)$ is bijective then $f:G\rightarrow G$. $\quad\quad\square$
 
 ## 3. Let G be a group. Prove G is abelian if and only if the function $f(x)=x^{-1}$ is an isomorphism from G to G. (Note: By #2 we already know that $f$ is a bijection.)
+
+
+i) G is abelian $\Rightarrow$ $f(x)=x^{-1}$ is an isomorphism from G to G
+
+Take any $a,b\in G$.
+
+Since G is abelian $f(ab)=f(ba)$. 
+
+We showed in 2 that f is bijective, so now we need to show that it is closed under multiplication. 
+
+$f(ab)=(ab)^{-1}=a^{-1}b^{-1}=f(a)f(b)$. 
+
+Therefore, since G is abelian $\Rightarrow$ $f(x)=x^{-1}$ is an isomorphism from G to G. 
+
+ii) $f(x)=x^{-1}$ is an isomorphism from G to G $\Rightarrow$ G is abelian. 
+
+Since $G\cong G$, then there is an isomorphism $f:G\rightarrow G$. 
+Take any $a,b\in G$. 
+
+\begin{equation}\label{3ii}
+\begin{split}
+f(ab) &= f(a)f(b) \quad\quad\text{, since f is an isomorphism}\\
+&= a^{-1}b^{-1}\\
+&= aa^{-1}b^{-1}a^{-1}\\
+&= b^{-1}a^{-1}\\
+&= f(b)f(a)\\
+&= f(ba)
+\end{split}
+\end{equation}
+
+$\Rightarrow f(ab)=f(ba)$, meaning f is commutative. 
+
+Since we already prove in 2 that f is bijective, then f is abelian. 
+
+Therefore, since $f(x)=x^{-1}$ is an isomorphism from G to G $\Rightarrow$ G is abelian.
 
 
 ## 4. Let $G_1$ and $G_2$ be groups and let $f:G_1\rightarrow G_2$ be an isomorphism. Prove that if H is a subgroup of $G_1$, then $$f(H)=\{f(h)|h\in H\}$$ is a subgroup of $G_2$. 
@@ -51,11 +104,17 @@ Since $\beta$ can be written $\beta = (17) (78) (84) (46) (63) (31)$ implies tha
 
 ### (a) $G_1=\{\epsilon, (12), (34), (12)(34)\}\leq S_4$
 
+$G_1$ is cyclic so $G_1\cong \mathbb {Z}_4$.
 
 ### (b) $G_2=\{\epsilon, (1234), (13)(24), (1432)\}\leq S_4$
 
+$G_2$ is cyclic so $G_2\cong \mathbb {Z}_4$.
+
 ### (c) $G_3=\{1,r,r^2,r^3\}\leq D_4$
+
+Any element of $G_3$ times itself is the identity, so $G_3\cong \mathbb{Z}_2\times \mathbb{Z}_2$.
 
 ### (d) $G_4=\{1,s,r^2,sr^2\}\leq D_4$
 
+Any element of $G_4$ times itself is the identity, so $G_4\cong \mathbb{Z}_2\times \mathbb{Z}_2$.
 
