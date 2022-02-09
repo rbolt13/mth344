@@ -2065,6 +2065,168 @@ Will do Review on Wednesday!
 
 # <span style="color: deepskyblue;">W6D16: Feb. 9th, 2022</span>
 
+## MTH 344 Midterm
+
+- Friday February 11th, 11:30-12:35 in person 
+
+- covers chapters 2-9 
+
+- 5 questions 
+
+- no notes / book allowed (this means more partial credit)
+
+- you will write your solutions on a separate paper. I will bring blank white paper to the exam. If you prefer to use your own paper that's okay. 
+
+### Topics
+
+- Ch 2-3: Definition of a group (associative, identity, inverses)
+
+- Ch 4: Cancellation Law, $(ab)^{-1}=b^{-1}a^{-1}$, $(a^{-1})^{-1}=a$
+
+- Ch 5: Subgroups 
+
+- Ch 7-8: Permutations in $S_n$, cycle notation, even/ odd permutations 
+
+- Ch 9: Isomorphisms 
+
+### HW 3 #5
+
+Isomorphic to $\mathbb{Z}_2\times\mathbb{Z}_2$ or $\mathbb{Z_}_4$?
+
+![](img/img62.png)
+
+![](img/img63.png)
+
+
+### HW 3 #5
+
+$f:G_1\rightarrow G_2$ isomorphsim, H is a subgroup of $G_1$. 
+
+Show $f(H)=\{f(h)|h\in H\}$ is a subgroup of $G_2$.
+
+![](img/img64.png)
+
+(i) Show $e_2\in f(H)$
+
+We know $e_1\in H$ since H is a subgroup. Since $e_2=f(e_1)$, $e_2\in f(H)$. 
+
+(ii) Let a,b $\in f(H)$. Show $ab^{-1}\in f(H)$. 
+
+This means $a=f(h_1)$ and $b=f(h_2)$ for some $h_1,h_2\in H$. 
+
+\begin{equation}\label{D16 HW3ii}
+\begin{split}
+\Rightarrow ab^{-1} &= f(h_1)f(h_2)^{-1}\\
+&= f(h_1)f(h_2^{-1})\\
+&= f(h_1h_2)\quad\quad\text{, since f is an isomorphism}
+\end{split}
+\end{equation}
+
+Since H is a subgroup of G, $h_1h_2^{-1}\in H$. So $ab^{-1}=f(h_1h_2^{-1})\in f(H)$. 
+
+## Practice Problems 
+
+2. Let G be a group and a,b,c, x $\in G$. Solve $$cx^2b=a\quad\quad\text{ and }\quad\quad x^3=e$$ for x in terms of a, b, and c. 
+
+\begin{equation}\label{pp2}
+\begin{split}
+cx^2b=a &\Rightarrow cx^2bb^{-1}=ab^{-1}\\
+&\Rightarrow cx^2=ab^{-1}\\
+&\Rightarrow cx^3=ab^{-1}x\\
+&\Rightarrow c=ab^{-1}x\quad\quad\text{, because }x^3=e\\
+&\Rightarrow a^{-1}c=a^{-1}ab^{-1}x\\
+&\Rightarrow a^{-1}c=b^{-1}x\\
+&\Rightarrow ba^{-1}c=bb^{-1}x\\
+&\Rightarrow x=ba^{-1}c
+\end{split}
+\end{equation}
+
+4. G is abelian group. Show $H=\{x\in G|x=g^2\text{ for some } g\in G\}$ is a subgroup of G. 
+
+(i) Show $e\in H$. 
+
+Since $e\in H$. Since $e=e^2$, $e\in H$. 
+
+(ii) Let a,b $\in H$. Show $ab^{-1}\in H$.
+
+This means $a=g_1^2$ and $b=g_2^2$ for some $g_1$, $g_2$ $\in G$. 
+
+\begin{equation}\label{pp4}
+\begin{split}
+\Rightarrow ab^{-1} &=g_1^2(g_2^2)^{-1}\\
+&= g_1g_1(g_2g_2)^{-1}\\
+&= g_1g_1g_2^{-1}g_2^{-1}\\
+&= g_1g_2^{-1}g_1g_2^{-1}\\
+&= g_1g_2^{-1}g_1g_2^{-1}\quad\quad\text{since G is abelian}\\
+&= (g_1g_2^{-1})^2
+\end{split}
+\end{equation}
+
+We've shown $ab^{-1}$ is the square of something from G, so $ab^{-1}\in H$. 
+
+5. $h=(\begin{smallmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7\\ 2 & 7& 3 & 4 & 1 & 6 & 5\end{smallmatrix})$
+
+Write in cycle notation: $h=(1275)$. 
+
+Write h as a composition of transpositions: $h=(12)(27)(75)$
+
+note: the first and last numbers in the cycle aren't repeated
+
+$\Rightarrow$ h is an odd permutation (since 3 is odd)
+
+8. Show f is an isomorphsim. 
+
+Define $f:G\rightarrow G$ by $f(x)=gxg^{-1}$, where $g\in G$ is constant. 
+
+one-to-one: 
+
+\begin{equation}\label{pp8}
+\begin{split}
+f(x_1)=f(x_2) & \Rightarrow gx_1g^{-1}= gx_2g^{-1}\\
+&\Rightarrow x_1 = x_2
+\end{split}
+\end{equation}
+
+onto: Take $y\in G$. Find x such that $f(x)=y$. 
+
+\begin{equation}\label{pp82}
+\begin{split}
+f(x)=y &\Leftrightarrow gxg^{-1}=y\\
+&\Leftrightarrow g^{-1}gxg^{-1}g=g^{-1}yg\\
+&\Leftrightarrow x=g^{-1}yg
+\end{split}
+\end{equation}
+
+Now let a,b $\in G$. We need to show $f(ab)=f(a)f(b)$. 
+
+![](img/img65.png)
+
+1. Define * on $\mathbb{R}$ by $$a*b=a+2b-ab$$
+
+identity? Solve $a*e=a$ for e. 
+
+\begin{equation}\label{pp1}
+\begin{split}
+a+2e-ae=a &\Rightarrow 2e-ae=0\\
+&\Rightarrow e(2-a)=0\\
+&\Rightarrow e=0
+\end{split}
+\end{equation}
+
+Check if for $e=0$, $e*a=a$: $$e*a=0*a=0+2a-0\cdot a=2a\ne a$$
+
+Since $e*a\ne a$ when $e=0$, there is no identity element. 
+
+6. $\alpha =(3714)$, $\beta=(123)$, $\rho=(24135)$ in $S_7$.
+
+\begin{equation}\label{pp6}
+\begin{split}
+\alpha^{-1}\beta &= (3714)^{-1}(123)\\
+&= (4173)(123)\\
+&= (124)(37)
+\end{split}
+\end{equation}
+
 # <span style="color: deepskyblue;">W6D17: Feb. 11th, 2022</span>
 
 MIDTERM!!!
