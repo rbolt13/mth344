@@ -297,6 +297,10 @@ So $\sim$ is an equivalence relation on $\mathbb{Z}$. List the equivalnece class
 
 So, $\{[0],[1],[2]\}$ is a partition of $\mathbb{Z}$. (It's the same as the example $\{3\mathbb{Z}, 3\mathbb{Z}+1,3\mathbb{Z}+2\}$ from earlier.)
 
+Note: Mathematicians don't like to say "sets of sets", so say "collection of sets instead". 
+
+Note: [3] = [0], and [1] = [4], and so on
+
 # W7D20: Feb. 18th, 2022
 
 # <span style="color: deepskyblue;">W8D21: Feb. 21st, 2022</span> 
