@@ -303,6 +303,141 @@ Note: [3] = [0], and [1] = [4], and so on
 
 # W7D20: Feb. 18th, 2022
 
+## **Ch 12 Partitions and Equivalence Relations:**
+
+Let A be a nonemepty set.
+
+A $\underline{\text{partition}}$ of A is a collection $\{A_i|i\in I\}$ of nonempty subsets of A such that 
+
+(i) distinct subsets don't overlap
+
+(ii) every element of A is in one of the subsets $A_i$
+
+A relation $\sim$ on A is an $\underline{\text{equivalence relation}}$ if 
+
+(i) $a\sim a$ for all $a\in A$
+
+(ii) If $a\sim b$ then $b\sim a$ for all $a,b\in A$
+
+(iii) If $a\sim b$ and $b\sim c$, then $a\sim c$. 
+
+For all $a\in A$, the $\underline{\text{equivalence class of a}}$ is the set of $x\in A$ such that $x\sim a$: $$[a]=\{x\in A|x\sim a\}.$$
+
+### Facts
+
+1. The set of all equivalence classes $\{[a]|a\in A\}$ forms a partition of A. 
+
+2. Suppose $\{A_i|i\in I\}$ is a partition of A. Define $\sim$ on A by $$a\sim b\text{ iff a and b are in the same subset }A_i$$ This is an equivalence relation on A. 
+
+### Ex. Check equivalence relation
+
+Let G be a group and H a subgroup of G. Define $\sim$ on G by $$a\sim b\text{ iff }ab^{-1}\in H.$$
+
+This is an equivalence relation on G. 
+
+(i) $a\sim a$ because $aa^{-1}=e\in H$
+
+(ii) Suppose $a\sim b$. Then $ab^{-1}\in H$. Since H is closed under inverses, $$(ab^{-1})^{-1}=(b^{-1})^{-1}a^{-1}=ba^{-1}\in H\quad\Rightarrow b\sim a$$
+
+(iii) Suppose $a\sim b$ and $b\sim c$. Then $ab^{-1}$ and $bc^{-1}$ are in H. Since H is closed under the operation, $ab^{-1}bc^{-1}=ac^{-1}\in H\quad\Rightarrow a\sim c.$
+
+What is the equivalence class of $a\in G$? 
+
+\begin{equation}\label{D20.1}
+\begin{split}
+[a] &= \{x\in G|x\sim a\}\\
+&= \{x\in G|xa^{-1}\in H\}\\
+&= \{x\in G|xa^{-1}=h\text{ for some }h\in H\}\\
+&= \{x\in G|x=ha\text{ for some }h\in H\}
+\end{split}
+\end{equation}
+
+## **Ch. 13 - Counting Cosets**
+
+Let G be a group and H a subgroup of G. For any $a\in G$, the set $$Ha=\{ha|h\in H\}$$ is called a (right) $\underline{\text{coset}}$ of H in G. 
+
+The set $aH=\{ah|h\in H\}$ is a left coset. 
+
+If the operation is +, the right coset looks like $H+a=\{h+a|h\in H\}$. 
+
+### Ex. List the cosets of $H=3\mathbb{Z}$ in $G=\mathbb{Z}$
+
+Let $G=\mathbb{Z}$ and $H=3\mathbb{Z}=\{...,-3,0,3,6,9,... \}$. 
+
+List the cosets of H in G: 
+
+$\quad\quad\quad H+0=H=\{...,-3,0,3,6,9,... \}$
+
+$\quad\quad\quad H+1=\{...,-2,1,4,7,10,... \}$
+
+$\quad\quad\quad H+2=\{...,-1,2,5,8,11,... \}$
+
+$\quad\quad\quad H+3=H$
+
+$\quad\quad\quad H+4=H+1$
+
+### Ex. List the cosets of $H=\langle 5\rangle$ in $G=\mathbb{Z}_{15}$
+
+Let $G=\mathbb{Z}_{15}$ and $H=\langle 5\rangle=\{0,5,10\}$. List the cosets of H in G:
+
+$\quad\quad\quad H+0=H=\{0,5,10\}$
+
+$\quad\quad\quad H+1=\{1,6,11\}$
+
+$\quad\quad\quad H+2=\{2,7,12\}$
+
+$\quad\quad\quad H+3=\{3, 8, 13\}$
+
+$\quad\quad\quad H+4=\{4,9,14\}$
+
+Since all elements of G have been listed at this point, these are all the cosets. 
+
+### Ex. List the cosets of $H=\langle (12)\rangle$ in $G=S_3$
+
+Let $G=S_3=\{\mathcal{E}, (12), (13), (23), (123),(132)\}$ and $H=\langle (12)\rangle=\{\mathcal{E}, (12),\}$. List the cosets of H in G: 
+
+$\quad\quad\quad H\mathcal{E}=\{\mathcal{E}\mathcal{E},(12)\mathcal{E}\}=\{\mathcal{E},(12)\}$
+
+$\quad\quad\quad H(13)=\{\mathcal{E}(13),(12)(13)\}=\{(13),(132)\}$
+
+$\quad\quad\quad H(23)=\{\mathcal{E}(23),(12)(23)\}=\{(23),(123)\}$
+
+### Facts about Cosets
+
+(can use these facts on the last problem for homework 4, will prove next week)
+
+1. All cosets have the same size as H. 
+
+2. Distinct cosets don't overlap. 
+
+3. Every element of G is in some coset of H. 
+
+$\quad\quad$ Proof: Let $a\in G$. Since $e\in H$, $a=ea\in Ha$.
+
+4. How should we choose a so that we don't get repeated cosets? Choose a to be an element of G that hasn't yet appeared in a coset. 
+
+$\quad\quad$ Why? If a and b are in the same coset, then $Ha=Hb$. (Ex. If two basketball players play for the same team)
+
+5. How do we know when we've listed all cosets? We're done when every element of G has appeared in a coset. 
+
+### Ex. Cosets
+
+Let $G=\mathbb{R}\times\mathbb{R}=\{(x,y)|x,y\in\mathbb{R}\}$. Let $H=\{(x,y)\in G|y=x\}$. 
+
+![](img/img72.png)
+
+### Ex. How many cosets of H are in G? 
+
+Let $G=\mathbb{Z}_3\times\mathbb{Z}_3$ and $H=\langle (1,1)\rangle =\{(0,0), (1,1), (2,2)\}$. 
+
+How many cosets of H in G are there? There are $\frac{|G|}{|H|}=\frac{9}{3}=3$.
+
+$\quad\quad\quad H+(0,0)=H=\{(0,0), (1,1), (2,2)\}$
+
+$\quad\quad\quad H+(1,0)=H=\{(1,0), (2,1), (0,2)\}$
+
+$\quad\quad\quad H+(2,0)=H=\{(2,0), (0,1), (1,2)\}$
+
 # <span style="color: deepskyblue;">W8D21: Feb. 21st, 2022</span> 
 
 # <span style="color: deepskyblue;">W8D22: Feb. 23rd, 2022</span> 
@@ -319,12 +454,12 @@ Note: [3] = [0], and [1] = [4], and so on
 
 # <span style="color: deepskyblue;">W10D28: Mar. 9th, 2022 </span>
 
+(Review)
+
 # <span style="color: deepskyblue;">W10D29: Mar. 11th, 2022 </span>
 
-# W11D30: Mar. 13th, 2022
+(Review)
 
-# W11D31: Mar. 15th, 2022
-
-# W11D32: Mar. 17th, 2022
+# W11D30: Mar. 17th, 2022
 
 FINAL!!!!
