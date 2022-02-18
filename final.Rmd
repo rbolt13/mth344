@@ -438,6 +438,8 @@ $\quad\quad\quad H+(1,0)=H=\{(1,0), (2,1), (0,2)\}$
 
 $\quad\quad\quad H+(2,0)=H=\{(2,0), (0,1), (1,2)\}$
 
+Note: this is really $\mathbb{Z}_3$ in disguise. 
+
 # <span style="color: deepskyblue;">W8D21: Feb. 21st, 2022</span> 
 
 # <span style="color: deepskyblue;">W8D22: Feb. 23rd, 2022</span> 
