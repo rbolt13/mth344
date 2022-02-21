@@ -442,6 +442,158 @@ Note: this is really $\mathbb{Z}_3$ in disguise.
 
 # <span style="color: deepskyblue;">W8D21: Feb. 21st, 2022</span> 
 
+## Ch. 13 Counting Cosets 
+
+Let H be a subgroup of a group G. For $a\in G$, the set $$Ha=\{ha|h\in H\}$$ is called a (right) $\underline{\text{coset}}$ of H in G. 
+
+### Ex. Let $G=\mathbb{Z}_{12}$ and $H=\langle 6\rangle =\{0,6\}$. 
+
+There are 6 cosets:
+
+$\quad H+0=H=\{0,6\}$
+
+$\quad H+1=\{1,7\}$
+
+$\quad H+2=\{2,8\}$
+
+$\quad H+3=\{3,9\}$
+
+$\quad H+4=\{4,10\}$
+
+$\quad H+5=\{5,11\}$
+
+### Lemma: Distinct cosets don't overlap.
+
+$\underline{\text{Proof}}$:
+
+Suppose cosets Ha and Hb both contain an element x. We'll show that Ha=Hb. 
+
+Let's show that $Ha\subseteq Hb$. 
+
+Since $x\in Ha$, $x=h_1a$ for some $h_1\in H$. Similarly, since $x\in Hb$, $x=h_2b$ for some $h_2\in H$. 
+
+Let's solve $x=h_1a$ for a: 
+
+\begin{equation}\label{D21a}
+\begin{split}
+x=h_1a &\Rightarrow h_1^{-1}x=h_1^{-1}a\\
+&\Rightarrow a=h_1^{-1}x
+\end{split}
+\end{equation}
+
+Now take any $h_3a\in Ha$. We'll show that $h_3a\in Hb$:
+
+\begin{equation}\label{D21b}
+\begin{split}
+h_3a &= h_3h_1^{-1}x\quad\text{ , since }a=h_1^{-1}x\\
+&= h_3h_1^{-1}h_2b\quad\text{ , since }x=h_2b
+\end{split}
+\end{equation}
+
+Since H is a subgroup, $h_3h_1^{-1}h_2\in H$. Hence $h_3a=h_3h_1^{-1}h_2b\in Hb$. We've shown every element of Ha is in Hb. thus, $Ha\subseteq Hb$. 
+
+The proof that $Hb\subseteq Ha$ is very similar. 
+
+So, if Ha and Hb have an element in common, then $Ha=Hb$. 
+
+$\square$
+
+### Corollary: If $a\in Hb$ then $Ha=Hb$
+
+$\underline{\text{Proof}}$:
+
+Since $e\in H$, $a=ea\in Ha$. if $a\in Hb$ as well, then $$a\in Ha\cap Hb.$$ Hence, by the lemma above $Ha=Hb$. 
+
+### Theorem 1
+
+The set $\{Ha|a\in G\}$ of all cosets of H in g is a partition of G. 
+
+![](img/img73.png)
+
+$\underline{\text{Proof}}$:
+
+By the lemma, distinct cosets don't overlap. moreover, every $a\in G$ is in a coset, since $a\in Ha$. Thus, $\{Ha|a\in G\}$ is a partition of G. 
+
+### Corollary
+
+Define a relation $\sim$ on G by $a\sim b$ iff a and b are in the same coset of H. 
+
+This defines an equivalence relation on G. 
+
+### Theorem 2
+
+Every coset of H in G has the same size as H. 
+
+$\underline{\text{Proof}}$:
+
+Let Ha be a coset of H in G. Define $f:H\rightarrow Ha$ by $$f(h)=ha.$$
+
+We'll show f is a bijection. 
+
+First suppose $f(x_1)=f(x_2)$. Then, by definition, $x_1a=x_2a$. By right cancellation, $x_1=x_2$. So f is one-to-one. 
+
+Now take any $ha\in Ha$. Then $h\in H$ and $f(h)=ha$, proving that f is onto. 
+
+Since f: $H\rightarrow Ha$ is a bijection, $|H|=|Ha|$. $\quad\square$
+
+### Lagrange's Theorem 
+
+Let G be a finite group and H a subgroup of G. Then the size of H divides the size of G. 
+
+$\underline{\text{Proof}}$:
+
+By Theorems 1 and 2, the set of all cosets of H partitions G into subsets of the same size. 
+
+Let n be the number of cosets of H. Then $$|G|=n\cdot |H|$$
+
+where n is the number of cosets, and $|H|$ is the size of each coset. 
+
+$\Rightarrow\frac{|G|}{|H|}=n\in \mathbb{N}$
+
+$\Rightarrow$ divides $|G|$. 
+
+The number of cosets of H in G is called the $\underline{\text{index}}$ of H in G and is denoted (G:H). 
+
+### Theorem 4
+
+Let $p\in\mathbb{Z}$ be prime. (So $p\in\{2,3,5,7,11,13,...\}$) If $|G|=p$, then $G\cong\mathbb{Z}_p$. 
+
+$\underline{\text{Proof}}$:
+
+Let $|G|=p$. Let $a\in G$ be such that $a\ne e$. Let $H=\langle a\rangle$. Since $a\ne e$, $|H|>1$. By Lagrange's Theorem $|H|$ must divide the prime p. Therefore, it must be the case that $|H|=p$. 
+
+Hence, $G=H=\langle a\rangle$ is cyclic. So, by Theorem 1 from Ch. 11, $$G\cong\mathbb{Z}_p.$$ $\quad\square$
+
+### Theorem 5
+
+Let G be a finite and $a\in G$. Then ord(a) divides $|G|$. 
+
+$\underline{\text{Proof}}$:
+
+Let $H=\langle a\rangle$. Then $|H|=$ ord(a). By Lagrange's Theorem, $|H|$ divides $|G|$. Hence, ord(a) divides |G|. $\quad\square$
+
+### Proposition 
+
+Let $G=\{e,a,b,c\}$ be a group of size 4. Then $G\cong \mathbb{Z}_4$. 
+
+So, let's suppose G doesn't have an element of order 4. Then by Theorem 5, every nonidentity element of G has order 2. Therefore, $$a^2=b^2=c^3=e.$$
+
+There is only one way to fill out the operation table:
+
+![](img/img74.png)
+
+The function $f:G\rightarrow\mathbb{Z}_2\times\mathbb{Z}_2$ given by 
+
+![](img/img75.png)
+
+is an isomorphism. 
+
+### Ex. 
+
+Let $G=S_3=\{\epsilon, (12), (13), (23),(123), (132)\}$ and $H=\langle (12)\rangle=\{\epsilon ,,(12)\}$. List the cosets of H in G: 
+
+![](img/img76.png)
+
 # <span style="color: deepskyblue;">W8D22: Feb. 23rd, 2022</span> 
 
 # <span style="color: deepskyblue;">W8D23: Feb. 25th, 2022</span> 
