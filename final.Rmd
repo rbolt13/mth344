@@ -646,6 +646,8 @@ let $f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}$ be defined $f(x,y)=x+y$.
 \end{split}
 \end{equation}
 
+Note: "In linear algebra you talked about the null space, and that's what this is."
+
 ### Theorem 1:
 
 Let $f:G_1\rightarrow G_2$ be a homomorphism. Then 
@@ -682,6 +684,8 @@ f(x_1)=f(x_1) &\Rightarrow f(x_1)[f(x_2)]^{-1}=f(x_2)[f(x_2)]^{-1}\\
 
 hence, f is one-to-one. $\quad\quad\square$
 
+(this might be helpful for the HW4 Q4a)
+
 ### Def. Conjugate
 
 let G be a group and $g_1x\in G$. The element $gxg^{-1}$ is called the $\underline{\text{conjugate}}$ of x by g. 
@@ -690,7 +694,7 @@ Going from x to $gxg^{-1}$ is called $\underline{\text{conjugation by g}}$.
 
 Let H be a subgroup of G. We call H a $\underline{\text{normal}}$ subgroup of G if all $g\in G$ and $h\in H$, the conjugate $$ghg^{-1}$$ is in H. Notation: $H \unlhd G$
 
-### Theorem 
+### Theorem: Abelian subgroups are normal 
 
 If G is abelian, every subgroup of G is normal. 
 
@@ -712,7 +716,7 @@ ghg^{-1} &= (23)(12)(23)^{-1}\\
 
 Since $ghg^{-1}=(13)\notin H$, H is not a normal subgroup of $S_3$. 
 
-### Ex. 
+### Ex. Show that H is normal in $G_1\times G_2$. 
 
 Let $G_1$ and $G_2$ be groups and let $$H=\{(x_1e_2)|x\in G_1\}\subseteq G_1\times G_2.$$
 
@@ -726,17 +730,19 @@ Let $g(g_1,g_2)\in G_1\times G_2$ and $(h,e_2)\in H$. Then
 &= (g_1hg_1^{-1},g_2e_2g_2^{-1})\\
 &= (g_1hg_1^{-1}, g)2g_2^{-1}\\
 &= (g_1hg_1^{-1},e_2)\\
-&= H.
+&\in H.
 \end{split}
 \end{equation}
 
-### Theorem 
+### Theorem: Normal subgroup
 
-Let H be a subgroup of G. Then H is normal is G if and only if $aH=Ha$ for all $a\in G$. 
+Let H be a subgroup of G. Then H is normal in G if and only if $aH=Ha$ for all $a\in G$. 
+
+"Every left coset is the same as every right coset"
 
 $\underline{\text{Proof}}$: On Friday. 
 
-### Ex. 
+### Ex. Show that the subgroup H is normal in $S_3$
 
 Let $g=S_3=\{\mathcal{E}, (12), (13),(23),(123),(132)\}$. show that the subgroup $H=\langle (123)\rangle =\{\mathcal{E},(123),(132)\}$ is normal in $S_3$. 
 
