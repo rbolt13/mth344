@@ -512,7 +512,7 @@ The set $\{Ha|a\in G\}$ of all cosets of H in g is a partition of G.
 
 $\underline{\text{Proof}}$:
 
-By the lemma, distinct cosets don't overlap. moreover, every $a\in G$ is in a coset, since $a\in Ha$. Thus, $\{Ha|a\in G\}$ is a partition of G. 
+By the lemma, distinct cosets don't overlap. Moreover, every $a\in G$ is in a coset, since $a\in Ha$. Thus, $\{Ha|a\in G\}$ is a partition of G. 
 
 ### Corollary
 
@@ -552,7 +552,7 @@ $\Rightarrow\frac{|G|}{|H|}=n\in \mathbb{N}$
 
 $\Rightarrow$ divides $|G|$. 
 
-The number of cosets of H in G is called the $\underline{\text{index}}$ of H in G and is denoted (G:H). 
+The number of cosets of H in G, n,  is called the $\underline{\text{index}}$ of H in G and is denoted (G:H). 
 
 ### Theorem 4
 
@@ -566,7 +566,7 @@ Hence, $G=H=\langle a\rangle$ is cyclic. So, by Theorem 1 from Ch. 11, $$G\cong\
 
 ### Theorem 5
 
-Let G be a finite and $a\in G$. Then ord(a) divides $|G|$. 
+Let G be a finite group and $a\in G$. Then ord(a) divides $|G|$. 
 
 $\underline{\text{Proof}}$:
 
@@ -578,9 +578,15 @@ Let $G=\{e,a,b,c\}$ be a group of size 4. Then $G\cong \mathbb{Z}_4$.
 
 So, let's suppose G doesn't have an element of order 4. Then by Theorem 5, every nonidentity element of G has order 2. Therefore, $$a^2=b^2=c^3=e.$$
 
-There is only one way to fill out the operation table:
+There is only one way to fill out the operation table: (we saw in chapter 4)
 
 ![](img/img74.png)
+
+- will do more multiplication tables in chapter 15
+
+- keep identities in the same place 
+
+- (bc of cyclic group) indentity goes down the diagnol 
 
 The function $f:G\rightarrow\mathbb{Z}_2\times\mathbb{Z}_2$ given by 
 
@@ -588,13 +594,163 @@ The function $f:G\rightarrow\mathbb{Z}_2\times\mathbb{Z}_2$ given by
 
 is an isomorphism. 
 
-### Ex. 
+### Ex. Adding to Friday's example 
 
 Let $G=S_3=\{\epsilon, (12), (13), (23),(123), (132)\}$ and $H=\langle (12)\rangle=\{\epsilon ,,(12)\}$. List the cosets of H in G: 
 
 ![](img/img76.png)
 
 # <span style="color: deepskyblue;">W8D22: Feb. 23rd, 2022</span> 
+
+## Ch. 14 - Homomorphisms and Normal Subgroups 
+
+Let $G_1$ and $G_2$ be groups. A $\underline{\text{homomorphsim}}$ is a function $f:G_1\rightarrow G_2$ such that for all a,b $\in G_1$, 
+
+![](img/img78.png)
+
+If $f:G_1\rightarrow G_2$ is an onto homomorphsim, we call $G_2$ a $\underline{\text{homomorphic image}}$ of $G_1$. 
+
+### Ex. Define $f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}$ by $f(x,y)=x+y$.
+
+For example, $f(1,5)=1+5=6$ and $f(-3,9)=-3+9=6$. This implies f is not injective (one-to-one). 
+
+Let's show that f is onto. Take any $y\in\mathbb{Z}$. Then $(0,y)\in\mathbb{Z}\times\mathbb{Z}$ and $$f(0,y)=0+y=y.$$
+
+Hence, f is onto. 
+
+Now let's show f is a homomorphism: 
+
+\begin{equation}\label{D22.1}
+\begin{split}
+f((a_1,a_2)+(b_1,b_2))&=f(a_1+b_1,a_2+b_2)\\
+&= a_1+b_1+a_2+b_2\\
+&= a_1+a_2+b_1+b_2\\
+&= f(a_1,a_2)+f(b_1,b_2)
+\end{split}
+\end{equation}
+
+### Def. Kernel
+
+Let $f:G_1\rightarrow G_2$ be a homomorphsim. The $\underline{\text{kernel}}$ of f is the set of all elements in $G_1$ that get sent to $e_2\in G_2$: $$\text{ker}(f)=\{x\in G_1|f(x)=e_2\}.$$
+
+### Ex. Find kern of (f)
+
+let $f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}$ be defined $f(x,y)=x+y$. 
+
+\begin{equation}\label{D22.2}
+\begin{split}
+\text{kern}(f) &= \{(x,y)\in\mathbb{Z}\times\mathbb{Z}|f(x,y)=0\}\\
+&= \{(x,y)\in\mathbb{Z}\times\mathbb{Z}|x+y=0\}\\
+&= \{(x,y)\in\mathbb{Z}\times\mathbb{Z}|y=-x\}\\
+&= \{...(-1,1),(0,0),(1,-1), (2,-2),(3,-3,...)\}
+\end{split}
+\end{equation}
+
+### Theorem 1:
+
+Let $f:G_1\rightarrow G_2$ be a homomorphism. Then 
+
+(i) $f(e_1)=e_2$
+
+(ii) $f(a^{-1})=[f(a)]^{-1}\forall a\in G_1$
+
+$\underline{\text{Proof}}$: Same as in Ch. 9
+
+### Theorem 
+
+Let $f:G_1\rightarrow G_2$ be a homomorphism. Then f is one-to-one if and only if ker(f)=$\{e_1\}$.
+
+$\underline{\text{Proof}}$: 
+
+($\Rightarrow$) Assume that f is one-to-one. Let $x\in$ ker(f). Then, by definition and Theorem 1(i), $$f(x)=e_2=f(e_1).$$
+
+Since f is one-to-one, this implies that $x=e_1$. Hence, ker(f)=$\{e_1\}$. 
+
+($\Leftarrow$) Now assume that ker(f)=$\{e_1\}$. We'll show f is one-to-one. Let $x_1,x_2\in G_1$ be such that $f(x_1)=f(x_2)$: 
+
+\begin{equation}\label{D22.3}
+\begin{split}
+f(x_1)=f(x_1) &\Rightarrow f(x_1)[f(x_2)]^{-1}=f(x_2)[f(x_2)]^{-1}\\
+&\Rightarrow f(x_1)f(x_2^{-1})=e_2\quad\text{ by Theorem 1(ii)}\\
+&\Rightarrow f(x_1x_2^{-1})=e_2\\
+&\Rightarrow x_1x_2^{-1}\in\text{ker}(f)\\
+&\Rightarrow x_1x_2^{-1}=e_1\quad\text{, since ker}(f)=\{e_1\}\\
+&\Rightarrow x_1x_2^{-1}x_2 = e_1x_2\\
+&\Rightarrow x_1=x_2
+\end{split}
+\end{equation}
+
+hence, f is one-to-one. $\quad\quad\square$
+
+### Def. Conjugate
+
+let G be a group and $g_1x\in G$. The element $gxg^{-1}$ is called the $\underline{\text{conjugate}}$ of x by g. 
+
+Going from x to $gxg^{-1}$ is called $\underline{\text{conjugation by g}}$.
+
+Let H be a subgroup of G. We call H a $\underline{\text{normal}}$ subgroup of G if all $g\in G$ and $h\in H$, the conjugate $$ghg^{-1}$$ is in H. Notation: $H \unlhd G$
+
+### Theorem 
+
+If G is abelian, every subgroup of G is normal. 
+
+$\underline{\text{Proof}}$: Let g be abelian and H a subgroup of G. Then for all $g\in G$ and $h\in H$, $$ghg^{-1}=gg^{-1}h=h\in H.$$
+
+Hence, $H\unlhd G$. $\quad\quad\square$
+
+### Ex Show H is not $\underline{\text{not}}$ a normal subgroup of G. 
+
+Let $h=(12)$ and $g=(23)$. Then 
+
+\begin{equation}\label{D22.4}
+\begin{split}
+ghg^{-1} &= (23)(12)(23)^{-1}\\
+&= (23)(12)(32)\\
+&= (13)
+\end{split}
+\end{equation}
+
+Since $ghg^{-1}=(13)\notin H$, H is not a normal subgroup of $S_3$. 
+
+### Ex. 
+
+Let $G_1$ and $G_2$ be groups and let $$H=\{(x_1e_2)|x\in G_1\}\subseteq G_1\times G_2.$$
+
+Show that H is normal in $G_1\times G_2$. 
+
+Let $g(g_1,g_2)\in G_1\times G_2$ and $(h,e_2)\in H$. Then 
+
+\begin{equation}\label{D22.5}
+\begin{split}
+(g_1,g_2)(h_1e_2)(g_1,g_2)^{-1} &= (g_1,g_2)(h_1e_2)(g_1^{-1},g_2^{-1})\\
+&= (g_1hg_1^{-1},g_2e_2g_2^{-1})\\
+&= (g_1hg_1^{-1}, g)2g_2^{-1}\\
+&= (g_1hg_1^{-1},e_2)\\
+&= H.
+\end{split}
+\end{equation}
+
+### Theorem 
+
+Let H be a subgroup of G. Then H is normal is G if and only if $aH=Ha$ for all $a\in G$. 
+
+$\underline{\text{Proof}}$: On Friday. 
+
+### Ex. 
+
+Let $g=S_3=\{\mathcal{E}, (12), (13),(23),(123),(132)\}$. show that the subgroup $H=\langle (123)\rangle =\{\mathcal{E},(123),(132)\}$ is normal in $S_3$. 
+
+List the right cosets of H in G: 
+
+![](img/img79.png)
+
+List the corresponding left cosets:
+
+$\quad\quad H=\mathcal{E}H=\{\mathcal{E},(123),(132)\}$
+
+$\quad\quad (12)H=\{(12)\mathcal{E},(12)(123),(12)(132)\}=\{(12),(23),(13)\}$
+
+Since $aH=Ha$ for all $a\in S_3$, H is a normal subgroup of $S_3$. 
 
 # <span style="color: deepskyblue;">W8D23: Feb. 25th, 2022</span> 
 
