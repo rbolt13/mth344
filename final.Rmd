@@ -760,6 +760,89 @@ Since $aH=Ha$ for all $a\in S_3$, H is a normal subgroup of $S_3$.
 
 # <span style="color: deepskyblue;">W8D23: Feb. 25th, 2022</span> 
 
+## Ch. 14 Homomorphisms and Normal Subgroups 
+
+A $\underline{\text{homomorphism}}$ is a function $f:G_1\rightarrow G_2$ such that for all $a,b\in G_1$ $$f(ab)=f(a)f(b)$$
+
+The $\underline{\text{kernel}}$ of homorphism $f:G_1\rightarrow G_2$ is the set $$ker(f)=\{x\in G_1|f(x)=e_2\}.$$
+
+![](img/img80.png)
+
+A subgroup H of G is called a $\underline{\text{normal subgroup}}$ if for all $g\in G$ and $h\in H$. $$ghg^{-1}\in H.$$
+
+### Theorem 
+
+A subgroup H of G is normal in G iff $aH=Ha\forall a\in G$. 
+
+$\underline{\text{Proof}}$: ($\Rightarrow$) Assume $\unlhd$. To show $aH=Ha$, we need to show $aH\subseteq Ha$ and $Ha\subseteq aH$. 
+
+Let's show $aH\subseteq Ha$. take any $aH\in aH$. since $H\unlhd G$, $aha^{-1}\in H$. So, $aha^{-1}=h$, for some $h_1\in H$. Therefore, $$ah=aha^{-1}a=h_1a\in Ha.$$
+
+We showed any element $ah\in aH$ is also an element of $Ha$. So, $aH\subseteq Ha$. 
+
+The proof that $Ha\subset aH$ is similar. 
+
+$(\Leftarrow)$ Assume $aH=Ha$ for all $a\in G$. Take any $g\in G$ and $h\in H$. Since $gh\in gH$ and $Hg$, $gh\in Hg$. This means $gh=h_1g$ for some $h_1\in H$. Thus, $$gh=h_1g\quad\Rightarrow\quad ghg^{-1}=h_1gg^{-1}=h_1\in H.$$
+
+So, by definition, $H \unlhd G$. 
+
+### Ex. Show H is normal in $D_4$
+
+Let $G=D_4=\{1,r,r^2,r^3,s,sr,sr^2,sr^3\}$ and $H=\langle r^2\rangle=\{1,r^2\}$. We'll show H is normal in $D_4$ by comparing left and right cosets. 
+
+![](img/img81.png)
+
+![](img/img82.png)
+
+### Example 
+
+Let $G=\{(\begin{smallmatrix}a & b \\ c & d\\\end{smallmatrix})|\text{a,b,c,d}\in\mathbb{R}\text{ and }ad-bc=0\}$ with matrix multiplication. 
+
+Define $f:G\rightarrow\mathbb{R}^*$ by $f(A)=det(A)$. This is a homomorphism: $$f(AB)=det(AB)=det(A)det(B)=f(A)f(B).$$
+
+\begin{equation}\label{D23.1}
+\begin{split}
+ker(f)&=\{A\in G|f(A)=1\}\\
+&= \{A\in G|f(A)=1\}
+\end{split}
+\end{equation}
+
+### Example 
+
+Define $f:\mathbb{R}^*\rightarrow\mathbb{R}^+$ by $f(x)=|x|$. This is a homomorphism: $$f(ab)=|ab|=|a||b|=f(a)f(b).$$
+
+\begin{equation}\label{D23.2}
+\begin{split}
+ker(f)&=\{x\in \mathbb{R}^*|f(x)=1\}\\
+&= \{-1,1\}
+\end{split}
+\end{equation}
+
+### Theorem 2
+
+Let $f|G_1\rightarrow G_2$ be a homomorphism. 
+
+(a) ran(f)=$\{f(x)|x\in G_1\}$ is a subgroup of $G_2$
+
+(b) ker(f) is a normal subgroup of $G_1$.
+
+(In fact, every normal subgroup is ther kernel of some homomorphsim.) 
+
+$\underline{\text{Proof}}$: 
+
+(b) Take any $g\in G$ and $h\in$ker(f). We want to show $ghg^{-1}\in$ker(f):
+
+\begin{equation}\label{D23.3}
+\begin{split}
+f(ghg^{-1}) &= f(g)f(h)f(g^{-1})\\
+&= f(g)e_2f(g^{-1})\quad\quad\text{ since }h\in\text{ker(f)}\\
+&= f(g)f(g^{-1})\\
+&= e_2\quad\quad\quad\quad\text{ since f(g) and }f(g^{-1})\text{ are inverses}
+\end{split}
+\end{equation}
+
+$\Rightarrow ghg^{-1}\in$ker(f).
+
 # W9D24: Feb. 28th, 2022
 
 # W9D25: Mar. 2nd, 2022
