@@ -6,6 +6,7 @@ View [here](https://rbolt13.github.io/mth344/)
 # To Do 
 * Ace this class
 * Save class content from drive
+* Book notes
 
 
 # Done 

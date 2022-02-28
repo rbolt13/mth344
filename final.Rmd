@@ -764,9 +764,15 @@ Since $aH=Ha$ for all $a\in S_3$, H is a normal subgroup of $S_3$.
 
 A $\underline{\text{homomorphism}}$ is a function $f:G_1\rightarrow G_2$ such that for all $a,b\in G_1$ $$f(ab)=f(a)f(b)$$
 
+(doesn't need to be one-to-one or onto)
+
 The $\underline{\text{kernel}}$ of homorphism $f:G_1\rightarrow G_2$ is the set $$ker(f)=\{x\in G_1|f(x)=e_2\}.$$
 
+(everything in the first group that is the identity in second group)
+
 ![](img/img80.png)
+
+### Def. Normal Subgroup
 
 A subgroup H of G is called a $\underline{\text{normal subgroup}}$ if for all $g\in G$ and $h\in H$. $$ghg^{-1}\in H.$$
 
@@ -794,7 +800,13 @@ Let $G=D_4=\{1,r,r^2,r^3,s,sr,sr^2,sr^3\}$ and $H=\langle r^2\rangle=\{1,r^2\}$.
 
 ![](img/img82.png)
 
-### Example 
+(The number of cosets if equal to G/H:8/2=4)
+
+(When you get to 4. it is everything in G that hasn't been filled out yet.)
+
+(Bottom order is reverse for s and $r^2$ in four square image (3.))
+
+### Example (Homomorphsism: Linear Algebra)
 
 Let $G=\{(\begin{smallmatrix}a & b \\ c & d\\\end{smallmatrix})|\text{a,b,c,d}\in\mathbb{R}\text{ and }ad-bc=0\}$ with matrix multiplication. 
 
@@ -807,7 +819,7 @@ ker(f)&=\{A\in G|f(A)=1\}\\
 \end{split}
 \end{equation}
 
-### Example 
+### Example (Homomorphsim)
 
 Define $f:\mathbb{R}^*\rightarrow\mathbb{R}^+$ by $f(x)=|x|$. This is a homomorphism: $$f(ab)=|ab|=|a||b|=f(a)f(b).$$
 
@@ -820,7 +832,7 @@ ker(f)&=\{x\in \mathbb{R}^*|f(x)=1\}\\
 
 ### Theorem 2
 
-Let $f|G_1\rightarrow G_2$ be a homomorphism. 
+Let $f:G_1\rightarrow G_2$ be a homomorphism. 
 
 (a) ran(f)=$\{f(x)|x\in G_1\}$ is a subgroup of $G_2$
 
@@ -841,9 +853,177 @@ f(ghg^{-1}) &= f(g)f(h)f(g^{-1})\\
 \end{split}
 \end{equation}
 
-$\Rightarrow ghg^{-1}\in$ker(f).
+$\Rightarrow ghg^{-1}\in$ker$(f)$.
 
 # W9D24: Feb. 28th, 2022
+
+## Ch. 14 Homomorphisms and Normal subgroups 
+
+The $\underline{\text{kernel}}$ of homomorphism $f:G_1\rightarrow G_2$ is the set $$\text{ker}(f)=\{x\in G_1 |f(x)=e_2\}$$
+
+Note: Ker$(f)$ always contains $e_1$ since $f(e_1)=e_2$
+
+A subgroup H of G is called $\underline{\text{normal}}$ in G if one of the following equivalent conditions holds:
+
+(i) For all $g\in G$ and $h\in H$, $ghg^{-1}\in H$. 
+
+(ii) For all $a\in G$, $aH=Ha$.
+
+Note: every subgroup of an abelian group is normal 
+
+### Theorem 2 (i)
+
+Let $f:G_1\rightarrow G_2$ be a homomorphsim. Then ker(f) is a normal subgroup of $G_1$. 
+
+$\underline{\text{Proof}}$: We showed that ker$(f)$ is closed under conjugates and contains $e_1$. 
+
+Let's show that ker(f) is closed under the operation and inverses. 
+
+Let $a,b\in$ker$(f)$. We'll show $a,b\in$ker$(f)$ and $a^{-1}\in$ker$(f)$. $$f(ab)=f(a)f(b)=e_2e_2=e_2\quad\quad\Rightarrow\quad\quad ab\in\text{ker}(f)$$ and $$f(a^{-1}=[f(a)]^{-1}e_2^{-1}=e_2\quad\quad\Rightarrow\quad\quad a^{-1}\in\text{ker}(f)$$
+
+Hence, ker$(f)$ is a normal subgroup of $G_1$. $\quad\quad\square$
+
+## Ch. 15 Quotient Groups
+
+### Def. Coset (Right)
+
+Let H be a subgroup of G. For any $a\in G$, the set $$Ha=\{ha|h\in H\}$$
+
+is called a (right) $\underline{\text{coset}}$ of H in G. 
+
+### Def. Coset multiplication or addition
+
+In this chapter we'll define a group whose elements are the cosets of H in G. What's the operation? $$Ha\cdot Hb=H(ab)$$ or $$(H+a)+(H+b)=H+(a+b)$$
+
+This is called $\underline{\text{coset multiplication}}$
+
+### Ex. Adding Cosets
+
+Consider the cosets of $H=\langle 4\rangle=\{0,4,8\}$ in $\mathbb{Z}_{12}$. 
+
+\begin{equation}\label{D24.1}
+\begin{split}
+H+0 &= H = \{0,4,8\}=H+4=H+8\\
+H+1 &= \{1,5,9\}=H+5=H+9\\
+H+2 &= \{2,6,10\}=H+6=H+10\\
+H+3 &= \{3,7,11\}=H+7=H+11
+\end{split}
+\end{equation}
+
+Note: If $a\in H+b$, then $H+a=H+b$. 
+
+Let's add the last two cosets a few different ways:
+
+$\quad\quad(H+2)+(H+3)=H+(2+3)=H+5$
+
+$\quad\quad(H+6)+(H+7)=H+(6+7)=H+1$
+
+(these are the same)
+
+The choice of representatives for the cosets didn't affect the output of the coset addition. This is because H is **normal** in $\mathbb{Z}_{12}$. 
+
+###Ex. Multiply Cosets
+
+Now consider the cosets of $H=\{\mathcal{E},(23)\}$ in $S_3$. 
+
+\begin{equation}\label{D24.2}
+\begin{split}
+H\mathcal{E} &= H = \{\mathcal{E},(23)\}=\{(23)\}\\
+H(12) &= \{(12),(132)\}=H(132)\\
+H(13) &= \{(13),(123)\}=H(123)
+\end{split}
+\end{equation}
+
+Let's multiply the last two cosets: 
+
+$\quad\quad H(12)\cdot H(13)=H(12)(13)=H(132)$
+
+$\quad\quad H(132)=H(132)(123)=H\mathcal{E}=H$
+
+(these are not the same)
+
+What went wrong in this example? The subgroup H isn't normal in $S_3$. Coset multiplication / addition is only an operation if the subgroup H is normal in G. 
+
+### Theorem 2
+
+Let H be a normal subgroup of G. If $Ha=Hc$ and $Hb=Hd$, then $H(ab)=H(cd)$.
+
+$\underline{\text{Proof}}$ 
+
+To prove $H(ab)=H(cd)$, we need to show $ab\in H(cd)$.
+
+Since $a]in Ha$ and $Ha=Hc$, $a\in Hc$. So $a=h_1c$ for some $h_1\in H$. Similarly, $b\in Hb=Hd$, which implies $b=h_2d$ for some $h_2\in H$. Therefore, 
+
+![](img/img83.png) 
+
+since H is a normal subgroup and is, hence, clsoed underconjugates. 
+
+We're shown $ab\in H(cd)$. Thus $H(ab)=H(cd)$. 
+
+### Theorem 3 (Quotient Group)
+
+Let H be a normal subgroup of G. The set $$G/H=\{Ha|a\in G\}$$
+
+(read "G mod H")
+
+togetehr with coset multiplication is a group, called the $\underline{\text{quotient group}}$ of G by H. 
+
+$\underline{\text{Proof}}$:
+
+The identity element in $G/H$ is $H=He$:
+
+\begin{equation}\label{D24.3}
+\begin{split}
+Ha\cdot He&=H(ae)=Ha\\
+He\cdot Ha&=H(ea)=Ha
+\end{split}
+\end{equation}
+
+The inverse of a coset Ha is $Ha^{-1}$
+
+\begin{equation}\label{D24.4}
+\begin{split}
+Ha\cdot Ha^{-1} &=H(aa^{-1})=He\\
+Ha^{-1}\cdot Ha &= H(a^{-1}a)=He
+\end{split}
+\end{equation}
+
+(e is the identity in G/H)
+
+See the book for the proof that coset multiplication is associative. $\quad\quad\square$
+
+### Ex. List the elements of $\mathbb{Z}_6/\langle 3\rangle$
+
+(Note: $\langle 3\rangle=\{0,3\}$)
+
+\begin{equation}\label{D24.5}
+\begin{split}
+\langle 3\rangle &= \{0,3\}\\
+\langle 3\rangle +1 &= \{1,4\}\\
+\langle 3\rangle +2 &= \{2,5\}
+\end{split}
+\end{equation}
+
+(Note: this quotient group is isomorphic to $\mathbb{Z}_3$)
+
+### Ex. List elements $G/H$
+
+Let $G=\mathbb{Z}_2\times\mathbb{Z}_4$ and $H=\langle (0,2)\rangle=\{(0,0),(0,2)\}$. List the elements of $G/H$. 
+
+\begin{equation}\label{D24.6}
+\begin{split}
+H+(0,0) &= \{(0,0),(0,2)\}\\
+H+(1,0) &= \{(1,0),(1,2)\}\\
+H+(0,1) &= \{(0,1),(0,3)\}\\
+H+(1,1) &= \{(1,1),(1,3)\}
+\end{split}
+\end{equation}
+
+Note: this quotient group is isomorphic to $\mathbb{Z}_2\times\mathbb{Z}_2$. 
+
+Lets compute a few inverses in $G/H$. 
+
+![](img/img84.png)
 
 # W9D25: Mar. 2nd, 2022
 
