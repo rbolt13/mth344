@@ -879,7 +879,7 @@ $\underline{\text{Proof}}$: We showed that ker$(f)$ is closed under conjugates a
 
 Let's show that ker(f) is closed under the operation and inverses. 
 
-Let $a,b\in$ker$(f)$. We'll show $a,b\in$ker$(f)$ and $a^{-1}\in$ker$(f)$. $$f(ab)=f(a)f(b)=e_2e_2=e_2\quad\quad\Rightarrow\quad\quad ab\in\text{ker}(f)$$ and $$f(a^{-1}=[f(a)]^{-1}e_2^{-1}=e_2\quad\quad\Rightarrow\quad\quad a^{-1}\in\text{ker}(f)$$
+Let $a,b\in$ker$(f)$. We'll show $a,b\in$ker$(f)$ and $a^{-1}\in$ker$(f)$. $$f(ab)=f(a)f(b)=e_2e_2=e_2\quad\quad\Rightarrow\quad\quad ab\in\text{ker}(f)$$ and $$f(a^{-1})=[f(a)]^{-1}e_2^{-1}=e_2\quad\quad\Rightarrow\quad\quad a^{-1}\in\text{ker}(f)$$
 
 Hence, ker$(f)$ is a normal subgroup of $G_1$. $\quad\quad\square$
 
@@ -898,6 +898,8 @@ In this chapter we'll define a group whose elements are the cosets of H in G. Wh
 This is called $\underline{\text{coset multiplication}}$
 
 ### Ex. Adding Cosets
+
+(These next two examples are from homework 4)
 
 Consider the cosets of $H=\langle 4\rangle=\{0,4,8\}$ in $\mathbb{Z}_{12}$. 
 
@@ -918,11 +920,11 @@ $\quad\quad(H+2)+(H+3)=H+(2+3)=H+5$
 
 $\quad\quad(H+6)+(H+7)=H+(6+7)=H+1$
 
-(these are the same)
+(Note: $H+5=H+1$)
 
 The choice of representatives for the cosets didn't affect the output of the coset addition. This is because H is **normal** in $\mathbb{Z}_{12}$. 
 
-###Ex. Multiply Cosets
+### Ex. Multiply Cosets
 
 Now consider the cosets of $H=\{\mathcal{E},(23)\}$ in $S_3$. 
 
@@ -940,7 +942,7 @@ $\quad\quad H(12)\cdot H(13)=H(12)(13)=H(132)$
 
 $\quad\quad H(132)=H(132)(123)=H\mathcal{E}=H$
 
-(these are not the same)
+(Note: $H(132)\ne H$)
 
 What went wrong in this example? The subgroup H isn't normal in $S_3$. Coset multiplication / addition is only an operation if the subgroup H is normal in G. 
 
@@ -952,9 +954,13 @@ $\underline{\text{Proof}}$
 
 To prove $H(ab)=H(cd)$, we need to show $ab\in H(cd)$.
 
-Since $a]in Ha$ and $Ha=Hc$, $a\in Hc$. So $a=h_1c$ for some $h_1\in H$. Similarly, $b\in Hb=Hd$, which implies $b=h_2d$ for some $h_2\in H$. Therefore, 
+Since $a\in Ha$ and $Ha=Hc$, $a\in Hc$. So $a=h_1c$ for some $h_1\in H$. Similarly, $b\in Hb=Hd$, which implies $b=h_2d$ for some $h_2\in H$. Therefore,
 
 ![](img/img83.png) 
+
+(We want to end with an equation with "stuff from H" ($h_1ch_2c^{-1}$) on the left and "cd"  on the right)
+
+($ch_2c^{-1}$ is a conjugate, which is in H)
 
 since H is a normal subgroup and is, hence, clsoed underconjugates. 
 
@@ -964,7 +970,7 @@ We're shown $ab\in H(cd)$. Thus $H(ab)=H(cd)$.
 
 Let H be a normal subgroup of G. The set $$G/H=\{Ha|a\in G\}$$
 
-(read "G mod H")
+(read "G mod H", which is something we've heard before. However this is a special case.)
 
 togetehr with coset multiplication is a group, called the $\underline{\text{quotient group}}$ of G by H. 
 
@@ -1024,6 +1030,8 @@ Note: this quotient group is isomorphic to $\mathbb{Z}_2\times\mathbb{Z}_2$.
 Lets compute a few inverses in $G/H$. 
 
 ![](img/img84.png)
+
+(it takes one one to get to zero in mod 2, and 3 in mod 4.)
 
 # W9D25: Mar. 2nd, 2022
 
