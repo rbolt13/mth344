@@ -1035,6 +1035,165 @@ Lets compute a few inverses in $G/H$.
 
 # W9D25: Mar. 2nd, 2022
 
+## Ch. 15 Quotient Groups Cont. 
+
+Let H be a normal subgroup of G. The $\underline{\text{quotient group}}$, denoted $G/H$, is the set of all (right) cosets of H in G with the operation $$Ha\cdot Hb=H(ab).$$
+
+The identity element in $G/H$ is $He=H$. The inverse of Ha is $Ha^{-1}$, $$(Ha^{-1})=Ha^{-1}.$$
+
+### Ex. 
+
+Let $G=\mathbb{Z}$ and $H=5\mathbb{Z}=\{...,-10,-5,0,5,10,15,...\}$. (Note that H is normal in G since G is abelian.)
+
+List the elements of $G/H=\mathbb{Z}/5\mathbb{Z}$: 
+
+\begin{equation}\label{D25.1}
+\begin{split}
+H &= \{...-10,-5,0,5,10,...\}=H+5\\
+H+1 &= \{...,-9,-4,1,6,11,...\}=H+6\\
+H+2 &= \{...,-8,-3,2,7,12,...\}\\
+H+3 &= \{...,-7,-2,3,8,13,...\}\\
+H+4 &= \{...,-6,-1,4,9,14,...\}
+\end{split}
+\end{equation}
+
+Note: $\mathbb{Z}/5\mathbb{Z}\cong\mathbb{Z}_5$
+
+### Ex. 
+
+Last week we showed $H=\{\mathcal{E},(123),(132)\}$ is a normal subgroup of $S_3$. (We compared left and right cosets.)
+
+The quotient group $S_3/H$ has two elements: 
+
+\begin{equation}\label{D25.2}
+\begin{split}
+H &= \{\mathcal{E},(123), (132)\}\\
+H(12) &= \{\mathcal{E}(12),(123)(12),(132)(12)\}\\
+&= \{(12),(13),(23)\}
+\end{split}
+\end{equation}
+
+
+Note: H contains all even permutations in $S_3$ and $H(12)$ contains the odd permutations. 
+
+Note: $S_3/H\cong \mathbb{Z}_2$
+
+We showed Friday and Monday that the kernel of a homomorphism is a normal subgroup of the domain. In fact, every normal subgroup is the kernel of a homomorphism. 
+
+### Theroem 4
+
+Let H be a normal subgroup of G. The function $f:G\rightarrow G/H$ define by $$f(a)=Ha$$ is a surjective homomorphsim with kernel H. 
+
+$\underline{\text{Proof}}$: 
+
+Let's show f is surjective (onto). Take any $Hy\in G/H$. Then $y\in G$ and $f(y)=Hy$, implying f is surjective. 
+
+Take any $a,b\in G$. Then, $$f(ab)=H(ab)=Ha\cdot Hb=f(a)f(b)$$
+
+Now lets show ker(f): 
+
+(Note the identity in G/H is H)
+
+\begin{equation}\label{D25.3}
+\begin{split}
+ker(f) &= \{x\in G|f(x)=H\}\\
+&= \{x\in G|Hx=H\}\\
+&= H
+\end{split}
+\end{equation}
+
+
+Since $Hx=H$ if and only if $x\in H$. 
+
+### Theorem 5
+
+Let H be a subgroup of G. 
+
+(i) $Ha=Hb$ if and only if $ab^{-1}\in H$.
+
+(ii) $Ha=H$ if and only if $a\in H$. 
+
+$\underline{\text{Proof}}$:
+
+(i) ($\Rightarrow$) Suppose $Ha=Hb$. Since $a\in Ha$, this implies $a\in Hb$ as well. Then $a=hb$ for some $h\in H$. Multiplying by $b^{-1}$ on the right gives $$ab^{-1}=hbb^{-1}=h\in H.$$
+
+$\quad$($\Leftarrow$) Assume that $ab^{-1}\in H$. This means $ab^{-1}=h$ for some $h\in H$. Multiplying by b on the right gives $$a=hb\in Hb$$.
+
+We showed in Ch. 13 that if $a\in Hb$, then $Ha=Hb$. 
+
+(ii) Use part (i) with $b=e$. 
+
+$\square$
+
+### Example: Prove $unlhd$ and abelian
+
+Let G be a group and H a subgroup of G. Suppose H contains all elements of the form $xyx^{-1}y^{-1}$, where $x,y,\in G$. 
+
+(i) Prove $H\unlhd G$.
+
+(ii) Prove $G/H$ is abelian. 
+
+$\underline{\text{Proof}}$:
+
+(i) Take any $g\in G$ and $h\in H$. We want to show $ghg^{-1}\in H$. 
+
+We know that $ghg^{-1}h^{-1}$ is in H. Therefore, since H is closed under the operation, $$ghg^{-1}=ghg^{-1}h^{-1}h\in H$$. 
+
+Note: $ghg^{-1}h^{-1}$ is in H, and $h$ is in H. 
+
+Hence, $H\unlhd G$. 
+
+(ii) Now let's prove $G/H$ is abelian, i.e. that $Ha\cdot Hb=Hb\cdot Ha$ for all cosets $Ha$, $Hb\in G/H$.
+
+We know $aba^{-1}b^{-1}\in H$, implying $(ab)(ba)^{-1}\in H$. So by Theorem 5(i), 
+
+\begin{equation}\label{D25.4}
+\begin{split}
+H(ab) = H(ba) &\Rightarrow Ha\cdot Hb = Hb\cdot Ha\\
+&\Rightarrow G/H\text{ is abelian.}
+\end{split}
+\end{equation}
+
+
+$\square$
+
+Why is $G/H$ abelian in this example? In $G/H$ all elements in a given coset are considered equivalent. So, everything in H is considered equivalent to the identity $e\in G$. 
+
+\begin{equation}\label{D25.5}
+\begin{split}
+aba^{-1}b^{-1} &\Rightarrow aba^{-1}b^{-1}\sim e\\
+&\Rightarrow aba^{-1}\sim b\\
+&\Rightarrow ab\sim ba
+\end{split}
+\end{equation}
+
+### Ex. 
+
+In Ch. 14 we showed $H=\{1,r^2\}$ is a normal subgroup of $D_4=\{1,r,r^2,r^3,s,sr,sr^2,sr^3\}$. The elements of $D_4/H$ are, 
+
+\begin{equation}\label{D25.6}
+\begin{split}
+H &= \{1,r^2\}\\
+Hr &= \{r,r^3\}\\
+Hs &= \{s,sr^2\}\\
+Hsr &= \{sr,sr^3\}
+\end{split}
+\end{equation}
+
+In $\mathbb{Z}_2\times\mathbb{Z}_2$ there are 3 elements with order 2. In $\mathbb{Z}_4$ there is only one element with order 2. 
+
+We'll show $D_4/H$ has at least two elements with order 2, implying $D_4/H\cong\mathbb{Z}_2\times\mathbb{Z}_2$: 
+
+\begin{equation}\label{D25.7}
+\begin{split}
+Hr\cdot Hr &= Hr^2=H\quad\quad\quad\text{, since }r^2\in H\\
+Hs\cdot Hs &= Hs^2 = H\cdot 1 = H\quad\quad\text{, since }s^2=1
+\end{split}
+\end{equation}
+
+Hence, $D_4/H\cong\mathbb{Z}_2\times\mathbb{Z}_2$
+
+
 # W9D26: Mar. 4th, 2022 
 
 # <span style="color: deepskyblue;">W10D27: Mar. 7th, 2022</span> 

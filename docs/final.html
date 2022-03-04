@@ -1135,6 +1135,131 @@ H+(1,1) &amp;= \{(1,1),(1,3)\}
 </div>
 <div id="w9d25-mar.-2nd-2022" class="section level1">
 <h1>W9D25: Mar. 2nd, 2022</h1>
+<div id="ch.-15-quotient-groups-cont." class="section level2">
+<h2>Ch. 15 Quotient Groups Cont.</h2>
+<p>Let H be a normal subgroup of G. The <span class="math inline">\(\underline{\text{quotient group}}\)</span>, denoted <span class="math inline">\(G/H\)</span>, is the set of all (right) cosets of H in G with the operation <span class="math display">\[Ha\cdot Hb=H(ab).\]</span></p>
+<p>The identity element in <span class="math inline">\(G/H\)</span> is <span class="math inline">\(He=H\)</span>. The inverse of Ha is <span class="math inline">\(Ha^{-1}\)</span>, <span class="math display">\[(Ha^{-1})=Ha^{-1}.\]</span></p>
+<div id="ex.-2" class="section level3">
+<h3>Ex.</h3>
+<p>Let <span class="math inline">\(G=\mathbb{Z}\)</span> and <span class="math inline">\(H=5\mathbb{Z}=\{...,-10,-5,0,5,10,15,...\}\)</span>. (Note that H is normal in G since G is abelian.)</p>
+<p>List the elements of <span class="math inline">\(G/H=\mathbb{Z}/5\mathbb{Z}\)</span>:</p>
+<p><span class="math display">\[\begin{equation}\label{D25.1}
+\begin{split}
+H &amp;= \{...-10,-5,0,5,10,...\}=H+5\\
+H+1 &amp;= \{...,-9,-4,1,6,11,...\}=H+6\\
+H+2 &amp;= \{...,-8,-3,2,7,12,...\}\\
+H+3 &amp;= \{...,-7,-2,3,8,13,...\}\\
+H+4 &amp;= \{...,-6,-1,4,9,14,...\}
+\end{split}
+\end{equation}\]</span></p>
+<p>Note: <span class="math inline">\(\mathbb{Z}/5\mathbb{Z}\cong\mathbb{Z}_5\)</span></p>
+</div>
+<div id="ex.-3" class="section level3">
+<h3>Ex.</h3>
+<p>Last week we showed <span class="math inline">\(H=\{\mathcal{E},(123),(132)\}\)</span> is a normal subgroup of <span class="math inline">\(S_3\)</span>. (We compared left and right cosets.)</p>
+<p>The quotient group <span class="math inline">\(S_3/H\)</span> has two elements:</p>
+<p><span class="math display">\[\begin{equation}\label{D25.2}
+\begin{split}
+H &amp;= \{\mathcal{E},(123), (132)\}\\
+H(12) &amp;= \{\mathcal{E}(12),(123)(12),(132)(12)\}\\
+&amp;= \{(12),(13),(23)\}
+\end{split}
+\end{equation}\]</span></p>
+<p>Note: H contains all even permutations in <span class="math inline">\(S_3\)</span> and <span class="math inline">\(H(12)\)</span> contains the odd permutations.</p>
+<p>Note: <span class="math inline">\(S_3/H\cong \mathbb{Z}_2\)</span></p>
+<p>We showed Friday and Monday that the kernel of a homomorphism is a normal subgroup of the domain. In fact, every normal subgroup is the kernel of a homomorphism.</p>
+</div>
+<div id="theroem-4" class="section level3">
+<h3>Theroem 4</h3>
+<p>Let H be a normal subgroup of G. The function <span class="math inline">\(f:G\rightarrow G/H\)</span> define by <span class="math display">\[f(a)=Ha\]</span> is a surjective homomorphsim with kernel H.</p>
+<p><span class="math inline">\(\underline{\text{Proof}}\)</span>:</p>
+<p>Let’s show f is surjective (onto). Take any <span class="math inline">\(Hy\in G/H\)</span>. Then <span class="math inline">\(y\in G\)</span> and <span class="math inline">\(f(y)=Hy\)</span>, implying f is surjective.</p>
+<p>Take any <span class="math inline">\(a,b\in G\)</span>. Then, <span class="math display">\[f(ab)=H(ab)=Ha\cdot Hb=f(a)f(b)\]</span></p>
+<p>Now lets show ker(f):</p>
+<p>(Note the identity in G/H is H)</p>
+<p><span class="math display">\[\begin{equation}\label{D25.3}
+\begin{split}
+ker(f) &amp;= \{x\in G|f(x)=H\}\\
+&amp;= \{x\in G|Hx=H\}\\
+&amp;= H
+\end{split}
+\end{equation}\]</span></p>
+<p>Since <span class="math inline">\(Hx=H\)</span> if and only if <span class="math inline">\(x\in H\)</span>.</p>
+</div>
+<div id="theorem-5-1" class="section level3">
+<h3>Theorem 5</h3>
+<p>Let H be a subgroup of G.</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(Ha=Hb\)</span> if and only if <span class="math inline">\(ab^{-1}\in H\)</span>.</p></li>
+<li><p><span class="math inline">\(Ha=H\)</span> if and only if <span class="math inline">\(a\in H\)</span>.</p></li>
+</ol>
+<p><span class="math inline">\(\underline{\text{Proof}}\)</span>:</p>
+<ol style="list-style-type: lower-roman">
+<li>(<span class="math inline">\(\Rightarrow\)</span>) Suppose <span class="math inline">\(Ha=Hb\)</span>. Since <span class="math inline">\(a\in Ha\)</span>, this implies <span class="math inline">\(a\in Hb\)</span> as well. Then <span class="math inline">\(a=hb\)</span> for some <span class="math inline">\(h\in H\)</span>. Multiplying by <span class="math inline">\(b^{-1}\)</span> on the right gives <span class="math display">\[ab^{-1}=hbb^{-1}=h\in H.\]</span></li>
+</ol>
+<p><span class="math inline">\(\quad\)</span>(<span class="math inline">\(\Leftarrow\)</span>) Assume that <span class="math inline">\(ab^{-1}\in H\)</span>. This means <span class="math inline">\(ab^{-1}=h\)</span> for some <span class="math inline">\(h\in H\)</span>. Multiplying by b on the right gives <span class="math display">\[a=hb\in Hb\]</span>.</p>
+<p>We showed in Ch. 13 that if <span class="math inline">\(a\in Hb\)</span>, then <span class="math inline">\(Ha=Hb\)</span>.</p>
+<ol start="2" style="list-style-type: lower-roman">
+<li>Use part (i) with <span class="math inline">\(b=e\)</span>.</li>
+</ol>
+<p><span class="math inline">\(\square\)</span></p>
+</div>
+<div id="example-prove-unlhd-and-abelian" class="section level3">
+<h3>Example: Prove <span class="math inline">\(unlhd\)</span> and abelian</h3>
+<p>Let G be a group and H a subgroup of G. Suppose H contains all elements of the form <span class="math inline">\(xyx^{-1}y^{-1}\)</span>, where <span class="math inline">\(x,y,\in G\)</span>.</p>
+<ol style="list-style-type: lower-roman">
+<li><p>Prove <span class="math inline">\(H\unlhd G\)</span>.</p></li>
+<li><p>Prove <span class="math inline">\(G/H\)</span> is abelian.</p></li>
+</ol>
+<p><span class="math inline">\(\underline{\text{Proof}}\)</span>:</p>
+<ol style="list-style-type: lower-roman">
+<li>Take any <span class="math inline">\(g\in G\)</span> and <span class="math inline">\(h\in H\)</span>. We want to show <span class="math inline">\(ghg^{-1}\in H\)</span>.</li>
+</ol>
+<p>We know that <span class="math inline">\(ghg^{-1}h^{-1}\)</span> is in H. Therefore, since H is closed under the operation, <span class="math display">\[ghg^{-1}=ghg^{-1}h^{-1}h\in H\]</span>.</p>
+<p>Note: <span class="math inline">\(ghg^{-1}h^{-1}\)</span> is in H, and <span class="math inline">\(h\)</span> is in H.</p>
+<p>Hence, <span class="math inline">\(H\unlhd G\)</span>.</p>
+<ol start="2" style="list-style-type: lower-roman">
+<li>Now let’s prove <span class="math inline">\(G/H\)</span> is abelian, i.e. that <span class="math inline">\(Ha\cdot Hb=Hb\cdot Ha\)</span> for all cosets <span class="math inline">\(Ha\)</span>, <span class="math inline">\(Hb\in G/H\)</span>.</li>
+</ol>
+<p>We know <span class="math inline">\(aba^{-1}b^{-1}\in H\)</span>, implying <span class="math inline">\((ab)(ba)^{-1}\in H\)</span>. So by Theorem 5(i),</p>
+<p><span class="math display">\[\begin{equation}\label{D25.4}
+\begin{split}
+H(ab) = H(ba) &amp;\Rightarrow Ha\cdot Hb = Hb\cdot Ha\\
+&amp;\Rightarrow G/H\text{ is abelian.}
+\end{split}
+\end{equation}\]</span></p>
+<p><span class="math inline">\(\square\)</span></p>
+<p>Why is <span class="math inline">\(G/H\)</span> abelian in this example? In <span class="math inline">\(G/H\)</span> all elements in a given coset are considered equivalent. So, everything in H is considered equivalent to the identity <span class="math inline">\(e\in G\)</span>.</p>
+<p><span class="math display">\[\begin{equation}\label{D25.5}
+\begin{split}
+aba^{-1}b^{-1} &amp;\Rightarrow aba^{-1}b^{-1}\sim e\\
+&amp;\Rightarrow aba^{-1}\sim b\\
+&amp;\Rightarrow ab\sim ba
+\end{split}
+\end{equation}\]</span></p>
+</div>
+<div id="ex.-4" class="section level3">
+<h3>Ex.</h3>
+<p>In Ch. 14 we showed <span class="math inline">\(H=\{1,r^2\}\)</span> is a normal subgroup of <span class="math inline">\(D_4=\{1,r,r^2,r^3,s,sr,sr^2,sr^3\}\)</span>. The elements of <span class="math inline">\(D_4/H\)</span> are,</p>
+<p><span class="math display">\[\begin{equation}\label{D25.6}
+\begin{split}
+H &amp;= \{1,r^2\}\\
+Hr &amp;= \{r,r^3\}\\
+Hs &amp;= \{s,sr^2\}\\
+Hsr &amp;= \{sr,sr^3\}
+\end{split}
+\end{equation}\]</span></p>
+<p>In <span class="math inline">\(\mathbb{Z}_2\times\mathbb{Z}_2\)</span> there are 3 elements with order 2. In <span class="math inline">\(\mathbb{Z}_4\)</span> there is only one element with order 2.</p>
+<p>We’ll show <span class="math inline">\(D_4/H\)</span> has at least two elements with order 2, implying <span class="math inline">\(D_4/H\cong\mathbb{Z}_2\times\mathbb{Z}_2\)</span>:</p>
+<p><span class="math display">\[\begin{equation}\label{D25.7}
+\begin{split}
+Hr\cdot Hr &amp;= Hr^2=H\quad\quad\quad\text{, since }r^2\in H\\
+Hs\cdot Hs &amp;= Hs^2 = H\cdot 1 = H\quad\quad\text{, since }s^2=1
+\end{split}
+\end{equation}\]</span></p>
+<p>Hence, <span class="math inline">\(D_4/H\cong\mathbb{Z}_2\times\mathbb{Z}_2\)</span></p>
+</div>
+</div>
 </div>
 <div id="w9d26-mar.-4th-2022" class="section level1">
 <h1>W9D26: Mar. 4th, 2022</h1>
