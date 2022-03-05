@@ -1197,6 +1197,138 @@ Hence, $D_4/H\cong\mathbb{Z}_2\times\mathbb{Z}_2$
 
 # W9D26: Mar. 4th, 2022 
 
+## Ch. 15 Quotient Groups, Cont. 
+
+### Ex. 
+
+Let $G=\mathbb{Z}_{24}$ and $H=\langle 6\rangle =\{0,6,12,18\}$.
+
+Then $G/H$ will have $|G|/|H|=24/4=6$ elements: $$H,H+1,H+2,H+3,H+4,H+5$$ 
+
+What's the order of $H+3$ in $G/H$? What's the fewest number of $H+3$'s we need to add to get H? (since H is the identity in $G/H$)
+
+\begin{equation}\label{D26.1}
+\begin{split}
+H +3 &= \{3,9,15,21\}\ne H\\
+(H+3)+(H+3) &= H +(3+3) = H+6 = H\quad\text{ , since }6\in H
+\end{split}
+\end{equation}
+
+Therefore the order of $H+3$ in $G/H$ in 2. 
+
+We're using Theorem 5(ii) from Ch.15, which says $$H+a=H\text{ iif }a\in H$$
+
+What's the ordr of $H+4$ in $G/H$? How many 4's do we need to add in $\mathbb{Z}_24$ to get something in H? 
+
+$$\text{ord}(H+4)=3\quad\text{ since }\quad(H+4)+(H+4)+(H+4) = H+12=H$$
+
+(b/c $12\in H$)
+
+What's the order of $H+1$ in $G/H$? Since $1+1+1+1+1+1=6\in H$, 
+
+![](img/img85.png)
+
+So ord$(H+1)=6$. Since $G/H$ has 6 elements, $G/H$ is cyclic: $$G/H=\langle H+1\rangle \quad\Rightarrow\quad G/H\cong\mathbb{Z}_6$$
+
+### Ex. (15C1)
+
+Let H be a normal subgroup of G. Suppose that for all $x\in G$, $x^2\in H$. Prove every element of $G/H$ is its own inverse. 
+
+(If Ha is its own inverse, then $Ha\cdot Ha=H$)
+
+$\underline{\text{Proof}}$: Take any $Ha\in G/H$. Then 
+
+\begin{equation}\label{D26.2}
+\begin{split}
+Ha\cdot Ha &= Ha^2\\
+&= H\quad\text{ , since }a^2\in H\\
+\Rightarrow Ha &= (Ha)^{-1}
+\end{split}
+\end{equation}
+
+$\square$
+
+### Ex. (15B2)
+
+Let $G=\mathbb{R}\times\mathbb{R}$ and $H=\{(x,y)|y=-x\}$.
+
+(a) Why is H normal in G? The group G is abelian. 
+
+(b) Describe the elements of $G/H$. 
+
+![](img/img86.png)
+
+## Ch. 16 The Fundamental Homomorphism Theorem (FHT)
+
+### Theorem 1 
+
+Let $f:G\rightarrow H$ be a homomorphism with kernel K. Then $f(a)=f(b)\quad\Leftrightarrow\quad Ka=Kb$. 
+
+(Note: we proved the kernel K is a normal subgroup of G in Ch. 14.)
+
+$\underline{\text{Proof}}$ Let $a,b\in G$. Then 
+
+\begin{equation}\label{D26.3}
+\begin{split}
+f(a)=f(b) &\Leftrightarrow f(a)[f(b)]^{-1}=f(b)[f(b)]^{-1}\\
+&\Leftrightarrow f(a)f(b^{-1}) = e_H\\
+&\Leftrightarrow f(ab^{-1}=e_H)\\
+&\Leftrightarrow ab ^{-1}\in K\\
+&\Leftrightarrow Ka=Kb \quad\text{ (by Theorem 5(i) from Ch.15)}
+\end{split}
+\end{equation}
+
+$\square$
+
+![](img/img87.png)
+
+### Theorem 2 (FHT)
+
+Let $f:G\rightarrow H$ be a surjective (onto) homomorphism with kernel K. Then $$G/K\cong H$$
+
+$\underline{\text{Proof}}$: Define a function $\varphi:G/K\rightarrow H$ by $\varphi(Kx)=f(x)$. This function $\varphi$ is an isomorphism. 
+
+Let's show that $\varphi$ is one=to-one. Suppose $\varphi (Kx_1)=\varphi(Kx_2)$ for some $kx_1$, $kx_2\in G/K$. Then
+
+\begin{equation}\label{D26.4}
+\begin{split}
+f(x_1)=f(x_2) &\Rightarrow Kx_1 = Kx_2\quad\text{ (by Theorem 1)}\\
+&\Rightarrow \varphi\text{ is one-to-one}
+\end{split}
+\end{equation}
+
+Now let's show $\varphi$ is onto. Take any $y\in H$. Since $f:G\rightarrow H$ is onto there exists $x\in G$ such that $f(x)=y$. Hence $Kx\in G/K$ and $$\varphi(Kx)=f(x)=y\quad\Rightarrow \varphi\text{ is onto.}$$
+
+Last, let's show $\varphi$ is a homomorphism: 
+
+\begin{equation}\label{D26.5}
+\begin{split}
+\varphi (Ka\cdot Kb) &= \varphi (K(ab))\\
+&= f(ab)\\
+&= f(a)f(b)\quad\text{ , since f is a homomorphism}\\
+&= \varphi(Ka)\varphi(Kb)
+\end{split}
+\end{equation}
+
+Hence, $\varphi$ is a bijective homomorphism. (See the book for details about why $\varphi$ is well=defined.)
+
+Thus, $G/K\cong H$. $\quad\quad\square$
+
+### Ex. 
+
+Let $G=\mathbb{R}\times\mathbb{R}$ and $K=\{(x,y)|y=-x\}$. Show $G/K\cong \mathbb{R}$. We need a surjective homomorphism $f:\mathbb{R}\times\mathbb{R}\rightarrow \mathbb{R}$ with kernel 
+
+\begin{equation}\label{D26.6}
+\begin{split}
+K &= \{(x,y)|y=-x\}\\
+&= \{(x,y)|x+y=0\}
+\end{split}
+\end{equation}
+
+Let's define $f:\mathbb{R}\times\mathbb{R}\rightarrow \mathbb{R}$ by $f(x,y)=x+y$. Then we know that the kernel of f is K. 
+
+We showed in Ch. 14 that this function f is a surjetive homomorphism. So by FHT, $$G/K\cong \mathbb{R}.$$
+
 # <span style="color: deepskyblue;">W10D27: Mar. 7th, 2022</span> 
 
 # <span style="color: deepskyblue;">W10D28: Mar. 9th, 2022 </span>
