@@ -1041,7 +1041,7 @@ Let H be a normal subgroup of G. The $\underline{\text{quotient group}}$, denote
 
 The identity element in $G/H$ is $He=H$. The inverse of Ha is $Ha^{-1}$, $$(Ha^{-1})=Ha^{-1}.$$
 
-### Ex. 
+### Ex. List the elements of $G/H=\mathbb{Z}/5\mathbb{Z}$
 
 Let $G=\mathbb{Z}$ and $H=5\mathbb{Z}=\{...,-10,-5,0,5,10,15,...\}$. (Note that H is normal in G since G is abelian.)
 
@@ -1059,7 +1059,9 @@ H+4 &= \{...,-6,-1,4,9,14,...\}
 
 Note: $\mathbb{Z}/5\mathbb{Z}\cong\mathbb{Z}_5$
 
-### Ex. 
+### Ex. Pairing Cosets
+
+(Recommend in doing simialr thing in homework 5.5)
 
 Last week we showed $H=\{\mathcal{E},(123),(132)\}$ is a normal subgroup of $S_3$. (We compared left and right cosets.)
 
@@ -1073,10 +1075,9 @@ H(12) &= \{\mathcal{E}(12),(123)(12),(132)(12)\}\\
 \end{split}
 \end{equation}
 
-
 Note: H contains all even permutations in $S_3$ and $H(12)$ contains the odd permutations. 
 
-Note: $S_3/H\cong \mathbb{Z}_2$
+This quotient group $S_3/H\cong \mathbb{Z}_2$.
 
 We showed Friday and Monday that the kernel of a homomorphism is a normal subgroup of the domain. In fact, every normal subgroup is the kernel of a homomorphism. 
 
@@ -1125,7 +1126,7 @@ We showed in Ch. 13 that if $a\in Hb$, then $Ha=Hb$.
 
 $\square$
 
-### Example: Prove $unlhd$ and abelian
+### Example: Prove H is a noraml subgroup of G and abelian
 
 Let G be a group and H a subgroup of G. Suppose H contains all elements of the form $xyx^{-1}y^{-1}$, where $x,y,\in G$. 
 
@@ -1167,7 +1168,7 @@ aba^{-1}b^{-1} &\Rightarrow aba^{-1}b^{-1}\sim e\\
 \end{split}
 \end{equation}
 
-### Ex. 
+### Ex. List the elements of $D_4/H$ and $D_4/H\cong\mathbb{Z}_2\times\mathbb{Z}_2$
 
 In Ch. 14 we showed $H=\{1,r^2\}$ is a normal subgroup of $D_4=\{1,r,r^2,r^3,s,sr,sr^2,sr^3\}$. The elements of $D_4/H$ are, 
 
