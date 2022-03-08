@@ -1343,6 +1343,124 @@ We showed in Ch. 14 that this function f is a surjetive homomorphism. So by FHT,
 
 # <span style="color: deepskyblue;">W10D27: Mar. 7th, 2022</span> 
 
+## Final Exam 
+
+- Thursday March 17th from 12:30-2:30 pm
+
+- focuses on Ch 10, 11, 13 - 16
+
+## Ch 16 The Fundamental Homomorphism Theorem, Contued
+
+**$\underline{\text{FHT}}$**: If $f:G\rightarrow H$ is a surjective (onto) homomorphism with kernel $$K=\text{ker}(f)=\{x\in G|f(x)=e\},$$ then $G/K\cong H$. 
+
+### Ex. Show $\mathbb{Z}_6/\langle 3\rangle\cong\mathbb{Z}_3$.
+
+We need a homomorphism $f:\mathbb{Z}_6\rightarrow\mathbb{Z}_3$ with kernel $\langle 3\rangle=\{0,3\}$. $$f=(\begin{smallmatrix} 0 & 1 & 2 & 3 & 4 & 5 \\ 0 & 1 & 2 & 0 & 1 &2\end{smallmatrix})$$
+
+![](img/img89.png)
+
+So $f:\mathbb{Z}_6\rightarrow\mathbb{Z}_3$ is the function $f(x)=x$ mod 3. 
+Since $f:\mathbb{Z}_6\rightarrow\mathbb{Z}_3$ is a surjective homomorphism with kernel $\langle 3\rangle$, $$\mathbb{Z}_6/\langle 3\rangle \cong\mathbb{Z}_3$$
+
+### Ex. Show $(\mathbb{Z}\times\mathbb{Z}/\langle 2, -1)\rangle \cong\mathbb{Z}$.
+
+We need a surjective homomorphsim $f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}$ with kernel 
+
+\begin{equation}\label{D27.1}
+\begin{split}
+\text{ker}(f) &= \langle (2 , -1)\rangle\\
+&= \{...,(-4,2),(-2,1),(0,0),(2,-1), (4,-2),(6,-3)\}\\
+&= \{(x,y)\in\mathbb{Z}\times\mathbb{Z}|x=-2y\}\\
+&= \{(x,y)\in\mathbb{Z}\times\mathbb{Z}|x+2y=0\}
+\end{split}
+\end{equation}
+
+Let $f(x,y)=x+2y$. We've shown that ker$(f)=\langle (2,-1)\rangle$. 
+
+Now lets show f is surjective. Take any $n\in\mathbb{Z}$. Then $(n,0)\in\mathbb{Z}\times\mathbb{Z}$ and $$f(n,0)=n+2\cdot 0=n.$$
+
+So f is surjective. Last, let's check f is a homomorphism: 
+
+\begin{equation}\label{D27.2}
+\begin{split}
+f((a_1,a_2)+(b_1,b_2)) &= f(a_1+b_1, a_2+b_2)\\
+&= a_1 + b_1 + 2(a_2+b_2)\\
+&= a_1 + 2a_2 +b_1 + 2b_2\\
+&= f(a_1,a_2)+f(b_1,b_2)
+\end{split}
+\end{equation}
+
+Hence, by the FHT, $(\mathbb{Z}\times\mathbb{Z})/\langle (2,-1)\rangle\cong \mathbb{Z}$. 
+
+### Ex. Show $\mathscr{F}(\mathbb{R})/K\cong \mathbb{R}$
+
+Recall $\mathscr{F}(\mathbb{R})$ is the group of all functions from $\mathbb{R}$ to $\mathbb{R}$ with the operation of function addition: $(f+g)(x)=f(x)+g(x)$. 
+
+Let $K=\{f\in\mathscr{F}(\mathbb{R})|f(0)=0\}$. For example, $f(x)=sin(x)\in K$ since $sin(0)=0$. Similarly, $f(x)=x^2\in K$ since $0^2=0$.
+
+Show $\mathscr{F}(\mathbb{R})/K\cong \mathbb{R}$.
+
+Define $\varphi:\mathscr{F}(\mathbb{R})\rightarrow\mathbb{R}$ by $\varphi(f)=f(0)$, i.e. $\varphi$ is the function which plugs in $x=0$. 
+
+Show $\varphi$ is a homomorphism: 
+
+$\varphi(f+g)=(f+g)(0)=f(0)+g(0)=\varphi(f)+\varphi(g)$
+
+Now show $\varphi$ is onto. Take any $n\in\mathbb{R}$. We need a function f whose graph goes through $(0,n)$. There are a lot to choose from; one is the constant function $f(x)=n$:
+
+![](img/img90.png)
+
+By the FHT, $\mathscr{F}(\mathbb{R})/K\cong\mathbb{R}$. 
+
+### Ex. Show $\mathbb{R}^*/\langle -1\rangle\cong\mathbb{R}^+$.
+
+Find a homomorphism $f:\mathbb{R}^*\rightarrow\mathbb{R}^+$ with kernel $\langle -1\rangle =\{1,-1\}$. 
+
+One such function is $f(x)=|x|$. We saw that f is a homomorphism with kernel $\langle -1\rangle=\{1,-1\}$. This function is onto since for all $n\in\mathbb{R}^+$, $$f(n)=|n|=n.$$ So $\mathbb{R}^*/\langle -1\rangle\cong \mathbb{R}^+$. 
+
+The function $f(x)=x^2$ would have also worked:
+
+\begin{equation}\label{D27.3}
+\begin{split}
+f(ab)=(ab)^2 &=a^2b^2\quad\quad\text{ , since }\mathbb{R}^+\text{ is abelian}\\
+&= f(a)f(b)
+\end{split}
+\end{equation}
+
+This function is alos onto since for all $n\in\mathbb{R}^+$, $$f(\sqrt{n})=(\sqrt{n})^2=n$$
+
+### Ex. Show $\mathbb{C}^*/K\cong\mathbb{R}^+$.
+
+Consider the gorup of nonzero complex numbers $\mathbb{C}^*$ with complex multiplication: $$(a+bi)(c+di)=ac+adi+bci+bdi^2=ac-bd+(ad+bc)i$$
+
+![](img/img91.png)
+
+Let $K=\{a+bi\in\mathbb{C}^*/\sqrt{a^2+b^2}=1\}$. The set K contains all complex numbers $a+bi$ where $(a,b)$ lies on the circle with radius 1 centered at the origin. 
+
+Show $\mathbb{C}^*/K\cong\mathbb{R}^+$. We need a homomorphism $f:\mathbb{C}^*\rightarrow \mathbb{R}^+$ with kernel K. 
+
+We'll use $f(a+bi)=\sqrt{a^2+b^2}$, since we know it will have the correct kernel K. 
+
+Let's show f is a surjective homomorphism. 
+
+Take any $n\in\mathbb{R}^+$. Then $$f(n+0i)=\sqrt{n^2=0^2}=\sqrt{n^2}=n,$$ proving f is surjective. 
+
+Now lets show f is a homomorphism: 
+
+\begin{equation}\label{D27.4}
+\begin{split}
+f((a+bi)(c+di)) &= f(ac-bd+(ad+bc)i)\\
+&= ((ab-bd)^2+(ad+bc)^2)^{1/2}\\
+&= (a^2c^2-2abcd+b^2d^2+a^2d^2+2abcd+b^2c^2)^{1/2}\\
+&= (a^2c^2+b^2d^2+a^2d^2+b^2c^2)^{1/2}\\
+&= ((a^2+b^2)(c^2+d^2))^{1/2}\\
+&= \sqrt{a^2+b^2}\cdot\sqrt{c^2+d^2}\\
+&= f(a+bi)\cdot f(c+di)
+\end{split}
+\end{equation}
+
+Since $f:\mathbb{C}^*\rightarrow\mathbb{R}^+$ is a surjective homomorphism with kernel K, $$\mathbb{C}^*/K\cong\mathbb{R}^+$$
+
 # <span style="color: deepskyblue;">W10D28: Mar. 9th, 2022 </span>
 
 (Review)

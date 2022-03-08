@@ -16,3 +16,19 @@ library(kableExtra)
 ```
 
 These are class notes and R code for Julie Bracken's MTH-344 : Introduction to Group Theory Application Winter term 2022 at Portland State University.
+
+```{r}
+library(distance)
+```
+
+
+```{r}
+x1 <- 0
+x2 <- 1
+y1 <- 1
+y2 <- 2
+distance_E(x1,x2,y1,y2)
+distance_T(x1,x2,y1,y2)
+```
+
+
