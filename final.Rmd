@@ -1392,6 +1392,8 @@ f((a_1,a_2)+(b_1,b_2)) &= f(a_1+b_1, a_2+b_2)\\
 
 Hence, by the FHT, $(\mathbb{Z}\times\mathbb{Z})/\langle (2,-1)\rangle\cong \mathbb{Z}$. 
 
+(Very similar to a homework 5 problem)
+
 ### Ex. Show $\mathscr{F}(\mathbb{R})/K\cong \mathbb{R}$
 
 Recall $\mathscr{F}(\mathbb{R})$ is the group of all functions from $\mathbb{R}$ to $\mathbb{R}$ with the operation of function addition: $(f+g)(x)=f(x)+g(x)$. 
@@ -1400,7 +1402,9 @@ Let $K=\{f\in\mathscr{F}(\mathbb{R})|f(0)=0\}$. For example, $f(x)=sin(x)\in K$ 
 
 Show $\mathscr{F}(\mathbb{R})/K\cong \mathbb{R}$.
 
-Define $\varphi:\mathscr{F}(\mathbb{R})\rightarrow\mathbb{R}$ by $\varphi(f)=f(0)$, i.e. $\varphi$ is the function which plugs in $x=0$. 
+Define $\varphi:\mathscr{F}(\mathbb{R})\rightarrow\mathbb{R}$ by $\varphi(f)=f(0)$, i.e. $\varphi$ is the function which plugs in $x=0$.
+
+(This comes up a lot in the next class and string theory)
 
 Show $\varphi$ is a homomorphism: 
 
@@ -1411,6 +1415,8 @@ Now show $\varphi$ is onto. Take any $n\in\mathbb{R}$. We need a function f whos
 ![](img/img90.png)
 
 By the FHT, $\mathscr{F}(\mathbb{R})/K\cong\mathbb{R}$. 
+
+(This wont be on final, but is in the book)
 
 ### Ex. Show $\mathbb{R}^*/\langle -1\rangle\cong\mathbb{R}^+$.
 
@@ -1427,7 +1433,7 @@ f(ab)=(ab)^2 &=a^2b^2\quad\quad\text{ , since }\mathbb{R}^+\text{ is abelian}\\
 \end{split}
 \end{equation}
 
-This function is alos onto since for all $n\in\mathbb{R}^+$, $$f(\sqrt{n})=(\sqrt{n})^2=n$$
+This function is also onto since for all $n\in\mathbb{R}^+$, $$f(\sqrt{n})=(\sqrt{n})^2=n$$
 
 ### Ex. Show $\mathbb{C}^*/K\cong\mathbb{R}^+$.
 
