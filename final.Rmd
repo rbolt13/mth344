@@ -1564,6 +1564,10 @@ $$\text{ord}((g,h))=\text{lcm}(\text{ord}(g),\text{ord}(h)).$$
 
 Ex. In $\mathbb{Z}_{12}\times\mathbb{Z}_8$, $$\text{ord}((6,2))=\text{lcm}(2,4)=4.$$
 
+"How many sixes do we add together to get 12? 2."
+
+"How many twos do we add together to get 8? 4."
+
 ### Normal Subgroups 
 
 A $\underline{\text{subgroup}}$ of G is a subset $H\subseteq G$ such that 
@@ -1585,7 +1589,7 @@ Let $h=(123)$ and $g=(1234)$. Then
 \begin{equation}\label{D28.3}
 \begin{split}
 ghg^{-1} &= (1234)(123)(1234)^{-1}\\
-&= (1234)(123)(1432)\\
+&= (1234)(123)(4321)\quad\quad\text{ note: could write (4321) as (1432)}\\
 &= (234)\notin H
 \end{split}
 \end{equation}
