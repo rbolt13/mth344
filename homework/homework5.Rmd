@@ -46,7 +46,7 @@ Let $f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}$ be defined by $f(x,y)=3x
 
 ## 2. Let G be a group. Recall that the _center_ of G is the set $$C=\{C=\{g\in G|xg=gx\forall x\in G\}.$$ We showed in HW 2 that C is a subgroup of G. Prove that C is a normal subgroup of G. 
 
-Let $g\in G$ and $h\in C$. Then, 
+Let $g\in G$ and $h\in C$. Then since C is abelian for all x in G,  
 
 $$ghg^{-1}=g^{-1}hg=g^{-1}gh=h\in C.$$
 
@@ -78,9 +78,13 @@ Since $aH=Ha\forall a\in G$, H is a normal subgroup of G. $\square$
 
 Note: $\frac{8\text{ elements in G}}{2\text{ elements in H}}=4\text{ cosets}$
 
+\newpage
+
 ## 4. Let $G=\mathbb{Z}_3\times\mathbb{Z}_4$ and let $H=\langle (1,0)\rangle=\{(0,0),(1,0)\}.$
 
 ### (a) Explain why H is a normal subgroup of G. 
+
+Every subgroup of an abelian group is normal since if G is abelian, then for all $g\in G$ and $h\in H$ $$ghg^{-1}=gg^{-1}h\in H.$$
 
 ### (b) List the elements of the quotient group $G/H$.
 
@@ -93,15 +97,55 @@ H + (1,1) &= \{(1,1),(2,1)\}\\
 \end{split}
 \end{equation}
 
-### (c) The quotient group $G/H$ is a group of size 4. Is it isomorphic to $\mathbb{Z}_4$ or $\mathbb{Z}_2\times\mathbb{Z}_2$? Justify your answer. 
+### (c) The quotient group $G/H$ is a group of size 4. Is it isomorphic to $\mathbb{Z}_4$ or $\mathbb{Z}_2\times\mathbb{Z}_2$? Justify your answer.
 
+$G/H\cong\mathbb{Z}_2\times\mathbb{Z}_2$ since neither group is cyclic, and the any element in $G/H$ times itself is the identity. 
 
 ## 5. Let G be a group and H be a normal subgroup of G. Suppose that for every $a\in G$ there is a positive integer _n_ such that $a^n\in H$. Prove that every element of the quotient group $G/H$ has finite order. 
 
-## 6. Use the Fundamental Homomorphism Theorem to prove that $$(\mathbb{Z}\times)\mathbb{Z}/K\cong\mathbb{Z}$$ where $K=\langle(0,1)\rangle=\{...,(0,-2),(0,-1),(0,0),(0,1),(0,2),(0,3),...\}$
+Let G be a group and H be a normal subgroup of G. 
 
+We need to show $\forall a\in G\exists n>0$ such that $a^n\in H$. Therefore, 
 
+\begin{equation}\label{5.1}
+\begin{split}
+\text{ord}(Ha\in G/H)=n &\Leftrightarrow (Ha)^n=H\\
+&\Leftrightarrow Ha^n=H\\
+&\Leftrightarrow He=H\\
+&\Leftrightarrow H=H
+\end{split}
+\end{equation}
 
+$\Leftrightarrow a^n\in H$ by Theorem 5 chapter 15. Since if $Ha=Hb$, then $ab^{-1}\in H$ where $a=e$ and $b=a^n$
 
+\newpage
+
+## 6. Use the Fundamental Homomorphism Theorem to prove that $$(\mathbb{Z}\times\mathbb{Z})/K\cong\mathbb{Z}$$ where $K=\langle(0,1)\rangle=\{...,(0,-2),(0,-1),(0,0),(0,1),(0,2),(0,3),...\}$
+
+We need a surjective homomorphism $f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}$ with kernel 
+
+\begin{equation}\label{6.1}
+\begin{split}
+ker(f) &= \langle (0,1)\rangle\\
+&=\{...,(0,-2),(0,-1),(0,0),(0,1),(0,2),(0,3),...\}\\
+&=\{(x,y)\in\mathbb{Z}\times\mathbb{Z}|x\}
+\end{split}
+\end{equation}
+
+Let $f(x,y)=x$. We've shown the ker$(f)=\langle (0,1)\rangle$. 
+
+Now lets show f is surjective. Take any $n\in\mathbb{Z}$. Then $f(n,0)\in\mathbb{Z}\times\mathbb{Z}$ and $$f(n,0)=(n,0)=(0,0).$$
+
+So f is surjective. Last, let's check f is a homomorphism: 
+
+\begin{equation}\label{6.2}
+\begin{split}
+f((a_1,a_2)+(b_1,b_2)) &= f(a_1+b_1,a_2+b_2)\\
+&= a_1+b_1\\
+&= f(a_1,a_2)+f(b_1,b_2)
+\end{split}
+\end{equation}
+
+Hence by the FHT, $(\mathbb{Z}\times\mathbb{Z})/K\cong\mathbb{Z}$
 
 

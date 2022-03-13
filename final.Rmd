@@ -1596,7 +1596,9 @@ ghg^{-1} &= (1234)(123)(1234)^{-1}\\
 
 $\Rightarrow$ H is not normal in $S_4$.
 
-### Example
+"To show H is not normal show the conjugate isn't in H."
+
+### Example (from book)
 
 Let $a\in G$ have order 2. Suppose $H=\langle a\rangle$ is normal in G. Show that a is in the center of G. i.e. $ax=xa$ for all $x\in G$. 
 
@@ -1617,7 +1619,133 @@ gag^{-1}=a &\Rightarrow gag^{-1}g=ag\\
 
 # <span style="color: deepskyblue;">W10D29: Mar. 11th, 2022 </span>
 
-(Review)
+## MTH 344 Final 
+
+Thursday March 17th, 12:30-2:20pm
+
+5. Let G be a group and $H\unlhd G$. For every $a\in G$ there is $n>0$ such that $a^n\in H$. Prove every element of $G/H$ has finite order. 
+
+$\underline{\text{Proof}}$: Take any $Ha\in G/H$. We know $\exists n>0$ such that $a^n\in H$. 
+
+\begin{equation}\label{D29.1}
+\begin{split}
+&\Rightarrow Ha^n=H\quad\quad\text{by Theorem 5(ii) from CH 15}\\
+&\Rightarrow (Ha)^n=H\\
+&\Rightarrow \text{ord}(Ha)\leq n<\infty
+\end{split}
+\end{equation}
+
+Similar problems: Ch. 15 c and d
+
+## Ch. 8 Permuations of a finite set
+
+Let $n\geq 2$. $S_n$ is the group of all permuations of $\{1,2,3,...,n\}$. We can denote elements of $S_n$ two different ways. 
+
+$f=(\begin{smallmatrix}1 & 2 & 3 & 4 & 5 & 6 \\ 3 & 4 & 2 & 1 & 6 & 5\end{smallmatrix})\in S_6$ means $f(1)=3,f(2)=4,f(3)=2,$ etc. 
+
+We can write this using cycle notation: 
+
+$f=(1324)(56)=(13)(32)(24)(56)\leftarrow$ 4 transpositions means f is an even permutation. 
+
+Let $g=(235)(46)$. Compute $f\circ g$: $$f\circ g=(1324)(56)(235)(46)=(136)(45)$$
+
+$3\rightarrow3\rightarrow5\rightarrow6\rightarrow6$
+
+$2\rightarrow2\rightarrow3\rightarrow3\rightarrow2$
+
+$5\rightarrow5\rightarrow2\rightarrow2\rightarrow4$
+
+$6\rightarrow4\rightarrow4\rightarrow4\rightarrow1$
+
+$4\rightarrow6\rightarrow6\rightarrow5\rightarrow5$
+
+## Ch. 13 Cosets
+
+Let H be a subgroup of G. A (right) $\underline{\text{coset}}$ of H in G is a set of the form 
+
+$$Ha=\{ha|h\in H\}$$ 
+
+$$\text{OR}$$
+
+$$H+a =\{h+a|h\in H\}\quad\quad\leftarrow \text{if the operation in G is +}$$
+
+### Ex.
+
+Let $G=\mathbb{Z}_3\times \mathbb{Z}_6$ and $H=\{(0,0),(0,3),(1,0),(1,3),(2,0),(2,3)\}$. 
+
+There will be $|G|/|H|=18/6=3$ cosets of H in G. 
+
+The operation in G is coordiantewise addition, mod 3 in the 1st coordinate and mod 6 in the 2nd coordinate. 
+
+1. $H=\{(0,0),(0,3),(1,0),(1,3),(2,0),(2,3)\}=H+(0,3)+H+(1,0)$
+
+2. $H+(0,1)=\{(0,1),(0,4),(1,1),(1,4),(2,1),(2,4)\}=H+(0,4)+H+(1,1)$
+
+3. $H+(0,2)=\{(0,2),(0,5),(1,2),(1,5),(2,2),(2,5)\}=H+(0,5)+H+(1,2)$
+
+The quotient group $(\mathbb{Z}_3\times\mathbb{Z}_6)/H$ is the group $\{H,H+(0,1),H+(0,2)\}$
+
+The partition consisting of all cosets of H comes from these equivalence relations: $$a\sim b \text{ iff }Ha=hb$$ $$a\sim b\text{ iff } ab^{-1}\in H$$
+
+### Ex. 
+
+Let $G=S_3$ and $H=\{\mathcal{E}, (23)\}$. List cosets of H in G:
+
+1. $H=\{\mathcal{E},(23)\}$
+
+2. $H(12)=\{\mathcal{E}(12),(23)(12)\}=\{(12),(132)\}=H(132)$
+
+3. $H(13)=\{(13),(123)\}=H(123)$
+
+### Facts
+
+1. If G is finite, the numebr of cosets of H in G is $|G|/|H|$
+
+2. distinct cosets don't overlap 
+
+3. Every element of G is in a coset ($a\in Ha$)
+
+4. If $a\in Hb$, then $Ha=Hb$. 
+
+5. If $a\in H$, then $Ha=H$. 
+
+### Ex. (Cancellation Law for Cosets)
+
+Let H be a subgroup of G. Suppose $H(ba)=H(Ca)$. Prove that $Hb=Hc$. (We can't use coset multiplication since H isn't necessarily normal.)
+
+To show $Hb=Hc$, we just need to show $b\in Hc$. (Then we can use fact #4 above.)
+
+Since $ba\in H(ba)$ and $H(ba)=H(ca)$, $ba\in H(ca)$. This means that $$ba=hca$$ for some $h\in H$. Cancelling the a's gives $b=hc\in Hc$. Hence, $Hb=Hc$. 
+
+## Ch. 15 Quotient Groups 
+
+if H is normal in G, then we can add or multiply cosets (depending on what the operation in G is): $$(H+a)+(H+b)=H+(a+b)$$ $$Ha\cdot Hb=H(ab)$$
+
+### Ex. 
+
+Consider $\mathbb{Z}_9/\langle 3\rangle$. Note $\langle 3\rangle =\{0,3,6\}$. The elements of $\mathbb{Z}_9/\langle 3\rangle$ are 
+
+\begin{equation}\label{D29.2}
+\begin{split}
+\langle 3\rangle &= \{0,3,6\}\\
+\langle 3\rangle + 1 &= \{1,4,7\}\\
+\langle 3\rangle + 2 &= \{2,5,8\}
+\end{split}
+\end{equation}
+
+Let's find the inverse of $\langle 3\rangle +1$. First find the inverse of 1 in $\mathbb{Z}_9$. 
+
+![](img/img95.png)
+
+(In general, in $G/H\quad(Ha)^{-1}=Ha^{-1}$)
+
+What's the order of $\langle 3\rangle+2$ in $\mathbb{Z}_9/\langle 3\rangle$?
+
+![](img/img96.png)
+
+### Ex. 
+
+![](img/img97.png)
 
 # W11D30: Mar. 17th, 2022
 
