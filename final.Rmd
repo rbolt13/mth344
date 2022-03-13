@@ -1651,7 +1651,7 @@ Let $g=(235)(46)$. Compute $f\circ g$: $$f\circ g=(1324)(56)(235)(46)=(136)(45)$
 
 $3\rightarrow3\rightarrow5\rightarrow6\rightarrow6$
 
-$2\rightarrow2\rightarrow3\rightarrow3\rightarrow2$
+$2\rightarrow2\rightarrow3\rightarrow3\rightarrow2$ (2 goes to itself so we can erase it)
 
 $5\rightarrow5\rightarrow2\rightarrow2\rightarrow4$
 
@@ -1683,7 +1683,7 @@ The operation in G is coordiantewise addition, mod 3 in the 1st coordinate and m
 
 3. $H+(0,2)=\{(0,2),(0,5),(1,2),(1,5),(2,2),(2,5)\}=H+(0,5)+H+(1,2)$
 
-The quotient group $(\mathbb{Z}_3\times\mathbb{Z}_6)/H$ is the group $\{H,H+(0,1),H+(0,2)\}$
+The quotient group $(\mathbb{Z}_3\times\mathbb{Z}_6)/H$ is the group $\{H,H+(0,1),H+(0,2)\}$ (these are the elements of the quotient group $(\mathbb{Z}_3\times\mathbb{Z}_6)/H$) 
 
 The partition consisting of all cosets of H comes from these equivalence relations: $$a\sim b \text{ iff }Ha=hb$$ $$a\sim b\text{ iff } ab^{-1}\in H$$
 
@@ -1734,6 +1734,8 @@ Consider $\mathbb{Z}_9/\langle 3\rangle$. Note $\langle 3\rangle =\{0,3,6\}$. Th
 \end{equation}
 
 Let's find the inverse of $\langle 3\rangle +1$. First find the inverse of 1 in $\mathbb{Z}_9$. 
+
+"For the inverse find how many 1's to add to 1 to get zero in mod 9. Answer = 8"
 
 ![](img/img95.png)
 
